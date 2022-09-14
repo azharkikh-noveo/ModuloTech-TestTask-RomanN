@@ -18,6 +18,11 @@
 		338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186828D2855C00278530 /* UIViewControllerPreview.swift */; };
 		338C186C28D285C300278530 /* UIFont+primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186B28D285C300278530 /* UIFont+primary.swift */; };
 		338C186E28D2880E00278530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338C186D28D2880E00278530 /* Assets.xcassets */; };
+		338C187328D28DC000278530 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187228D28DC000278530 /* Light.swift */; };
+		338C187528D28DCC00278530 /* RollerShutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187428D28DCC00278530 /* RollerShutter.swift */; };
+		338C187728D28DD400278530 /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187628D28DD400278530 /* Heater.swift */; };
+		338C187B28D28E8200278530 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187A28D28E8200278530 /* Device.swift */; };
+		338C187F28D2967100278530 /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187E28D2967100278530 /* Clamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +39,11 @@
 		338C186828D2855C00278530 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		338C186B28D285C300278530 /* UIFont+primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+primary.swift"; sourceTree = "<group>"; };
 		338C186D28D2880E00278530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338C187228D28DC000278530 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		338C187428D28DCC00278530 /* RollerShutter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutter.swift; sourceTree = "<group>"; };
+		338C187628D28DD400278530 /* Heater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
+		338C187A28D28E8200278530 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		338C187E28D2967100278530 /* Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,8 @@
 				338C184928D2829400278530 /* SceneDelegate.swift */,
 				338C185C28D283A200278530 /* common */,
 				338C186A28D285B200278530 /* extension */,
+				338C187D28D2966900278530 /* global */,
+				338C187128D28DAF00278530 /* model */,
 				338C186328D2849900278530 /* propertyWrapper */,
 				338C185B28D282DC00278530 /* resources */,
 			);
@@ -112,6 +124,33 @@
 				338C186B28D285C300278530 /* UIFont+primary.swift */,
 			);
 			name = extension;
+			sourceTree = "<group>";
+		};
+		338C187128D28DAF00278530 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				338C187C28D28E8800278530 /* device */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		338C187C28D28E8800278530 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				338C187A28D28E8200278530 /* Device.swift */,
+				338C187228D28DC000278530 /* Light.swift */,
+				338C187428D28DCC00278530 /* RollerShutter.swift */,
+				338C187628D28DD400278530 /* Heater.swift */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
+		338C187D28D2966900278530 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				338C187E28D2967100278530 /* Clamp.swift */,
+			);
+			path = global;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,12 +223,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338C187728D28DD400278530 /* Heater.swift in Sources */,
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
+				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
+				338C187B28D28E8200278530 /* Device.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
 				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
+				338C187328D28DC000278530 /* Light.swift in Sources */,
+				338C187F28D2967100278530 /* Clamp.swift in Sources */,
 				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,

@@ -11,6 +11,13 @@
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185128D2829500278530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338C185028D2829500278530 /* Assets.xcassets */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
+		338C185E28D283B500278530 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185D28D283B500278530 /* BaseViewController.swift */; };
+		338C186028D283F500278530 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185F28D283F500278530 /* BaseView.swift */; };
+		338C186228D2843200278530 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186128D2843200278530 /* BaseViewModel.swift */; };
+		338C186528D284A200278530 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186428D284A200278530 /* AutoLayout.swift */; };
+		338C186728D2853D00278530 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186628D2853D00278530 /* UIViewPreview.swift */; };
+		338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186828D2855C00278530 /* UIViewControllerPreview.swift */; };
+		338C186C28D285C300278530 /* UIFont+primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186B28D285C300278530 /* UIFont+primary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +27,13 @@
 		338C185028D2829500278530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338C185328D2829500278530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		338C185528D2829500278530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338C185D28D283B500278530 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		338C185F28D283F500278530 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		338C186128D2843200278530 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		338C186428D284A200278530 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
+		338C186628D2853D00278530 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
+		338C186828D2855C00278530 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
+		338C186B28D285C300278530 /* UIFont+primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+primary.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +69,9 @@
 				338C185528D2829500278530 /* Info.plist */,
 				338C184728D2829400278530 /* AppDelegate.swift */,
 				338C184928D2829400278530 /* SceneDelegate.swift */,
+				338C185C28D283A200278530 /* common */,
+				338C186A28D285B200278530 /* extension */,
+				338C186328D2849900278530 /* propertyWrapper */,
 				338C185B28D282DC00278530 /* resources */,
 			);
 			path = "modulotech-test-ios";
@@ -67,6 +84,34 @@
 				338C185228D2829500278530 /* LaunchScreen.storyboard */,
 			);
 			path = resources;
+			sourceTree = "<group>";
+		};
+		338C185C28D283A200278530 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				338C185F28D283F500278530 /* BaseView.swift */,
+				338C185D28D283B500278530 /* BaseViewController.swift */,
+				338C186128D2843200278530 /* BaseViewModel.swift */,
+				338C186628D2853D00278530 /* UIViewPreview.swift */,
+				338C186828D2855C00278530 /* UIViewControllerPreview.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		338C186328D2849900278530 /* propertyWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				338C186428D284A200278530 /* AutoLayout.swift */,
+			);
+			path = propertyWrapper;
+			sourceTree = "<group>";
+		};
+		338C186A28D285B200278530 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				338C186B28D285C300278530 /* UIFont+primary.swift */,
+			);
+			name = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
+				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
+				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
+				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
+				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
+				338C186028D283F500278530 /* BaseView.swift in Sources */,
+				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +334,10 @@
 				DEVELOPMENT_TEAM = K3W3K9M953;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ModuloTech;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -310,8 +364,10 @@
 				DEVELOPMENT_TEAM = K3W3K9M953;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = ModuloTech;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;

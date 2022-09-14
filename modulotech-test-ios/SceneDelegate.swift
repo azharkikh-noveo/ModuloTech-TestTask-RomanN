@@ -22,7 +22,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(windowScene: windowScene)
         window?.backgroundColor = .white
-        window?.rootViewController = UIViewController(nibName: nil, bundle: nil)
+        window?.rootViewController = BaseViewController()
         window?.makeKeyAndVisible()
         
     }

@@ -18,6 +18,14 @@ public final class DeviceListViewController: BaseViewController {
     private let viewModel: DeviceListViewModel
     
     
+    // MARK: Subviews
+    
+    /// Use this property instead of just `view`. Casts a view controller `view` to the needed class.
+    private var deviceListView: DeviceListView! {
+        return view as? DeviceListView
+    }
+    
+    
     // MARK: Lifecycle
     
     /// Creates an instance of view controller and assignes a view-model to it.
@@ -32,7 +40,7 @@ public final class DeviceListViewController: BaseViewController {
     }
     
     public override func loadView() {
-        view = UIView()
+        view = DeviceListView(frame: .zero)
     }
     
     public override func viewDidLoad() {

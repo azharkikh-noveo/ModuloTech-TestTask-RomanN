@@ -37,6 +37,10 @@
 		338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */; };
 		338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */; };
 		338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AE28D32A0A00278530 /* DeviceListResponse.swift */; };
+		338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */; };
+		338C18B328D34F1700278530 /* UITableView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B228D34F1700278530 /* UITableView+register.swift */; };
+		338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B428D34F4900278530 /* UITableView+dequeue.swift */; };
+		338C18B828D34FB000278530 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B728D34FB000278530 /* DeviceListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +76,10 @@
 		338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+ProductType.swift"; sourceTree = "<group>"; };
 		338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+Mode.swift"; sourceTree = "<group>"; };
 		338C18AE28D32A0A00278530 /* DeviceListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListResponse.swift; sourceTree = "<group>"; };
+		338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+defaultReuseIdentifier.swift"; sourceTree = "<group>"; };
+		338C18B228D34F1700278530 /* UITableView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register.swift"; sourceTree = "<group>"; };
+		338C18B428D34F4900278530 /* UITableView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeue.swift"; sourceTree = "<group>"; };
+		338C18B728D34FB000278530 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 				338C185B28D282DC00278530 /* resources */,
 				338C188028D298BC00278530 /* screen */,
 				338C18A428D31CB900278530 /* service */,
+				338C18B928D3514300278530 /* subview */,
 			);
 			path = "modulotech-test-ios";
 			sourceTree = "<group>";
@@ -154,6 +163,9 @@
 			isa = PBXGroup;
 			children = (
 				338C186B28D285C300278530 /* UIFont+primary.swift */,
+				338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */,
+				338C18B228D34F1700278530 /* UITableView+register.swift */,
+				338C18B428D34F4900278530 /* UITableView+dequeue.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -198,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				338C188228D298D200278530 /* controller */,
+				338C18B628D34F9C00278530 /* subview */,
 				338C188528D298E600278530 /* viewModel */,
 			);
 			path = deviceList;
@@ -273,6 +286,21 @@
 				338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */,
 			);
 			path = network;
+			sourceTree = "<group>";
+		};
+		338C18B628D34F9C00278530 /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				338C18B728D34FB000278530 /* DeviceListView.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		338C18B928D3514300278530 /* subview */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = subview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -353,23 +381,27 @@
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
 				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
+				338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
 				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
 				338C187B28D28E8200278530 /* Device.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
 				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
+				338C18B328D34F1700278530 /* UITableView+register.swift in Sources */,
 				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
 				338C189328D313F100278530 /* PushTransition.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
 				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
 				338C187328D28DC000278530 /* Light.swift in Sources */,
 				338C188C28D3134B00278530 /* Router.swift in Sources */,
+				338C18B828D34FB000278530 /* DeviceListView.swift in Sources */,
 				338C187F28D2967100278530 /* Clamp.swift in Sources */,
 				338C189B28D3176D00278530 /* BaseRouter.swift in Sources */,
 				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
+				338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */,
 				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
 				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
 				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,

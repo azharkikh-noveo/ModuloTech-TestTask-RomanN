@@ -15,8 +15,13 @@ import SnapKit
 public final class LightSettingsView: BaseView {
     
     
+    // MARK: Subviews
+    
     /// Custom navigation bar that is a part of the view.
     @AutoLayout public var navigationView: NavigationBarView = NavigationBarView(frame: .zero)
+    
+    /// Light mode switch view.
+    @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
     
     // MARK: Lifecycle
@@ -24,6 +29,7 @@ public final class LightSettingsView: BaseView {
     public override func setupSubviewHierarchy() {
         super.setupSubviewHierarchy()
         addSubview(navigationView)
+        addSubview(modeSwitchView)
     }
     
     public override func setupSubviewConstraints() {
@@ -34,6 +40,12 @@ public final class LightSettingsView: BaseView {
             make.top.equalTo(safeAreaLayoutGuide)
             make.left.right.equalToSuperview()
             make.height.equalTo(NavigationBarView.preferredHeight)
+        }
+        
+        modeSwitchView.snp.makeConstraints { make in
+            make.top.equalTo(navigationView.snp.bottom).offset(40)
+            make.left.right.equalToSuperview().inset(30)
+            make.height.equalTo(ModeSwitchView.preferredHeight)
         }
         
     }

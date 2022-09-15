@@ -77,11 +77,10 @@ public final class DeviceListViewController: BaseViewController {
     /// Setups bindings to the view. Should be called once.
     private func setupBindings() {
         
-        viewModel.devices
+        viewModel
+            .shouldUpdateScreen
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] _ in
-                deviceListView.tableView.reloadData()
-            }
+            .sink(receiveValue: deviceListView.tableView.reloadData)
             .store(in: &disposeBag)
         
     }
@@ -98,7 +97,7 @@ extension DeviceListViewController: UITableViewDataSource {
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
     ) -> Int {
-        return viewModel.devices.value.count
+        return viewModel.devices.count
     }
     
     public func tableView(
@@ -106,7 +105,7 @@ extension DeviceListViewController: UITableViewDataSource {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         let cell: DeviceListTableViewCell = tableView.dequeue(for: indexPath)
-        cell.assign(viewModel.devices.value[indexPath.row])
+        cell.assign(viewModel.devices[indexPath.row])
         return cell
     }
     
@@ -122,7 +121,7 @@ extension DeviceListViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        let device: Device = viewModel.devices.value[indexPath.row]
+        let device: Device = viewModel.devices[indexPath.row]
         viewModel.openSettingsScreen(for: device)
     }
     

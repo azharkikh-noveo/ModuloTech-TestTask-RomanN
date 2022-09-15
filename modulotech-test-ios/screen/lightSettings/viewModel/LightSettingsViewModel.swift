@@ -25,6 +25,15 @@ public final class LightSettingsViewModel: BaseViewModel {
     public let device: Light
     
     
+    // MARK: Publishers
+    
+    /// Current light mode.
+    public let isLightOn: PassthroughSubject<Bool, Never> = .init()
+    
+    /// Current light intensity.
+    public let lightIntensity: PassthroughSubject<Int, Never> = .init()
+    
+    
     // MARK: Lifecycle
     
     /// Creates an instance of a view-model and assignes a router to it.
@@ -34,6 +43,32 @@ public final class LightSettingsViewModel: BaseViewModel {
     ) {
         self.router = router
         self.device = device
+    }
+    
+    public override func onViewDidLoad() {
+        super.onViewDidLoad()
+        self.isLightOn.send(device.mode.booleanValue)
+        self.lightIntensity.send(device.intensity)
+    }
+    
+}
+
+
+// MARK: Settings
+
+extension LightSettingsViewModel {
+    
+    
+    /// Changes the light binary mode.
+    public func setLightMode(isOn: Bool) {
+        device.mode = Device.BinaryMode(isOn: isOn)
+        isLightOn.send(isOn)
+    }
+    
+    /// Changes the light intensity level.
+    public func setIntensity(_ instensity: Int) {
+        device.set(intensity: instensity)
+        lightIntensity.send(device.intensity)
     }
     
 }

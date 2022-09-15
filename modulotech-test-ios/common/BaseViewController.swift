@@ -38,6 +38,22 @@ public class BaseViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Asset.Colors.white.color
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+}
+
+
+// MARK: UIGestureRecognizerDelegate
+
+extension BaseViewController: UIGestureRecognizerDelegate {
+    
+    
+    public func gestureRecognizer(
+        _ gestureRecognizer: UIGestureRecognizer,
+        shouldBeRequiredToFailBy otherGestureRecognizer: UIGestureRecognizer
+    ) -> Bool {
+        return true
     }
     
 }

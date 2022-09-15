@@ -75,12 +75,35 @@ public final class LightSettingsViewController: BaseViewController {
     /// Setups bindings to the view. Should be called once.
     private func setupBindings() {
         
+        // View subscriptions
+        
         settingsView
             .navigationView
             .backButton
             .publisher(for: .touchUpInside)
             .sink { [unowned self] _ in
                 viewModel.close()
+            }
+            .store(in: &disposeBag)
+        
+        settingsView
+            .modeSwitchView
+            .switchView
+            .publisher(for: .touchUpInside)
+            .map(\.isOn)
+            .removeDuplicates()
+            .sink(receiveValue: viewModel.setLightMode(isOn:))
+            .store(in: &disposeBag)
+        
+        
+        // View-model subscriptions
+        
+        viewModel
+            .isLightOn
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] isOn in
+                settingsView.modeSwitchView.switchView.isOn = isOn
+                settingsView.modeSwitchView.titleLabel.text = "Selected mode " + (isOn ? "ON" : "OFF")
             }
             .store(in: &disposeBag)
         

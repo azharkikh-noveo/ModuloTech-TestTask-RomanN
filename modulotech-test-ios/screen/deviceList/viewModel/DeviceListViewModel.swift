@@ -24,11 +24,14 @@ public final class DeviceListViewModel: BaseViewModel {
     /// Used for backend calls.
     private let networkService: NetworkService
     
+    /// Publishes devices to display.
+    public private(set) var devices: Array<Device>
+    
     
     // MARK: Publishers
     
-    /// Publishes devices to display.
-    public let devices: CurrentValueSubject<Array<Device>, Never> = .init([])
+    /// Whether a screen views should be reloaded depending on their data.
+    public let shouldUpdateScreen: PassthroughSubject<Void, Never>
     
     
     // MARK: Lifecycle
@@ -38,6 +41,8 @@ public final class DeviceListViewModel: BaseViewModel {
         router: DeviceListViewModel.RouterType,
         networkService: NetworkService
     ) {
+        self.devices = []
+        self.shouldUpdateScreen = .init()
         self.router = router
         self.networkService = networkService
     }
@@ -57,16 +62,23 @@ public final class DeviceListViewModel: BaseViewModel {
                 case .finished:
                     break
                 case .failure:
-                    devices.send([])
+                    devices = []
                 }
+                
+                shouldUpdateScreen.send()
                 
             } receiveValue: { [unowned self] deviceList in
                 
-                devices.send(deviceList)
+                devices = deviceList
                 
             }
             .store(in: &disposeBag)
         
+    }
+    
+    public override func onViewWillAppear() {
+        super.onViewWillAppear()
+        shouldUpdateScreen.send()
     }
     
 }

@@ -74,6 +74,11 @@ extension Device {
             }
         }
         
+        /// Whether a mode is *on*.
+        public var booleanValue: Bool {
+            return (self == .on)
+        }
+        
     }
     
 }

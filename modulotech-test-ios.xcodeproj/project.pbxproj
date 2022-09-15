@@ -33,6 +33,9 @@
 		338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A028D31B0500278530 /* DeviceListRoute.swift */; };
 		338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A228D31B6200278530 /* BaseNavigationController.swift */; };
 		338C18A628D31DF900278530 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A528D31DF900278530 /* NetworkService.swift */; };
+		338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A828D323BC00278530 /* DeviceProduct.swift */; };
+		338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */; };
+		338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +67,9 @@
 		338C18A028D31B0500278530 /* DeviceListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListRoute.swift; sourceTree = "<group>"; };
 		338C18A228D31B6200278530 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		338C18A528D31DF900278530 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		338C18A828D323BC00278530 /* DeviceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProduct.swift; sourceTree = "<group>"; };
+		338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+ProductType.swift"; sourceTree = "<group>"; };
+		338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+Mode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				338C187C28D28E8800278530 /* device */,
+				338C18A728D3234200278530 /* network */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -255,6 +262,16 @@
 			path = service;
 			sourceTree = "<group>";
 		};
+		338C18A728D3234200278530 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				338C18A828D323BC00278530 /* DeviceProduct.swift */,
+				338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */,
+				338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -326,12 +343,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */,
+				338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */,
 				338C188E28D3137000278530 /* Transition.swift in Sources */,
 				338C189128D313CD00278530 /* EmptyTransition.swift in Sources */,
 				338C187728D28DD400278530 /* Heater.swift in Sources */,
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
+				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
 				338C187B28D28E8200278530 /* Device.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
@@ -349,6 +368,7 @@
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
 				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
 				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
+				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

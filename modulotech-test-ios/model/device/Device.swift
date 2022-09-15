@@ -48,8 +48,16 @@ extension Device {
             self = isOn ? .on : .off
         }
         
+        /// Creates an instance using raw value.
+        public init?(rawMode: DeviceProduct.Mode) {
+            switch rawMode {
+            case .on:
+                self = .on
+            case .off:
+                self = .off
+            }
+        }
+        
     }
     
 }
-
-

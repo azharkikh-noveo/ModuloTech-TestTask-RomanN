@@ -30,6 +30,22 @@ public final class Light: Device {
         super.init(id: deviceId, name: name)
     }
     
+    /// Creates an instance of the device from its raw model if possible.
+    public init?(from rawModel: DeviceProduct) {
+        
+        guard
+            let mode = rawModel.mode.flatMap(Device.BinaryMode.init(rawMode:)),
+            let intensity = rawModel.intensity
+        else {
+            return nil
+        }
+        
+        self.intensity = intensity
+        self.mode = mode
+        super.init(id: rawModel.deviceId, name: rawModel.name)
+        
+    }
+    
     
     // MARK: Helper
     

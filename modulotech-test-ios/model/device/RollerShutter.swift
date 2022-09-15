@@ -25,6 +25,18 @@ public final class RollerShutter: Device {
         super.init(id: deviceId, name: name)
     }
     
+    /// Creates an instance of the device from its raw model if possible.
+    public init?(from rawModel: DeviceProduct) {
+        
+        guard let position = rawModel.position else {
+            return nil
+        }
+        
+        self.position = position
+        super.init(id: rawModel.deviceId, name: rawModel.name)
+        
+    }
+    
     
     // MARK: Helper
     

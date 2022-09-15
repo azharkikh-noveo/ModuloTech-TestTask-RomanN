@@ -32,6 +32,7 @@
 		338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189E28D31A8B00278530 /* DeviceListViewController.swift */; };
 		338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A028D31B0500278530 /* DeviceListRoute.swift */; };
 		338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A228D31B6200278530 /* BaseNavigationController.swift */; };
+		338C18A628D31DF900278530 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A528D31DF900278530 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		338C189E28D31A8B00278530 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		338C18A028D31B0500278530 /* DeviceListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListRoute.swift; sourceTree = "<group>"; };
 		338C18A228D31B6200278530 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		338C18A528D31DF900278530 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				338C186328D2849900278530 /* propertyWrapper */,
 				338C185B28D282DC00278530 /* resources */,
 				338C188028D298BC00278530 /* screen */,
+				338C18A428D31CB900278530 /* service */,
 			);
 			path = "modulotech-test-ios";
 			sourceTree = "<group>";
@@ -244,6 +247,14 @@
 			path = transition;
 			sourceTree = "<group>";
 		};
+		338C18A428D31CB900278530 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				338C18A528D31DF900278530 /* NetworkService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -324,6 +335,7 @@
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
 				338C187B28D28E8200278530 /* Device.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
+				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
 				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
 				338C189328D313F100278530 /* PushTransition.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,

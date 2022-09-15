@@ -32,7 +32,12 @@ extension DeviceListRoute where Self: Router {
         let empty = EmptyTransition()
         let router = BaseRouter(rootTransition: empty)
         
-        let viewModel = DeviceListViewModel(router: router)
+        let networkService = NetworkService()
+        
+        let viewModel = DeviceListViewModel(
+            router: router,
+            networkService: networkService
+        )
         let viewController = DeviceListViewController(viewModel: viewModel)
         
         router.rootViewController = viewController

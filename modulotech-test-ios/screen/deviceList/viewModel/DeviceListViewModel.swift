@@ -20,9 +20,16 @@ public final class DeviceListViewModel: BaseViewModel {
     /// Assigned router.
     private let router: DeviceListViewModel.RouterType
     
+    /// Used for backend calls.
+    private let networkService: NetworkService
+    
     /// Creates an instance of a view-model and assignes a router to it.
-    public init(router: DeviceListViewModel.RouterType) {
+    public init(
+        router: DeviceListViewModel.RouterType,
+        networkService: NetworkService
+    ) {
         self.router = router
+        self.networkService = networkService
     }
     
 }

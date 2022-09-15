@@ -28,6 +28,10 @@
 		338C189128D313CD00278530 /* EmptyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189028D313CD00278530 /* EmptyTransition.swift */; };
 		338C189328D313F100278530 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189228D313F100278530 /* PushTransition.swift */; };
 		338C189B28D3176D00278530 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189A28D3176D00278530 /* BaseRouter.swift */; };
+		338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189C28D31A2900278530 /* DeviceListViewModel.swift */; };
+		338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189E28D31A8B00278530 /* DeviceListViewController.swift */; };
+		338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A028D31B0500278530 /* DeviceListRoute.swift */; };
+		338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A228D31B6200278530 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		338C189028D313CD00278530 /* EmptyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTransition.swift; sourceTree = "<group>"; };
 		338C189228D313F100278530 /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
 		338C189A28D3176D00278530 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		338C189C28D31A2900278530 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
+		338C189E28D31A8B00278530 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		338C18A028D31B0500278530 /* DeviceListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListRoute.swift; sourceTree = "<group>"; };
+		338C18A228D31B6200278530 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,7 @@
 		338C185C28D283A200278530 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				338C18A228D31B6200278530 /* BaseNavigationController.swift */,
 				338C185F28D283F500278530 /* BaseView.swift */,
 				338C185D28D283B500278530 /* BaseViewController.swift */,
 				338C186128D2843200278530 /* BaseViewModel.swift */,
@@ -185,6 +194,7 @@
 		338C188228D298D200278530 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				338C189E28D31A8B00278530 /* DeviceListViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -192,6 +202,7 @@
 		338C188528D298E600278530 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
+				338C189C28D31A2900278530 /* DeviceListViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -209,6 +220,7 @@
 		338C188928D3130900278530 /* routes */ = {
 			isa = PBXGroup;
 			children = (
+				338C18A028D31B0500278530 /* DeviceListRoute.swift */,
 			);
 			path = routes;
 			sourceTree = "<group>";
@@ -302,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */,
 				338C188E28D3137000278530 /* Transition.swift in Sources */,
 				338C189128D313CD00278530 /* EmptyTransition.swift in Sources */,
 				338C187728D28DD400278530 /* Heater.swift in Sources */,
@@ -314,6 +327,7 @@
 				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
 				338C189328D313F100278530 /* PushTransition.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
+				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
 				338C187328D28DC000278530 /* Light.swift in Sources */,
 				338C188C28D3134B00278530 /* Router.swift in Sources */,
 				338C187F28D2967100278530 /* Clamp.swift in Sources */,
@@ -321,6 +335,8 @@
 				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
+				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
+				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

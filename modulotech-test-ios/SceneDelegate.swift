@@ -23,7 +23,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let router = BaseRouter(rootTransition: EmptyTransition())
         
         window = UIWindow(windowScene: windowScene)
-        window?.backgroundColor = .white
+        window?.backgroundColor = Asset.Colors.white.color
         window?.rootViewController = router.makeRootViewController()
         window?.makeKeyAndVisible()
         

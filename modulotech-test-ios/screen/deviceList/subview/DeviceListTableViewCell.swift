@@ -78,7 +78,7 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         }
         
         containerStackView.snp.makeConstraints { make in
-            make.top.bottom.equalToSuperview().inset(8)
+            make.top.bottom.equalToSuperview().inset(12)
             make.left.right.equalToSuperview().inset(14)
         }
         
@@ -88,7 +88,7 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         
         stateImageView.snp.makeConstraints { make in
             make.right.equalToSuperview()
-            make.width.height.equalTo(60)
+            make.width.height.equalTo(28)
         }
         
     }
@@ -102,14 +102,16 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         containerStackView.alignment = .center
         
         labelsStackView.axis = .vertical
-        labelsStackView.spacing = 12
+        labelsStackView.spacing = 6
         labelsStackView.alignment = .leading
         
         deviceTitleLabel.font = .primary(ofSize: 18, .bold)
+        deviceTitleLabel.textColor = Asset.Colors.darkGray.color
         
         deviceTypeLabel.font = .primary(ofSize: 16, .semibold)
+        deviceTypeLabel.textColor = Asset.Colors.gray.color
         
-        containerView.backgroundColor = .white
+        containerView.backgroundColor = Asset.Colors.white.color
         containerView.layer.cornerRadius = 12
         containerView.layer.shadowRadius = 5
         containerView.layer.shadowOffset = CGSize(width: 0, height: 2)
@@ -142,13 +144,28 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
             
             deviceTypeLabel.text = "Light"
             
+            switch light.mode {
+            case .on:
+                stateImageView.image = Asset.Images.Device.deviceLightOnIcon.image
+            case .off:
+                stateImageView.image = Asset.Images.Device.deviceLightOffIcon.image
+            }
+            
         case let heater as Heater:
             
             deviceTypeLabel.text = "Heater"
             
-        case let shutter as RollerShutter:
+            switch heater.mode {
+            case .on:
+                stateImageView.image = Asset.Images.Device.deviceHeaterOnIcon.image
+            case .off:
+                stateImageView.image = Asset.Images.Device.deviceHeaterOffIcon.image
+            }
+            
+        case _ as RollerShutter:
             
             deviceTypeLabel.text = "Roller shutter"
+            stateImageView.image = Asset.Images.Device.deviceRollerShutterIcon.image
             
         default:
             fatalError("Unknown device found.")

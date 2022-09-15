@@ -41,6 +41,7 @@
 		338C18B328D34F1700278530 /* UITableView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B228D34F1700278530 /* UITableView+register.swift */; };
 		338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B428D34F4900278530 /* UITableView+dequeue.swift */; };
 		338C18B828D34FB000278530 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B728D34FB000278530 /* DeviceListView.swift */; };
+		338C18BC28D3528D00278530 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 338C18BB28D3528D00278530 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338C18BC28D3528D00278530 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +321,9 @@
 			dependencies = (
 			);
 			name = "modulotech-test-ios";
+			packageProductDependencies = (
+				338C18BB28D3528D00278530 /* SnapKit */,
+			);
 			productName = "modulotech-test-ios";
 			productReference = 338C184428D2829400278530 /* modulotech-test-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -347,6 +352,9 @@
 				Base,
 			);
 			mainGroup = 338C183B28D2829400278530;
+			packageReferences = (
+				338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 338C184528D2829400278530 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -618,6 +626,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		338C18BB28D3528D00278530 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 338C183C28D2829400278530 /* Project object */;
 }

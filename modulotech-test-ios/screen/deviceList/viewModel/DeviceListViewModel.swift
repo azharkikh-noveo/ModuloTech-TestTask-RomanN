@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 
 // MARK: - View-model
@@ -23,6 +24,15 @@ public final class DeviceListViewModel: BaseViewModel {
     /// Used for backend calls.
     private let networkService: NetworkService
     
+    
+    // MARK: Publishers
+    
+    /// Publishes devices to display.
+    public let devices: CurrentValueSubject<Array<Device>, Never> = .init([])
+    
+    
+    // MARK: Lifecycle
+    
     /// Creates an instance of a view-model and assignes a router to it.
     public init(
         router: DeviceListViewModel.RouterType,
@@ -33,15 +43,26 @@ public final class DeviceListViewModel: BaseViewModel {
     }
     
     
+    // MARK: View controller lifecycle
+    
     public override func onViewDidLoad() {
         
         super.onViewDidLoad()
         
         networkService
             .deviceList()
-            .sink { _ in
+            .sink { [unowned self] completion in
                 
-            } receiveValue: { _ in
+                switch completion {
+                case .finished:
+                    break
+                case .failure:
+                    devices.send([])
+                }
+                
+            } receiveValue: { [unowned self] deviceList in
+                
+                devices.send(deviceList)
                 
             }
             .store(in: &disposeBag)
@@ -54,5 +75,13 @@ public final class DeviceListViewModel: BaseViewModel {
 // MARK: Navigation
 
 extension DeviceListViewModel {
+    
+    
+    /// Opens a device settings screen for a specific device.
+    public func openSettingsScreen(for device: Device) {
+        
+        print(device)
+        
+    }
     
 }

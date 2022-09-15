@@ -42,6 +42,8 @@
 		338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B428D34F4900278530 /* UITableView+dequeue.swift */; };
 		338C18B828D34FB000278530 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B728D34FB000278530 /* DeviceListView.swift */; };
 		338C18BC28D3528D00278530 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 338C18BB28D3528D00278530 /* SnapKit */; };
+		338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */; };
+		338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BF28D3559C00278530 /* BaseTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		338C18B228D34F1700278530 /* UITableView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register.swift"; sourceTree = "<group>"; };
 		338C18B428D34F4900278530 /* UITableView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeue.swift"; sourceTree = "<group>"; };
 		338C18B728D34FB000278530 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewCell.swift; sourceTree = "<group>"; };
+		338C18BF28D3559C00278530 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		338C185C28D283A200278530 /* common */ = {
 			isa = PBXGroup;
 			children = (
+				338C18BF28D3559C00278530 /* BaseTableViewCell.swift */,
 				338C18A228D31B6200278530 /* BaseNavigationController.swift */,
 				338C185F28D283F500278530 /* BaseView.swift */,
 				338C185D28D283B500278530 /* BaseViewController.swift */,
@@ -293,6 +298,7 @@
 		338C18B628D34F9C00278530 /* subview */ = {
 			isa = PBXGroup;
 			children = (
+				338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */,
 				338C18B728D34FB000278530 /* DeviceListView.swift */,
 			);
 			path = subview;
@@ -393,6 +399,7 @@
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
 				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
+				338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */,
 				338C187B28D28E8200278530 /* Device.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
 				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
@@ -413,6 +420,7 @@
 				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
 				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
 				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,
+				338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

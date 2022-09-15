@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 
 // MARK: - View
@@ -22,25 +23,35 @@ public final class DeviceListView: BaseView {
     
     // MARK: Lifecycle
     
-    /// Setups initial subview hierarchy. Should be called once.
     public override func setupSubviewHierarchy() {
         super.setupSubviewHierarchy()
         addSubview(tableView)
     }
     
-    /// Setups initial subview constraints. Should be called once and after `setupSubviewHierarchy`.
     public override func setupSubviewConstraints() {
+        
         super.setupSubviewConstraints()
+        
+        tableView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.bottom.equalTo(safeAreaLayoutGuide)
+        }
+        
     }
     
-    /// Setups subview bindings. Should be called once.
     public override func setupSubviewBindings() {
         super.setupSubviewBindings()
     }
     
-    /// Setups initial subview properties. Should be called once and after all setup methods.
     public override func setupSubviews() {
+        
         super.setupSubviews()
+        
+        tableView.register(cellClass: DeviceListTableViewCell.self)
+        tableView.rowHeight = DeviceListTableViewCell.preferredHeight
+        tableView.estimatedRowHeight = DeviceListTableViewCell.preferredHeight
+        tableView.separatorStyle = .none
+        
     }
     
 }

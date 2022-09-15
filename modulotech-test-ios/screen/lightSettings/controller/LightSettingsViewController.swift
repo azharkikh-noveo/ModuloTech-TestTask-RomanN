@@ -103,7 +103,7 @@ public final class LightSettingsViewController: BaseViewController {
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] isOn in
                 settingsView.modeSwitchView.switchView.isOn = isOn
-                settingsView.modeSwitchView.titleLabel.text = "Selected mode " + (isOn ? "ON" : "OFF")
+                settingsView.modeSwitchView.titleLabel.text = "Selected mode \"" + (isOn ? "ON" : "OFF") + "\""
             }
             .store(in: &disposeBag)
         

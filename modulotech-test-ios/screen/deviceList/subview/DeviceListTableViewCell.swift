@@ -33,8 +33,8 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
     /// Device title label.
     @AutoLayout public var deviceTitleLabel: UILabel = UILabel(frame: .zero)
     
-    /// Device type label.
-    @AutoLayout public var deviceTypeLabel: UILabel = UILabel(frame: .zero)
+    /// Device description label.
+    @AutoLayout public var deviceDescriptionLabel: UILabel = UILabel(frame: .zero)
     
     /// Device state image view.
     @AutoLayout public var stateImageView: UIImageView = UIImageView(frame: .zero)
@@ -59,11 +59,11 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         
         containerView.addSubview(containerStackView)
         
-        containerStackView.addArrangedSubview(labelsStackView)
         containerStackView.addArrangedSubview(stateImageView)
+        containerStackView.addArrangedSubview(labelsStackView)
         
         labelsStackView.addArrangedSubview(deviceTitleLabel)
-        labelsStackView.addArrangedSubview(deviceTypeLabel)
+        labelsStackView.addArrangedSubview(deviceDescriptionLabel)
         
     }
     
@@ -82,13 +82,13 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
             make.left.right.equalToSuperview().inset(14)
         }
         
-        labelsStackView.snp.makeConstraints { make in
+        stateImageView.snp.makeConstraints { make in
             make.left.equalToSuperview()
+            make.width.height.equalTo(28)
         }
         
-        stateImageView.snp.makeConstraints { make in
+        labelsStackView.snp.makeConstraints { make in
             make.right.equalToSuperview()
-            make.width.height.equalTo(28)
         }
         
     }
@@ -108,8 +108,8 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         deviceTitleLabel.font = .primary(ofSize: 18, .bold)
         deviceTitleLabel.textColor = Asset.Colors.darkGray.color
         
-        deviceTypeLabel.font = .primary(ofSize: 16, .semibold)
-        deviceTypeLabel.textColor = Asset.Colors.gray.color
+        deviceDescriptionLabel.font = .primary(ofSize: 16, .semibold)
+        deviceDescriptionLabel.textColor = Asset.Colors.gray.color
         
         containerView.backgroundColor = Asset.Colors.white.color
         containerView.layer.cornerRadius = 12
@@ -142,30 +142,43 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         switch device {
         case let light as Light:
             
-            deviceTypeLabel.text = "Light"
-            
             switch light.mode {
             case .on:
                 stateImageView.image = Asset.Images.Device.deviceLightOnIcon.image
+                deviceDescriptionLabel.text = "Light: on at \(light.intensity)"
             case .off:
                 stateImageView.image = Asset.Images.Device.deviceLightOffIcon.image
+                deviceDescriptionLabel.text = "Light: off"
             }
             
         case let heater as Heater:
             
-            deviceTypeLabel.text = "Heater"
-            
             switch heater.mode {
             case .on:
                 stateImageView.image = Asset.Images.Device.deviceHeaterOnIcon.image
+                deviceDescriptionLabel.text = "Heater: on at " + String(format: "%.1f", heater.temperature) + "°C"
             case .off:
                 stateImageView.image = Asset.Images.Device.deviceHeaterOffIcon.image
+                deviceDescriptionLabel.text = "Heater: off"
             }
             
-        case _ as RollerShutter:
+        case let shutter as RollerShutter:
             
-            deviceTypeLabel.text = "Roller shutter"
             stateImageView.image = Asset.Images.Device.deviceRollerShutterIcon.image
+            
+            if shutter.position == 0 {
+                
+                deviceDescriptionLabel.text = "Roller shutter: closed"
+                
+            } else if shutter.position == 100 {
+                
+                deviceDescriptionLabel.text = "Roller shutter: opened"
+                
+            } else {
+             
+                deviceDescriptionLabel.text = "Roller shutter: opened at \(shutter.position)%"
+                
+            }
             
         default:
             fatalError("Unknown device found.")

@@ -75,6 +75,15 @@ public final class LightSettingsViewController: BaseViewController {
     /// Setups bindings to the view. Should be called once.
     private func setupBindings() {
         
+        settingsView
+            .navigationView
+            .backButton
+            .publisher(for: .touchUpInside)
+            .sink { [unowned self] _ in
+                viewModel.close()
+            }
+            .store(in: &disposeBag)
+        
     }
     
 }

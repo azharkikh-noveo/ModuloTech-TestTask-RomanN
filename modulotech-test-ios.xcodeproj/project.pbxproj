@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3357F3C928D371550044AE7B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3C828D371550044AE7B /* Assets.swift */; };
 		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
@@ -47,6 +48,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3357F3C828D371550044AE7B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +101,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3357F3C728D371050044AE7B /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3C828D371550044AE7B /* Assets.swift */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
 		338C183B28D2829400278530 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +148,7 @@
 		338C185B28D282DC00278530 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				3357F3C728D371050044AE7B /* generated */,
 				338C186D28D2880E00278530 /* Assets.xcassets */,
 				338C185228D2829500278530 /* LaunchScreen.storyboard */,
 			);
@@ -395,6 +406,7 @@
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
 				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
+				3357F3C928D371550044AE7B /* Assets.swift in Sources */,
 				338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
 				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,

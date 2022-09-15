@@ -16,7 +16,7 @@ public final class DeviceListViewModel: BaseViewModel {
     
     
     /// Router type used by the view-model.
-    public typealias RouterType = Router
+    public typealias RouterType = Router & LightSettingsRoute
     
     /// Assigned router.
     private let router: DeviceListViewModel.RouterType
@@ -33,7 +33,7 @@ public final class DeviceListViewModel: BaseViewModel {
     
     // MARK: Lifecycle
     
-    /// Creates an instance of a view-model and assignes a router to it.
+    /// Creates an instance of a view-model and assignes a router and a network service to it.
     public init(
         router: DeviceListViewModel.RouterType,
         networkService: NetworkService
@@ -80,7 +80,16 @@ extension DeviceListViewModel {
     /// Opens a device settings screen for a specific device.
     public func openSettingsScreen(for device: Device) {
         
-        print(device)
+        switch device {
+        case let light as Light:
+            router.openLightSettings(for: light)
+        case let heater as Heater:
+            break
+        case let shutter as RollerShutter:
+            break
+        default:
+            fatalError("Unknown device kind found. Check the flow.")
+        }
         
     }
     

@@ -23,6 +23,9 @@ public final class LightSettingsView: BaseView {
     /// Light mode switch view.
     @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
+    /// Slider to configure the light intensity.
+    @AutoLayout public var intensitySlider: BaseSlider = BaseSlider(frame: .zero)
+    
     
     // MARK: Lifecycle
     
@@ -30,6 +33,7 @@ public final class LightSettingsView: BaseView {
         super.setupSubviewHierarchy()
         addSubview(navigationView)
         addSubview(modeSwitchView)
+        addSubview(intensitySlider)
     }
     
     public override func setupSubviewConstraints() {
@@ -48,6 +52,12 @@ public final class LightSettingsView: BaseView {
             make.height.equalTo(ModeSwitchView.preferredHeight)
         }
         
+        intensitySlider.snp.makeConstraints { make in
+            make.top.equalTo(modeSwitchView.snp.bottom).offset(40)
+            make.left.right.equalToSuperview().inset(30)
+            make.height.equalTo(40)
+        }
+        
     }
     
     public override func setupSubviewBindings() {
@@ -60,6 +70,32 @@ public final class LightSettingsView: BaseView {
         
         navigationView.titleLabel.text = "Device settings"
         
+        intensitySlider.minimumValue = 0
+        intensitySlider.maximumValue = 100
+        intensitySlider.tintColor = Asset.Colors.lightSteelBlue.color
+        
     }
     
 }
+
+
+#if DEBUG
+import SwiftUI
+
+
+struct LightSettingsView_Preview: PreviewProvider {
+    
+    static var previews: some View {
+        
+        UIViewPreview {
+            let view = LightSettingsView(frame: .zero)
+            view.modeSwitchView.switchView.isOn = true
+            view.modeSwitchView.titleLabel.text = "Light is on"
+            return view
+        }
+        .border(Color.blue, width: 0.6)
+        
+    }
+    
+}
+#endif

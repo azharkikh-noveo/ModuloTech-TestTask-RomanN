@@ -95,6 +95,15 @@ public final class LightSettingsViewController: BaseViewController {
             .sink(receiveValue: viewModel.setLightMode(isOn:))
             .store(in: &disposeBag)
         
+        settingsView
+            .intensitySlider
+            .valueChanged
+            .map(\.value)
+            .map(Int.init)
+            .removeDuplicates()
+            .sink(receiveValue: viewModel.setIntensity(_:))
+            .store(in: &disposeBag)
+        
         
         // View-model subscriptions
         
@@ -105,6 +114,13 @@ public final class LightSettingsViewController: BaseViewController {
                 settingsView.modeSwitchView.switchView.isOn = isOn
                 settingsView.modeSwitchView.titleLabel.text = "Selected mode \"" + (isOn ? "ON" : "OFF") + "\""
             }
+            .store(in: &disposeBag)
+        
+        viewModel
+            .lightIntensity
+            .map(Float.init)
+            .receive(on: DispatchQueue.main)
+            .sink(receiveValue: settingsView.intensitySlider.set(value:))
             .store(in: &disposeBag)
         
     }

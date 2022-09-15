@@ -56,7 +56,7 @@ public final class Light: Device {
     
     /// Setter for the light intensity.
     public func set(intensity newValue: Int) {
-        intensity = clamp(intensity, using: 0...100)
+        intensity = clamp(newValue, using: 0...100)
     }
     
 }

@@ -15,6 +15,7 @@
 		3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */; };
 		3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */; };
 		3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */; };
+		3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E228D3D1F60044AE7B /* BaseSlider.swift */; };
 		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
 		3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSwitchView.swift; sourceTree = "<group>"; };
+		3357F3E228D3D1F60044AE7B /* BaseSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlider.swift; sourceTree = "<group>"; };
 		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		338C18B928D3514300278530 /* subview */ = {
 			isa = PBXGroup;
 			children = (
+				3357F3E228D3D1F60044AE7B /* BaseSlider.swift */,
 				338C18BF28D3559C00278530 /* BaseTableViewCell.swift */,
 				338C185F28D283F500278530 /* BaseView.swift */,
 				3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */,
@@ -455,6 +458,7 @@
 				338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */,
 				338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */,
 				338C188E28D3137000278530 /* Transition.swift in Sources */,
+				3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */,
 				338C189128D313CD00278530 /* EmptyTransition.swift in Sources */,
 				338C187728D28DD400278530 /* Heater.swift in Sources */,
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,

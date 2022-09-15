@@ -12,6 +12,11 @@ import Foundation
 public final class Light: Device {
     
     
+    public override var description: String {
+        return "Light(id: \(deviceId), name: \"\(name)\", intensity: \(intensity), mode: \"\(mode)\")"
+    }
+    
+    
     /// Light mode.
     public var mode: Device.BinaryMode
     

@@ -32,6 +32,22 @@ public final class DeviceListViewModel: BaseViewModel {
         self.networkService = networkService
     }
     
+    
+    public override func onViewDidLoad() {
+        
+        super.onViewDidLoad()
+        
+        networkService
+            .deviceList()
+            .sink { _ in
+                
+            } receiveValue: { _ in
+                
+            }
+            .store(in: &disposeBag)
+        
+    }
+    
 }
 
 

@@ -12,6 +12,11 @@ import Foundation
 public final class Heater: Device {
     
     
+    public override var description: String {
+        return "Heater(id: \(deviceId), name: \"\(name)\", temperature: \(temperature), mode: \"\(mode)\")"
+    }
+    
+    
     /// Heater mode.
     public var mode: Device.BinaryMode
     

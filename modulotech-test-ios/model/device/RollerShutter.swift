@@ -12,6 +12,11 @@ import Foundation
 public final class RollerShutter: Device {
     
     
+    public override var description: String {
+        return "RollerShutter(id: \(deviceId), name: \"\(name)\", position: \(position))"
+    }
+    
+    
     /// Shutter position
     public private(set) var position: Int
     

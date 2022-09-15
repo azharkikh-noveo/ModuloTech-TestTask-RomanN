@@ -11,7 +11,12 @@ import Foundation
 // MARK: Device
 
 /// Base class for smart home device.
-public class Device {
+public class Device: CustomStringConvertible {
+    
+    
+    public var description: String {
+        return "Device(id: \(deviceId), name: \"\(name)\")"
+    }
     
     
     /// Device identifier.
@@ -35,7 +40,18 @@ extension Device {
     
     
     /// A simple device mode. Can be either on or off.
-    public enum BinaryMode: UInt8 {
+    public enum BinaryMode: UInt8, CustomStringConvertible {
+        
+        
+        public var description: String {
+            switch self {
+            case .off:
+                return "OFF"
+            case .on:
+                return "ON"
+            }
+        }
+        
         
         /// ON.
         case on

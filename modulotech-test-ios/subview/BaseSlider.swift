@@ -19,10 +19,15 @@ public class BaseSlider: UISlider {
     public var disposeBag: Set<AnyCancellable> = []
     
     /// Slider step.
-    public var step: Float = 1
+    public var step: Float = 1.0
     
     /// Publishes whenever a slider changes its value.
     public let valueChanged: PassthroughSubject<BaseSlider, Never>
+    
+    /// Returns a value considering the step.
+    public var valueConsideringStep: Float {
+        return step * round(value / step)
+    }
     
     
     // MARK: Init

@@ -1,8 +1,8 @@
 //
-//  LightSettingsViewController.swift
+//  HeaterSettingsViewController.swift
 //  modulotech-test-ios
 //
-//  Created by Roman Nabiullin on 15.09.2022.
+//  Created by Roman Nabiullin on 16.09.2022.
 //
 
 import UIKit
@@ -10,26 +10,26 @@ import UIKit
 
 // MARK: - Screen
 
-/// The light device editor screen.
-public final class LightSettingsViewController: BaseViewController {
+/// The heater device editor screen.
+public final class HeaterSettingsViewController: BaseViewController {
     
     
     /// The view-model.
-    private let viewModel: LightSettingsViewModel
+    private let viewModel: HeaterSettingsViewModel
     
     
     // MARK: Subviews
     
     /// Use this property instead of just `view`. Casts a view controller `view` to the needed class.
-    private var settingsView: LightSettingsView! {
-        return view as? LightSettingsView
+    private var settingsView: HeaterSettingsView! {
+        return view as? HeaterSettingsView
     }
     
     
     // MARK: Lifecycle
     
     /// Creates an instance of view controller and assignes a view-model to it.
-    public init(viewModel: LightSettingsViewModel) {
+    public init(viewModel: HeaterSettingsViewModel) {
         self.viewModel = viewModel
         super.init()
     }
@@ -40,14 +40,14 @@ public final class LightSettingsViewController: BaseViewController {
     }
     
     public override func loadView() {
-        view = LightSettingsView(frame: .zero)
+        view = HeaterSettingsView(frame: .zero)
     }
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
         settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
-        settingsView.deviceInfoView.deviceTypeLabel.text = "Light"
+        settingsView.deviceInfoView.deviceTypeLabel.text = "Heater"
         viewModel.onViewDidLoad()
     }
     
@@ -94,24 +94,24 @@ public final class LightSettingsViewController: BaseViewController {
             .publisher(for: .touchUpInside)
             .map(\.isOn)
             .removeDuplicates()
-            .sink(receiveValue: viewModel.setLightMode(isOn:))
+            .sink(receiveValue: viewModel.setHeaterMode(isOn:))
             .store(in: &disposeBag)
         
         settingsView
-            .intensitySlider
+            .temperatureSlider
             .slider
             .valueChanged
             .map(\.valueConsideringStep)
-            .map(Int.init)
+            .map(Double.init)
             .removeDuplicates()
-            .sink(receiveValue: viewModel.setIntensity(_:))
+            .sink(receiveValue: viewModel.setTemperature(_:))
             .store(in: &disposeBag)
         
         
         // View-model subscriptions
         
         viewModel
-            .isLightOn
+            .isHeaterOn
             .receive(on: DispatchQueue.main)
             .sink { [unowned self] isOn in
                 settingsView.modeSwitchView.switchView.isOn = isOn
@@ -120,14 +120,16 @@ public final class LightSettingsViewController: BaseViewController {
             .store(in: &disposeBag)
         
         viewModel
-            .lightIntensity
+            .heaterTemperature
+            .map(Float.init)
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] intensity in
-                settingsView.intensitySlider.titleLabel.text = "Intensity: \(intensity)"
-                settingsView.intensitySlider.slider.set(value: Float(intensity))
+            .sink { [unowned self] temperature in
+                settingsView.temperatureSlider.titleLabel.text = "Temperature: \(String(format: "%.1f", temperature)) °C"
+                settingsView.temperatureSlider.slider.set(value: temperature)
             }
             .store(in: &disposeBag)
         
     }
     
 }
+

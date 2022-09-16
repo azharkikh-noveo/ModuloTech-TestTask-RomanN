@@ -16,7 +16,7 @@ public final class DeviceListViewModel: BaseViewModel {
     
     
     /// Router type used by the view-model.
-    public typealias RouterType = Router & LightSettingsRoute & ShutterSettingsRoute
+    public typealias RouterType = Router & LightSettingsRoute & ShutterSettingsRoute & HeaterSettingsRoute
     
     /// Assigned router.
     private let router: DeviceListViewModel.RouterType
@@ -96,7 +96,7 @@ extension DeviceListViewModel {
         case let light as Light:
             router.openLightSettings(for: light)
         case let heater as Heater:
-            break
+            router.openHeaterSettings(for: heater)
         case let shutter as RollerShutter:
             router.openShutterSettings(for: shutter)
         default:

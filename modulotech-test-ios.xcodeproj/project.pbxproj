@@ -26,6 +26,7 @@
 		3357F3FB28D472BF0044AE7B /* HeaterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */; };
 		3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */; };
 		3357F3FF28D475AA0044AE7B /* HeaterSettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */; };
+		3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */; };
 		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
@@ -85,6 +86,7 @@
 		3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewModel.swift; sourceTree = "<group>"; };
 		3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewController.swift; sourceTree = "<group>"; };
 		3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsRoute.swift; sourceTree = "<group>"; };
+		3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceListViewModel+State.swift"; sourceTree = "<group>"; };
 		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -386,6 +388,7 @@
 			isa = PBXGroup;
 			children = (
 				338C189C28D31A2900278530 /* DeviceListViewModel.swift */,
+				3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
 				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
 				338C187328D28DC000278530 /* Light.swift in Sources */,
+				3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */,
 				338C188C28D3134B00278530 /* Router.swift in Sources */,
 				3357F3D328D3A7320044AE7B /* LightSettingsViewController.swift in Sources */,
 				338C18B828D34FB000278530 /* DeviceListView.swift in Sources */,

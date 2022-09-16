@@ -78,7 +78,27 @@ public final class DeviceListViewController: BaseViewController {
     private func setupBindings() {
         
         viewModel
-            .shouldUpdateScreen
+            .screenState
+            .throttle(
+                for: 1.5,
+                scheduler: DispatchQueue.main,
+                latest: true
+            )
+            .receive(on: DispatchQueue.main)
+            .sink { [unowned self] state in
+                switch state {
+                case .error(let error):
+                    deviceListView.showLoadingErrorState(for: error)
+                case .loading:
+                    deviceListView.showLoadingState()
+                case .deviceList:
+                    deviceListView.showTableView()
+                }
+            }
+            .store(in: &disposeBag)
+        
+        viewModel
+            .shouldReloadDeviceList
             .receive(on: DispatchQueue.main)
             .sink(receiveValue: deviceListView.tableView.reloadData)
             .store(in: &disposeBag)

@@ -20,17 +20,34 @@ public final class DeviceListView: BaseView {
     /// Device list table view.
     @AutoLayout public var tableView: UITableView = UITableView(frame: .zero)
     
+    /// Activity indicator for loading state.
+    @AutoLayout public var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: .zero)
+    
+    /// Label that describes the current activity.
+    @AutoLayout public var activityDescriptionLabel: UILabel = UILabel(frame: .zero)
+    
     
     // MARK: Lifecycle
     
     public override func setupSubviewHierarchy() {
         super.setupSubviewHierarchy()
+        addSubview(activityIndicator)
+        addSubview(activityDescriptionLabel)
         addSubview(tableView)
     }
     
     public override func setupSubviewConstraints() {
         
         super.setupSubviewConstraints()
+        
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
+        
+        activityDescriptionLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(activityIndicator.snp.bottom).offset(20)
+        }
         
         tableView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
@@ -39,13 +56,19 @@ public final class DeviceListView: BaseView {
         
     }
     
-    public override func setupSubviewBindings() {
-        super.setupSubviewBindings()
-    }
-    
     public override func setupSubviews() {
         
         super.setupSubviews()
+        
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .large
+        activityIndicator.color = Asset.Colors.darkGray.color
+        
+        activityDescriptionLabel.font = .primary(ofSize: 18, .semibold)
+        activityDescriptionLabel.textColor = Asset.Colors.black.color
+        activityDescriptionLabel.textAlignment = .center
+        activityDescriptionLabel.numberOfLines = 0
+        activityDescriptionLabel.minimumScaleFactor = 0.5
         
         tableView.register(cellClass: DeviceListTableViewCell.self)
         tableView.rowHeight = DeviceListTableViewCell.preferredHeight
@@ -53,6 +76,31 @@ public final class DeviceListView: BaseView {
         tableView.separatorStyle = .none
         tableView.backgroundColor = Asset.Colors.white.color
         
+    }
+    
+    
+    // MARK: Helper
+    
+    /// Shows a loading error message.
+    public func showLoadingErrorState(for error: Error) {
+        tableView.isHidden = true
+        activityIndicator.stopAnimating()
+        activityDescriptionLabel.text = "Failed to load the device list.\n\(error.localizedDescription)\n\nTry to restart the application."
+        activityDescriptionLabel.sizeToFit()
+    }
+    
+    /// Shows an activity indicator state.
+    public func showLoadingState() {
+        tableView.isHidden = true
+        activityIndicator.startAnimating()
+        activityDescriptionLabel.text = "Fetching the device list."
+        activityDescriptionLabel.sizeToFit()
+    }
+    
+    /// Shows a content view.
+    public func showTableView() {
+        tableView.isHidden = false
+        activityIndicator.stopAnimating()
     }
     
 }

@@ -15,6 +15,14 @@ import Combine
 public final class DeviceListViewModel: BaseViewModel {
     
     
+    /// Cancellable subscription for the device list.
+    private var deviceListDownloadCancellable: AnyCancellable? {
+        willSet {
+            deviceListDownloadCancellable?.cancel()
+        }
+    }
+    
+    
     /// Router type used by the view-model.
     public typealias RouterType = Router & LightSettingsRoute & ShutterSettingsRoute & HeaterSettingsRoute
     
@@ -31,7 +39,10 @@ public final class DeviceListViewModel: BaseViewModel {
     // MARK: Publishers
     
     /// Whether a screen views should be reloaded depending on their data.
-    public let shouldUpdateScreen: PassthroughSubject<Void, Never>
+    public let shouldReloadDeviceList: PassthroughSubject<Void, Never>
+    
+    /// Screen UI state.
+    public let screenState: CurrentValueSubject<DeviceListViewModel.State, Never>
     
     
     // MARK: Lifecycle
@@ -41,8 +52,9 @@ public final class DeviceListViewModel: BaseViewModel {
         router: DeviceListViewModel.RouterType,
         networkService: NetworkService
     ) {
+        self.shouldReloadDeviceList = .init()
+        self.screenState = .init(.loading)
         self.devices = []
-        self.shouldUpdateScreen = .init()
         self.router = router
         self.networkService = networkService
     }
@@ -51,34 +63,49 @@ public final class DeviceListViewModel: BaseViewModel {
     // MARK: View controller lifecycle
     
     public override func onViewDidLoad() {
-        
         super.onViewDidLoad()
+        loadDeviceList()
+    }
+    
+    public override func onViewWillAppear() {
+        super.onViewWillAppear()
+        shouldReloadDeviceList.send()
+    }
+    
+}
+
+
+// MARK: Device list
+
+extension DeviceListViewModel {
+    
+    
+    /// Downloads the device list from the server.
+    public func loadDeviceList() {
         
-        networkService
+        screenState.send(.loading)
+        
+        deviceListDownloadCancellable = networkService
             .deviceList()
             .sink { [unowned self] completion in
                 
                 switch completion {
                 case .finished:
-                    break
-                case .failure:
+                    screenState.send(.deviceList)
+                case .failure(let error):
                     devices = []
+                    screenState.send(.error(error))
                 }
                 
-                shouldUpdateScreen.send()
+                shouldReloadDeviceList.send()
                 
             } receiveValue: { [unowned self] deviceList in
                 
                 devices = deviceList
+                screenState.send(.deviceList)
                 
             }
-            .store(in: &disposeBag)
         
-    }
-    
-    public override func onViewWillAppear() {
-        super.onViewWillAppear()
-        shouldUpdateScreen.send()
     }
     
 }

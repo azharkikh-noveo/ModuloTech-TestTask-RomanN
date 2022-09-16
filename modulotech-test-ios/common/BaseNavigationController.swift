@@ -19,6 +19,10 @@ public class BaseNavigationController: UINavigationController {
         return [.portrait, .portraitUpsideDown]
     }
     
+    public override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     // MARK: Properties
     

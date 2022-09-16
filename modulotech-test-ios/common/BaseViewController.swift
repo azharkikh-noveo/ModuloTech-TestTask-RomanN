@@ -20,7 +20,7 @@ public class BaseViewController: UIViewController {
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
+        return .darkContent
     }
     
     

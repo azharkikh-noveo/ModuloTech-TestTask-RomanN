@@ -746,7 +746,7 @@
 				DEVELOPMENT_TEAM = K3W3K9M953;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = ModuloTech;
+				INFOPLIST_KEY_CFBundleDisplayName = "modulo Tech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -776,7 +776,7 @@
 				DEVELOPMENT_TEAM = K3W3K9M953;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = ModuloTech;
+				INFOPLIST_KEY_CFBundleDisplayName = "modulo Tech";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";

@@ -15,6 +15,11 @@ import Combine
 public class BaseViewController: UIViewController {
     
     
+    public override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .portraitUpsideDown]
+    }
+    
+    
     // MARK: Properties
     
     /// Storage for the subscriptions.

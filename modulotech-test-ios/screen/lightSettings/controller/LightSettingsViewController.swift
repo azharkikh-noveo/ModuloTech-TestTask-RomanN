@@ -46,6 +46,8 @@ public final class LightSettingsViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
+        settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
+        settingsView.deviceInfoView.deviceTypeLabel.text = "Light"
         viewModel.onViewDidLoad()
     }
     
@@ -97,6 +99,7 @@ public final class LightSettingsViewController: BaseViewController {
         
         settingsView
             .intensitySlider
+            .slider
             .valueChanged
             .map(\.value)
             .map(Int.init)
@@ -118,9 +121,11 @@ public final class LightSettingsViewController: BaseViewController {
         
         viewModel
             .lightIntensity
-            .map(Float.init)
             .receive(on: DispatchQueue.main)
-            .sink(receiveValue: settingsView.intensitySlider.set(value:))
+            .sink { [unowned self] intensity in
+                settingsView.intensitySlider.titleLabel.text = "Intensity: \(intensity)"
+                settingsView.intensitySlider.slider.set(value: Float(intensity))
+            }
             .store(in: &disposeBag)
         
     }

@@ -51,6 +51,7 @@ public final class DeviceListView: BaseView {
         tableView.rowHeight = DeviceListTableViewCell.preferredHeight
         tableView.estimatedRowHeight = DeviceListTableViewCell.preferredHeight
         tableView.separatorStyle = .none
+        tableView.backgroundColor = Asset.Colors.white.color
         
     }
     

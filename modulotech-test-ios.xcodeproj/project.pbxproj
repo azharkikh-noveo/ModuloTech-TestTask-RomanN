@@ -16,6 +16,8 @@
 		3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */; };
 		3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */; };
 		3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E228D3D1F60044AE7B /* BaseSlider.swift */; };
+		3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E428D458150044AE7B /* DeviceInfoView.swift */; };
+		3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */; };
 		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
@@ -65,6 +67,8 @@
 		3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
 		3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSwitchView.swift; sourceTree = "<group>"; };
 		3357F3E228D3D1F60044AE7B /* BaseSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlider.swift; sourceTree = "<group>"; };
+		3357F3E428D458150044AE7B /* DeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoView.swift; sourceTree = "<group>"; };
+		3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledHorizontalSlider.swift; sourceTree = "<group>"; };
 		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -372,6 +376,8 @@
 				3357F3E228D3D1F60044AE7B /* BaseSlider.swift */,
 				338C18BF28D3559C00278530 /* BaseTableViewCell.swift */,
 				338C185F28D283F500278530 /* BaseView.swift */,
+				3357F3E428D458150044AE7B /* DeviceInfoView.swift */,
+				3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */,
 				3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */,
 				3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */,
 			);
@@ -492,11 +498,13 @@
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
 				3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */,
+				3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */,
 				338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */,
 				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
 				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
 				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,
 				338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */,
+				3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -642,7 +650,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -672,7 +680,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

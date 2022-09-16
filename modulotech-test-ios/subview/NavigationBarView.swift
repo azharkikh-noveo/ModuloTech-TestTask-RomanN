@@ -16,7 +16,7 @@ public final class NavigationBarView: BaseView {
     
     
     /// Preferred view height.
-    public static let preferredHeight: CGFloat = 80
+    public static let preferredHeight: CGFloat = 60
     
     
     // MARK: Subviews

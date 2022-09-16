@@ -20,11 +20,14 @@ public final class LightSettingsView: BaseView {
     /// Custom navigation bar that is a part of the view.
     @AutoLayout public var navigationView: NavigationBarView = NavigationBarView(frame: .zero)
     
+    /// Light description view.
+    @AutoLayout public var deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
+    
     /// Light mode switch view.
     @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
     /// Slider to configure the light intensity.
-    @AutoLayout public var intensitySlider: BaseSlider = BaseSlider(frame: .zero)
+    @AutoLayout public var intensitySlider: LabeledHorizontalSlider = LabeledHorizontalSlider(frame: .zero)
     
     
     // MARK: Lifecycle
@@ -32,6 +35,7 @@ public final class LightSettingsView: BaseView {
     public override func setupSubviewHierarchy() {
         super.setupSubviewHierarchy()
         addSubview(navigationView)
+        addSubview(deviceInfoView)
         addSubview(modeSwitchView)
         addSubview(intensitySlider)
     }
@@ -46,8 +50,14 @@ public final class LightSettingsView: BaseView {
             make.height.equalTo(NavigationBarView.preferredHeight)
         }
         
+        deviceInfoView.snp.makeConstraints { make in
+            make.top.equalTo(navigationView.snp.bottom).offset(30)
+            make.left.right.equalToSuperview().inset(60)
+            make.height.equalTo(DeviceInfoView.preferredHeight)
+        }
+        
         modeSwitchView.snp.makeConstraints { make in
-            make.top.equalTo(navigationView.snp.bottom).offset(40)
+            make.top.equalTo(deviceInfoView.snp.bottom).offset(40)
             make.left.right.equalToSuperview().inset(30)
             make.height.equalTo(ModeSwitchView.preferredHeight)
         }
@@ -55,7 +65,7 @@ public final class LightSettingsView: BaseView {
         intensitySlider.snp.makeConstraints { make in
             make.top.equalTo(modeSwitchView.snp.bottom).offset(40)
             make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(40)
+            make.height.equalTo(LabeledHorizontalSlider.preferredHeight)
         }
         
     }
@@ -70,9 +80,11 @@ public final class LightSettingsView: BaseView {
         
         navigationView.titleLabel.text = "Device settings"
         
-        intensitySlider.minimumValue = 0
-        intensitySlider.maximumValue = 100
-        intensitySlider.tintColor = Asset.Colors.lightSteelBlue.color
+        deviceInfoView.deviceTypeLabel.text = "Light"
+        
+        intensitySlider.slider.minimumValue = 0
+        intensitySlider.slider.maximumValue = 100
+        intensitySlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
         
     }
     

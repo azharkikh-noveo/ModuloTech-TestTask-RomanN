@@ -97,6 +97,8 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
         
         super.setupSubviews()
         
+        contentView.backgroundColor = Asset.Colors.white.color
+        
         containerStackView.axis = .horizontal
         containerStackView.spacing = 30
         containerStackView.alignment = .center

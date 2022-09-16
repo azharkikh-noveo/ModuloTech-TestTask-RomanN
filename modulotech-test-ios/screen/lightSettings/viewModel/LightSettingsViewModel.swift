@@ -21,7 +21,7 @@ public final class LightSettingsViewModel: BaseViewModel {
     /// Assigned router.
     private let router: LightSettingsViewModel.RouterType
     
-    /// Publishes devices to display.
+    /// A device to display.
     public let device: Light
     
     
@@ -36,9 +36,9 @@ public final class LightSettingsViewModel: BaseViewModel {
     
     // MARK: Lifecycle
     
-    /// Creates an instance of a view-model and assignes a router to it.
+    /// Creates an instance of a view-model, assignes a router and a device to it.
     public init(
-        router: DeviceListViewModel.RouterType,
+        router: LightSettingsViewModel.RouterType,
         device: Light
     ) {
         self.router = router

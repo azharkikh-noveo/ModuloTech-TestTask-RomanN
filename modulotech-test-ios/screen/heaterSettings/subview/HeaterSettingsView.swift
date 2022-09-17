@@ -78,9 +78,9 @@ public final class HeaterSettingsView: BaseView {
         
         super.setupSubviews()
         
-        navigationView.titleLabel.text = "Device settings"
+        navigationView.titleLabel.text = L10n.DeviceSettings.NavigationBar.title
         
-        deviceInfoView.deviceTypeLabel.text = "Heater"
+        deviceInfoView.deviceTypeLabel.text = L10n.Device.Heater.kind
         
         temperatureSlider.slider.minimumValue = 7.0
         temperatureSlider.slider.maximumValue = 28.0

@@ -147,21 +147,22 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
             switch light.mode {
             case .on:
                 stateImageView.image = Asset.Images.Device.deviceLightOnIcon.image
-                deviceDescriptionLabel.text = "Light: on at \(light.intensity)"
+                deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.onAt(light.intensity)
             case .off:
                 stateImageView.image = Asset.Images.Device.deviceLightOffIcon.image
-                deviceDescriptionLabel.text = "Light: off"
+                deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.off
             }
             
         case let heater as Heater:
             
             switch heater.mode {
             case .on:
+                let temperature = String(format: "%.1f", heater.temperature)
                 stateImageView.image = Asset.Images.Device.deviceHeaterOnIcon.image
-                deviceDescriptionLabel.text = "Heater: on at " + String(format: "%.1f", heater.temperature) + "°C"
+                deviceDescriptionLabel.text = L10n.Device.Heater.DeviceListState.onAt(temperature)
             case .off:
                 stateImageView.image = Asset.Images.Device.deviceHeaterOffIcon.image
-                deviceDescriptionLabel.text = "Heater: off"
+                deviceDescriptionLabel.text = L10n.Device.Heater.DeviceListState.off
             }
             
         case let shutter as RollerShutter:
@@ -170,15 +171,15 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
             
             if shutter.position == 0 {
                 
-                deviceDescriptionLabel.text = "Roller shutter: closed"
+                deviceDescriptionLabel.text = L10n.Device.RollerShutter.DeviceListState.closed
                 
             } else if shutter.position == 100 {
                 
-                deviceDescriptionLabel.text = "Roller shutter: opened"
+                deviceDescriptionLabel.text = L10n.Device.RollerShutter.DeviceListState.opened
                 
             } else {
              
-                deviceDescriptionLabel.text = "Roller shutter: opened at \(shutter.position)%"
+                deviceDescriptionLabel.text = L10n.Device.RollerShutter.DeviceListState.openedAt(shutter.position)
                 
             }
             

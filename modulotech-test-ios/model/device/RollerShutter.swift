@@ -17,6 +17,11 @@ public final class RollerShutter: Device {
     }
     
     
+    public override var deviceType: String {
+        return L10n.Device.RollerShutter.kind
+    }
+    
+    
     /// Shutter position
     public private(set) var position: Int
     

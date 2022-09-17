@@ -67,9 +67,9 @@ public final class ShutterSettingsView: BaseView {
         
         super.setupSubviews()
         
-        navigationView.titleLabel.text = "Device settings"
+        navigationView.titleLabel.text = L10n.DeviceSettings.NavigationBar.title
         
-        deviceInfoView.deviceTypeLabel.text = "Roller shutter"
+        deviceInfoView.deviceTypeLabel.text = L10n.Device.RollerShutter.kind
         
         positionSlider.slider.minimumValue = 0
         positionSlider.slider.maximumValue = 100

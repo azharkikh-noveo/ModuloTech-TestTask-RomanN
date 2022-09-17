@@ -42,6 +42,7 @@ internal enum Asset {
       internal static let deviceRollerShutterIcon = ImageAsset(name: "DeviceRollerShutterIcon")
     }
   }
+  internal static let launchScreen = ImageAsset(name: "LaunchScreen")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

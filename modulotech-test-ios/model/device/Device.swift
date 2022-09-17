@@ -19,6 +19,12 @@ public class Device: CustomStringConvertible {
     }
     
     
+    /// A device type string.
+    public var deviceType: String {
+        return L10n.Device.Device.kind
+    }
+    
+    
     /// Device identifier.
     public var deviceId: Int
     
@@ -46,9 +52,9 @@ extension Device {
         public var description: String {
             switch self {
             case .off:
-                return "OFF"
+                return L10n.Device.BinaryMode.off
             case .on:
-                return "ON"
+                return L10n.Device.BinaryMode.on
             }
         }
         

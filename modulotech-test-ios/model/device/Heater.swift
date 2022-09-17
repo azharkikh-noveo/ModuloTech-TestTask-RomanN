@@ -17,6 +17,11 @@ public final class Heater: Device {
     }
     
     
+    public override var deviceType: String {
+        return L10n.Device.Heater.kind
+    }
+    
+    
     /// Heater mode.
     public var mode: Device.BinaryMode
     

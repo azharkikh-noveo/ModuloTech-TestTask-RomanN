@@ -1,0 +1,61 @@
+
+"device.binaryMode.on" = "ON";
+
+"device.binaryMode.off" = "OFF";
+
+
+
+"device.device.kind" = "Device";
+
+"device.light.kind" = "Light";
+
+"device.heater.kind" = "Heater";
+
+"device.rollerShutter.kind" = "Roller shutter";
+
+
+
+"device.light.deviceListState.off" = "Light: off";
+
+"device.light.deviceListState.onAt" = "Light: on at %@";
+
+"device.heater.deviceListState.off" = "Heater: off";
+
+"device.heater.deviceListState.onAt" = "Heater: on at %@°C";
+
+"device.rollerShutter.deviceListState.closed" = "Roller shutter: closed";
+
+"device.rollerShutter.deviceListState.openedAt" = "Roller shutter: opened at %@\%";
+
+"device.rollerShutter.deviceListState.opened" = "Roller shutter: opened";
+
+
+
+"deviceList.state.loadingError" = "Failed to load the device list.\n%@\n\nTry to restart the application.";
+
+"deviceList.state.loading" = "Fetching the device list.";
+
+
+
+"deviceSettings.navigationBar.title" = "Device settings";
+
+
+"deviceSettings.heater.mode.on" = "Selected mode \"ON\"";
+
+"deviceSettings.heater.mode.off" = "Selected mode \"OFF\"";
+
+"deviceSettings.heater.slider.title" = "Temperature: %@ °C";
+
+
+"deviceSettings.light.mode.on" = "Selected mode \"ON\"";
+
+"deviceSettings.light.mode.off" = "Selected mode \"OFF\"";
+
+"deviceSettings.light.slider.title" = "Intensity: %@";
+
+
+"deviceSettings.rollerShutter.slider.title.closed" = "Closed";
+
+"deviceSettings.rollerShutter.slider.title.openedAt" = "Opened at %@\%";
+
+"deviceSettings.rollerShutter.slider.title.opened" = "Opened";

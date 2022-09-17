@@ -43,7 +43,7 @@ public final class NavigationBarView: BaseView {
         backButton.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.left.equalToSuperview().inset(30)
-            make.width.height.equalTo(30)
+            make.width.height.equalTo(34)
         }
         
         titleLabel.snp.makeConstraints { make in

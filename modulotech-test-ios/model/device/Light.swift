@@ -17,6 +17,11 @@ public final class Light: Device {
     }
     
     
+    public override var deviceType: String {
+        return L10n.Device.Light.kind
+    }
+    
+    
     /// Light mode.
     public var mode: Device.BinaryMode
     

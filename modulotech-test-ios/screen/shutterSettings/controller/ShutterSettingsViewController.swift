@@ -47,7 +47,7 @@ public final class ShutterSettingsViewController: BaseViewController {
         super.viewDidLoad()
         setupBindings()
         settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
-        settingsView.deviceInfoView.deviceTypeLabel.text = "Roller shutter"
+        settingsView.deviceInfoView.deviceTypeLabel.text = L10n.Device.RollerShutter.kind
         settingsView.positionSlider.slider.set(value: viewModel.device.position)
         viewModel.onViewDidLoad()
     }
@@ -107,11 +107,11 @@ public final class ShutterSettingsViewController: BaseViewController {
             .shutterPosition
             .map { position in
                 if position == 0 {
-                    return "Closed"
+                    return L10n.DeviceSettings.RollerShutter.Slider.Title.closed
                 } else if position == 100 {
-                    return "Opened"
+                    return L10n.DeviceSettings.RollerShutter.Slider.Title.opened
                 } else {
-                    return "Opened at \(position)%"
+                    return L10n.DeviceSettings.RollerShutter.Slider.Title.openedAt(position)
                 }
             }
             .receive(on: DispatchQueue.main)

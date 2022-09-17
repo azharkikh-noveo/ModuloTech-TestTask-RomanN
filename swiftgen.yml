@@ -5,3 +5,9 @@ xcassets:
     params:
       forceProvidesNamespaces: true
     output: modulotech-test-ios/resources/generated/Assets.swift
+    
+strings:
+  inputs:  modulotech-test-ios/resources/Localizable.strings
+  outputs:
+    templateName: structured-swift5
+    output: modulotech-test-ios/resources/generated/Strings.swift

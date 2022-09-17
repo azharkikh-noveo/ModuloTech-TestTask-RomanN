@@ -12,7 +12,6 @@ extension UITableView {
     
     
     /// Registers a class for use in creating new table cells.
-    /// - Parameter cell: Cell class.
     public func register<T: UITableViewCell>(cellClass cell: T.Type) {
         register(T.self, forCellReuseIdentifier: T.defaultReuseIdentifier)
     }

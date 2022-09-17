@@ -85,7 +85,7 @@ public final class DeviceListView: BaseView {
     public func showLoadingErrorState(for error: Error) {
         tableView.isHidden = true
         activityIndicator.stopAnimating()
-        activityDescriptionLabel.text = "Failed to load the device list.\n\(error.localizedDescription)\n\nTry to restart the application."
+        activityDescriptionLabel.text = L10n.DeviceList.State.loadingError(error.localizedDescription)
         activityDescriptionLabel.sizeToFit()
     }
     
@@ -93,7 +93,7 @@ public final class DeviceListView: BaseView {
     public func showLoadingState() {
         tableView.isHidden = true
         activityIndicator.startAnimating()
-        activityDescriptionLabel.text = "Fetching the device list."
+        activityDescriptionLabel.text = L10n.DeviceList.State.loading
         activityDescriptionLabel.sizeToFit()
     }
     

@@ -16,7 +16,7 @@ public class VerticalSlider: BaseSlider {
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
-        self.transform = .identity.rotated(by: -0.5 * CGFloat.pi)
+        self.transform = .identity.rotated(by: -0.5 * .pi)
     }
     
     required init?(coder: NSCoder) {

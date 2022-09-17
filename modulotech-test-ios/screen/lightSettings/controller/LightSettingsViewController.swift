@@ -48,6 +48,8 @@ public final class LightSettingsViewController: BaseViewController {
         setupBindings()
         settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
         settingsView.deviceInfoView.deviceTypeLabel.text = "Light"
+        settingsView.modeSwitchView.switchView.isOn = viewModel.device.mode.booleanValue
+        settingsView.intensitySlider.slider.set(value: viewModel.device.intensity)
         viewModel.onViewDidLoad()
     }
     
@@ -112,20 +114,22 @@ public final class LightSettingsViewController: BaseViewController {
         
         viewModel
             .isLightOn
+            .map { "Selected mode \"" + ($0 ? "ON" : "OFF") + "\"" }
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] isOn in
-                settingsView.modeSwitchView.switchView.isOn = isOn
-                settingsView.modeSwitchView.titleLabel.text = "Selected mode \"" + (isOn ? "ON" : "OFF") + "\""
-            }
+            .assign(
+                to: \.text,
+                on: settingsView.modeSwitchView.titleLabel
+            )
             .store(in: &disposeBag)
         
         viewModel
             .lightIntensity
+            .map { "Intensity: \($0)" }
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] intensity in
-                settingsView.intensitySlider.titleLabel.text = "Intensity: \(intensity)"
-                settingsView.intensitySlider.slider.set(value: Float(intensity))
-            }
+            .assign(
+                to: \.text,
+                on: settingsView.intensitySlider.titleLabel
+            )
             .store(in: &disposeBag)
         
     }

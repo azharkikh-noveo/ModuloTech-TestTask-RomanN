@@ -27,6 +27,8 @@
 		3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */; };
 		3357F3FF28D475AA0044AE7B /* HeaterSettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */; };
 		3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */; };
+		336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E228D5FD62001BD45B /* VerticalSlider.swift */; };
+		336147E528D60002001BD45B /* LabeledVerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E428D60002001BD45B /* LabeledVerticalSlider.swift */; };
 		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
 		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
 		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
@@ -87,6 +89,8 @@
 		3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewController.swift; sourceTree = "<group>"; };
 		3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsRoute.swift; sourceTree = "<group>"; };
 		3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceListViewModel+State.swift"; sourceTree = "<group>"; };
+		336147E228D5FD62001BD45B /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		336147E428D60002001BD45B /* LabeledVerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledVerticalSlider.swift; sourceTree = "<group>"; };
 		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -469,8 +473,10 @@
 				338C185F28D283F500278530 /* BaseView.swift */,
 				3357F3E428D458150044AE7B /* DeviceInfoView.swift */,
 				3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */,
+				336147E428D60002001BD45B /* LabeledVerticalSlider.swift */,
 				3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */,
 				3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */,
+				336147E228D5FD62001BD45B /* VerticalSlider.swift */,
 			);
 			path = subview;
 			sourceTree = "<group>";
@@ -571,6 +577,7 @@
 				338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */,
 				3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */,
 				338C187B28D28E8200278530 /* Device.swift in Sources */,
+				336147E528D60002001BD45B /* LabeledVerticalSlider.swift in Sources */,
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
 				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
 				338C18B328D34F1700278530 /* UITableView+register.swift in Sources */,
@@ -593,6 +600,7 @@
 				3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */,
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
+				336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */,
 				3357F3ED28D46A6D0044AE7B /* ShutterSettingsView.swift in Sources */,
 				3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */,
 				3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */,

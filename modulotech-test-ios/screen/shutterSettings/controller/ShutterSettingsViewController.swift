@@ -48,6 +48,7 @@ public final class ShutterSettingsViewController: BaseViewController {
         setupBindings()
         settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
         settingsView.deviceInfoView.deviceTypeLabel.text = "Roller shutter"
+        settingsView.positionSlider.slider.set(value: viewModel.device.position)
         viewModel.onViewDidLoad()
     }
     
@@ -88,45 +89,37 @@ public final class ShutterSettingsViewController: BaseViewController {
             }
             .store(in: &disposeBag)
         
-//        settingsView
-//            .modeSwitchView
-//            .switchView
-//            .publisher(for: .touchUpInside)
-//            .map(\.isOn)
-//            .removeDuplicates()
-//            .sink(receiveValue: viewModel.setLightMode(isOn:))
-//            .store(in: &disposeBag)
-//
-//        settingsView
-//            .intensitySlider
-//            .slider
-//            .valueChanged
-//            .map(\.value)
-//            .map(Int.init)
-//            .removeDuplicates()
-//            .sink(receiveValue: viewModel.setIntensity(_:))
-//            .store(in: &disposeBag)
+
+        settingsView
+            .positionSlider
+            .slider
+            .valueChanged
+            .map(\.valueConsideringStep)
+            .map(Int.init)
+            .removeDuplicates()
+            .sink(receiveValue: viewModel.setPosition(_:))
+            .store(in: &disposeBag)
         
         
         // View-model subscriptions
-        
-//        viewModel
-//            .isLightOn
-//            .receive(on: DispatchQueue.main)
-//            .sink { [unowned self] isOn in
-//                settingsView.modeSwitchView.switchView.isOn = isOn
-//                settingsView.modeSwitchView.titleLabel.text = "Selected mode \"" + (isOn ? "ON" : "OFF") + "\""
-//            }
-//            .store(in: &disposeBag)
-//
-//        viewModel
-//            .lightIntensity
-//            .receive(on: DispatchQueue.main)
-//            .sink { [unowned self] intensity in
-//                settingsView.intensitySlider.titleLabel.text = "Intensity: \(intensity)"
-//                settingsView.intensitySlider.slider.set(value: Float(intensity))
-//            }
-//            .store(in: &disposeBag)
+
+        viewModel
+            .shutterPosition
+            .map { position in
+                if position == 0 {
+                    return "Closed"
+                } else if position == 100 {
+                    return "Opened"
+                } else {
+                    return "Opened at \(position)%"
+                }
+            }
+            .receive(on: DispatchQueue.main)
+            .assign(
+                to: \.text,
+                on: settingsView.positionSlider.titleLabel
+            )
+            .store(in: &disposeBag)
         
     }
     

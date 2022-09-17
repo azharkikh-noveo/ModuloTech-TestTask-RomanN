@@ -48,6 +48,8 @@ public final class HeaterSettingsViewController: BaseViewController {
         setupBindings()
         settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
         settingsView.deviceInfoView.deviceTypeLabel.text = "Heater"
+        settingsView.modeSwitchView.switchView.isOn = viewModel.device.mode.booleanValue
+        settingsView.temperatureSlider.slider.set(value: viewModel.device.temperature)
         viewModel.onViewDidLoad()
     }
     
@@ -112,24 +114,25 @@ public final class HeaterSettingsViewController: BaseViewController {
         
         viewModel
             .isHeaterOn
+            .map { "Selected mode \"" + ($0 ? "ON" : "OFF") + "\"" }
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] isOn in
-                settingsView.modeSwitchView.switchView.isOn = isOn
-                settingsView.modeSwitchView.titleLabel.text = "Selected mode \"" + (isOn ? "ON" : "OFF") + "\""
-            }
+            .assign(
+                to: \.text,
+                on: settingsView.modeSwitchView.titleLabel
+            )
             .store(in: &disposeBag)
         
         viewModel
             .heaterTemperature
             .map(Float.init)
+            .map { "Temperature: \(String(format: "%.1f", $0)) °C" }
             .receive(on: DispatchQueue.main)
-            .sink { [unowned self] temperature in
-                settingsView.temperatureSlider.titleLabel.text = "Temperature: \(String(format: "%.1f", temperature)) °C"
-                settingsView.temperatureSlider.slider.set(value: temperature)
-            }
+            .assign(
+                to: \.text,
+                on: settingsView.temperatureSlider.titleLabel
+            )
             .store(in: &disposeBag)
         
     }
     
 }
-

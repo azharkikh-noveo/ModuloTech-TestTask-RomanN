@@ -11,7 +11,7 @@ import SnapKit
 
 // MARK: - View
 
-/// View with device binary mode switching.
+/// Horizontal slider with description label.
 public final class LabeledHorizontalSlider: BaseView {
     
     

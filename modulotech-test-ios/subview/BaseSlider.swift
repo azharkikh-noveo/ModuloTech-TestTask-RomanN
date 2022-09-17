@@ -36,7 +36,7 @@ public class BaseSlider: UISlider {
         
         self.valueChanged = .init()
         
-        super.init(frame: .zero)
+        super.init(frame: frame)
         
         tintColor = Asset.Colors.lightSteelBlue.color
         
@@ -58,15 +58,20 @@ public class BaseSlider: UISlider {
         }
     }
     
-    /// Sets the value
-    public func set(value: Float) {
+    /// Sets the value.
+    public func set<Value: BinaryFloatingPoint>(value: Value) {
         
-        let newValue: Float = step * round(value / step)
+        let newValue: Float = step * round(Float(value) / step)
         
         if 1e-10 < fabsf(self.value - newValue) {
             self.value = newValue
         }
         
+    }
+    
+    /// Sets the value.
+    public func set<Value: BinaryInteger>(value: Value) {
+        set(value: Float(value))
     }
     
 }

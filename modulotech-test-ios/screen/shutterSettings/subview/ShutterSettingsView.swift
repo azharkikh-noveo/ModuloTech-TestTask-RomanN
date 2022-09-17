@@ -24,7 +24,7 @@ public final class ShutterSettingsView: BaseView {
     @AutoLayout public var deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
     
     /// Roller shutter position slider.
-    @AutoLayout public var intensitySlider: LabeledHorizontalSlider = LabeledHorizontalSlider(frame: .zero)
+    @AutoLayout public var positionSlider: LabeledVerticalSlider = LabeledVerticalSlider(frame: .zero)
     
     
     // MARK: Lifecycle
@@ -33,7 +33,7 @@ public final class ShutterSettingsView: BaseView {
         super.setupSubviewHierarchy()
         addSubview(navigationView)
         addSubview(deviceInfoView)
-        addSubview(intensitySlider)
+        addSubview(positionSlider)
     }
     
     public override func setupSubviewConstraints() {
@@ -52,10 +52,9 @@ public final class ShutterSettingsView: BaseView {
             make.height.equalTo(DeviceInfoView.preferredHeight)
         }
         
-        intensitySlider.snp.makeConstraints { make in
+        positionSlider.snp.makeConstraints { make in
             make.top.equalTo(deviceInfoView.snp.bottom).offset(40)
             make.left.right.equalToSuperview().inset(30)
-            make.height.equalTo(LabeledHorizontalSlider.preferredHeight)
         }
         
     }
@@ -72,9 +71,9 @@ public final class ShutterSettingsView: BaseView {
         
         deviceInfoView.deviceTypeLabel.text = "Roller shutter"
         
-        intensitySlider.slider.minimumValue = 0
-        intensitySlider.slider.maximumValue = 100
-        intensitySlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
+        positionSlider.slider.minimumValue = 0
+        positionSlider.slider.maximumValue = 100
+        positionSlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
         
     }
     
@@ -91,6 +90,7 @@ struct ShutterSettingsView_Preview: PreviewProvider {
         
         UIViewPreview {
             let view = ShutterSettingsView(frame: .zero)
+            view.positionSlider.titleLabel.text = "Position"
             return view
         }
         .border(Color.blue, width: 0.6)

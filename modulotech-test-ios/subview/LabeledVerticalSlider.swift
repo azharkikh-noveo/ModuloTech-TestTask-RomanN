@@ -49,7 +49,7 @@ public final class LabeledVerticalSlider: BaseView {
         }
         
         slider.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(8)
+            make.top.equalTo(titleLabel.snp.bottom).offset(14)
             make.left.right.equalToSuperview()
             make.height.equalTo(snp.width)
             make.bottom.equalToSuperview()

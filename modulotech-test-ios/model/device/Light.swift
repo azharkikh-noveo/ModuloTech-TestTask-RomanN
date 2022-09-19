@@ -28,7 +28,7 @@ public final class Light: Device {
     
     
     /// Light mode.
-    public var mode: Device.BinaryMode
+    public var mode: BinaryMode
     
     /// Light intensity. Use `set(intensity:)` to change the value.
     public private(set) var intensity: Int
@@ -37,7 +37,7 @@ public final class Light: Device {
     public init(
         deviceId: Int,
         name: String,
-        mode: Device.BinaryMode,
+        mode: BinaryMode,
         intensity: Int
     ) {
         self.mode = mode
@@ -49,7 +49,7 @@ public final class Light: Device {
     public init?(from rawModel: DeviceProduct) {
         
         guard
-            let mode = rawModel.mode.flatMap(Device.BinaryMode.init(rawMode:)),
+            let mode = rawModel.mode.flatMap(BinaryMode.init(rawMode:)),
             let intensity = rawModel.intensity
         else {
             return nil

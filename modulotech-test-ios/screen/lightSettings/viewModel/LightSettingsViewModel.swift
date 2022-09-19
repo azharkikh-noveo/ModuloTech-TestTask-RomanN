@@ -58,7 +58,7 @@ extension LightSettingsViewModel {
     
     /// Changes the light binary mode.
     public func setLightMode(isOn: Bool) {
-        device.mode = Device.BinaryMode(isOn: isOn)
+        device.mode = BinaryMode(isOn: isOn)
         isLightOn.send(isOn)
     }
     

@@ -58,7 +58,7 @@ extension HeaterSettingsViewModel {
     
     /// Changes the heater binary mode.
     public func setHeaterMode(isOn: Bool) {
-        device.mode = Device.BinaryMode(isOn: isOn)
+        device.mode = BinaryMode(isOn: isOn)
         isHeaterOn.send(isOn)
     }
     

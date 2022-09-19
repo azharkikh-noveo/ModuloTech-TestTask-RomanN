@@ -28,7 +28,7 @@ public final class Heater: Device {
     
     
     /// Heater mode.
-    public var mode: Device.BinaryMode
+    public var mode: BinaryMode
     
     /// Heater temperature
     public private(set) var temperature: Double
@@ -37,7 +37,7 @@ public final class Heater: Device {
     public init(
         deviceId: Int,
         name: String,
-        mode: Device.BinaryMode,
+        mode: BinaryMode,
         temperature: Double
     ) {
         self.mode = mode
@@ -49,7 +49,7 @@ public final class Heater: Device {
     public init?(from rawModel: DeviceProduct) {
         
         guard
-            let mode = rawModel.mode.flatMap(Device.BinaryMode.init(rawMode:)),
+            let mode = rawModel.mode.flatMap(BinaryMode.init(rawMode:)),
             let temperature = rawModel.temperature
         else {
             return nil

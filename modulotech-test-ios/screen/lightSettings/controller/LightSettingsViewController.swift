@@ -46,10 +46,7 @@ public final class LightSettingsViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
-        settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
-        settingsView.deviceInfoView.deviceTypeLabel.text = L10n.Device.Light.kind
-        settingsView.modeSwitchView.switchView.isOn = viewModel.device.mode.booleanValue
-        settingsView.intensitySlider.slider.set(value: viewModel.device.intensity)
+        settingsView.setup(for: viewModel.device)
         viewModel.onViewDidLoad()
     }
     

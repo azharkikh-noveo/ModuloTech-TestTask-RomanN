@@ -59,21 +59,28 @@ public final class RollerShutterSettingsView: BaseView {
         
     }
     
-    public override func setupSubviewBindings() {
-        super.setupSubviewBindings()
-    }
-    
     public override func setupSubviews() {
         
         super.setupSubviews()
         
         navigationView.titleLabel.text = L10n.DeviceSettings.NavigationBar.title
         
-        deviceInfoView.deviceTypeLabel.text = L10n.Device.RollerShutter.kind
-        
-        positionSlider.slider.minimumValue = 0
-        positionSlider.slider.maximumValue = 100
         positionSlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
+        
+    }
+    
+    
+    // MARK: Helper
+    
+    /// Setups a view for the device. Should be called once.
+    public func setup(for device: RollerShutter) {
+        
+        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        deviceInfoView.deviceTitleLabel.text = device.name
+        
+        positionSlider.slider.minimumValue = Float(device.minimumPosition)
+        positionSlider.slider.maximumValue = Float(device.maximumPosition)
+        positionSlider.slider.set(value: device.position)
         
     }
     

@@ -70,10 +70,6 @@ public final class LightSettingsView: BaseView {
         
     }
     
-    public override func setupSubviewBindings() {
-        super.setupSubviewBindings()
-    }
-    
     public override func setupSubviews() {
         
         super.setupSubviews()
@@ -85,6 +81,23 @@ public final class LightSettingsView: BaseView {
         intensitySlider.slider.minimumValue = 0
         intensitySlider.slider.maximumValue = 100
         intensitySlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
+        
+    }
+    
+    
+    // MARK: Helper
+    
+    /// Setups a view for the device. Should be called once.
+    public func setup(for device: Light) {
+        
+        deviceInfoView.deviceTitleLabel.text = device.name
+        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        
+        modeSwitchView.switchView.isOn = device.mode.booleanValue
+     
+        intensitySlider.slider.minimumValue = Float(device.minimumIntensity)
+        intensitySlider.slider.maximumValue = Float(device.maximumIntensity)
+        intensitySlider.slider.set(value: device.intensity)
         
     }
     

@@ -46,9 +46,7 @@ public final class RollerShutterSettingsViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
-        settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
-        settingsView.deviceInfoView.deviceTypeLabel.text = L10n.Device.RollerShutter.kind
-        settingsView.positionSlider.slider.set(value: viewModel.device.position)
+        settingsView.setup(for: viewModel.device)
         viewModel.onViewDidLoad()
     }
     

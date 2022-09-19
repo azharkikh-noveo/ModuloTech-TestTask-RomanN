@@ -46,10 +46,7 @@ public final class HeaterSettingsViewController: BaseViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setupBindings()
-        settingsView.deviceInfoView.deviceTitleLabel.text = viewModel.device.name
-        settingsView.deviceInfoView.deviceTypeLabel.text = L10n.Device.Heater.kind
-        settingsView.modeSwitchView.switchView.isOn = viewModel.device.mode.booleanValue
-        settingsView.temperatureSlider.slider.set(value: viewModel.device.temperature)
+        settingsView.setup(for: viewModel.device)
         viewModel.onViewDidLoad()
     }
     

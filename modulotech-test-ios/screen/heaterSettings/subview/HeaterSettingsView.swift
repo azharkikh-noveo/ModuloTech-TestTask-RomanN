@@ -80,12 +80,25 @@ public final class HeaterSettingsView: BaseView {
         
         navigationView.titleLabel.text = L10n.DeviceSettings.NavigationBar.title
         
-        deviceInfoView.deviceTypeLabel.text = L10n.Device.Heater.kind
-        
-        temperatureSlider.slider.minimumValue = 7.0
-        temperatureSlider.slider.maximumValue = 28.0
-        temperatureSlider.slider.step = 0.5
         temperatureSlider.slider.tintColor = Asset.Colors.lightSteelBlue.color
+        
+    }
+    
+    
+    // MARK: Helper
+    
+    /// Setups a view for the device. Should be called once.
+    public func setup(for device: Heater) {
+        
+        deviceInfoView.deviceTitleLabel.text = device.name
+        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        
+        temperatureSlider.slider.minimumValue = Float(device.minimumTemperature)
+        temperatureSlider.slider.maximumValue = Float(device.maximumTemperature)
+        temperatureSlider.slider.step = Float(device.temperatureStep)
+        temperatureSlider.slider.set(value: device.temperature)
+        
+        modeSwitchView.switchView.isOn = device.mode.booleanValue
         
     }
     

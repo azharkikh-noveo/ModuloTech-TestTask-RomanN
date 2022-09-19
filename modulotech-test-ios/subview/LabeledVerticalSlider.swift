@@ -2,7 +2,7 @@
 //  LabeledVerticalSlider.swift
 //  modulotech-test-ios
 //
-//  Created by Roman Nabiullin on 17.09.2022.
+//  Created by Roman Nabiullin on 20.09.2022.
 //
 
 import UIKit

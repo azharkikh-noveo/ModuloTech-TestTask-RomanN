@@ -2,7 +2,7 @@
 //  DeviceListViewModel+State.swift
 //  modulotech-test-ios
 //
-//  Created by Roman Nabiullin on 16.09.2022.
+//  Created by Roman Nabiullin on 19.09.2022.
 //
 
 import Foundation

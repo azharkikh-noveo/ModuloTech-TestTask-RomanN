@@ -14,6 +14,13 @@ import Foundation
 public struct RollerShutter: Device {
     
     
+    /// Default roller shutter position lowerbound.
+    public static let defaultMinimumPosition: Int = 0
+    
+    /// Default roller shutter position upperbound.
+    public static let defaultMaximumPosition: Int = 100
+    
+    
     public var deviceKindString: String {
         return L10n.Device.RollerShutter.kind
     }
@@ -22,18 +29,34 @@ public struct RollerShutter: Device {
     
     public var name: String
     
+    /// Minimum shutter position.
+    public let minimumPosition: Int
+    
     /// Shutter position
     public private(set) var position: Int
+    
+    /// Maximum shutter position.
+    public let maximumPosition: Int
+    
+    /// The shutter position change step.
+    public let positionStep: Int = 1
+    
+    
+    // MARK: Init
     
     /// Creates an instace of the roller shutter device with all parameters specified.
     public init(
         deviceId: Int,
         name: String,
-        position: Int
+        position: Int,
+        minimumPosition: Int = RollerShutter.defaultMinimumPosition,
+        maximumPosition: Int = RollerShutter.defaultMaximumPosition
     ) {
         self.deviceId = deviceId
         self.name = name
-        self.position = clamp(position, using: 0...100)
+        self.position = clamp(position, using: minimumPosition...maximumPosition)
+        self.minimumPosition = minimumPosition
+        self.maximumPosition = maximumPosition
     }
     
     /// Creates an instance of the device from its raw model if possible.
@@ -46,6 +69,8 @@ public struct RollerShutter: Device {
         self.deviceId = rawModel.deviceId
         self.name = rawModel.name
         self.position = position
+        self.minimumPosition = 0
+        self.maximumPosition = 100
         
     }
     

@@ -13,6 +13,14 @@ import Foundation
 /// "Light" device.
 public struct Light: Device {
     
+    
+    /// Default light intensity lowerbound.
+    public static let defaultMinimumIntensity: Int = 0
+    
+    /// Default light intensity upperbound.
+    public static let defaultMaximumIntensity: Int = 100
+    
+    
     public var deviceKindString: String {
         return L10n.Device.Light.kind
     }
@@ -21,11 +29,20 @@ public struct Light: Device {
     
     public var name: String
     
+    /// Light mode.
+    public var mode: BinaryMode
+    
+    /// Minimum light intensity.
+    public let minimumIntensity: Int
+    
     /// Light intensity. Use `set(intensity:)` to change the value.
     public private(set) var intensity: Int
     
-    /// Light mode.
-    public var mode: BinaryMode
+    /// Maximum light intensity.
+    public let maximumIntensity: Int
+    
+    /// The intensity change step.
+    public let intensityStep: Int = 1
     
     
     // MARK: Init
@@ -35,12 +52,16 @@ public struct Light: Device {
         deviceId: Int,
         name: String,
         mode: BinaryMode,
-        intensity: Int
+        intensity: Int,
+        minimumIntensity: Int = Light.defaultMinimumIntensity,
+        maximumIntensity: Int = Light.defaultMaximumIntensity
     ) {
         self.deviceId = deviceId
         self.name = name
-        self.intensity = clamp(intensity, using: 0...100)
+        self.intensity = clamp(intensity, using: minimumIntensity...maximumIntensity)
         self.mode = mode
+        self.minimumIntensity = minimumIntensity
+        self.maximumIntensity = maximumIntensity
     }
     
     /// Creates an instance of the device from its raw model if possible.
@@ -57,6 +78,8 @@ public struct Light: Device {
         self.name = rawModel.name
         self.intensity = intensity
         self.mode = mode
+        self.minimumIntensity = Light.defaultMinimumIntensity
+        self.maximumIntensity = Light.defaultMaximumIntensity
         
     }
     
@@ -65,7 +88,7 @@ public struct Light: Device {
     
     /// Setter for the light intensity.
     public mutating func set(intensity newValue: Int) {
-        intensity = clamp(newValue, using: 0...100)
+        intensity = clamp(newValue, using: minimumIntensity...maximumIntensity)
     }
     
 }

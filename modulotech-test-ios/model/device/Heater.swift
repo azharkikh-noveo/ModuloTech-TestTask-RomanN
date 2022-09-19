@@ -14,6 +14,13 @@ import Foundation
 public struct Heater: Device {
     
     
+    /// Default heater temperature lowerbound.
+    public static let defaultMinimumTemperature: Double = 7.0
+    
+    /// Default heater temperature upperbound.
+    public static let defaultMaximumTemperature: Double = 28.0
+    
+    
     public var deviceKindString: String {
         return L10n.Device.Heater.kind
     }
@@ -25,20 +32,36 @@ public struct Heater: Device {
     /// Heater mode.
     public var mode: BinaryMode
     
+    /// Minimum temperature.
+    public let minimumTemperature: Double
+    
     /// Heater temperature
     public private(set) var temperature: Double
+    
+    /// Maximum temperature.
+    public let maximumTemperature: Double
+    
+    /// The heater temperature change step.
+    public let temperatureStep: Double = 0.5
+    
+    
+    // MARK: Init
     
     /// Creates an instace of the light device with all parameters specified.
     public init(
         deviceId: Int,
         name: String,
         mode: BinaryMode,
-        temperature: Double
+        temperature: Double,
+        minimumTemperature: Double = Heater.defaultMinimumTemperature,
+        maximumTemperature: Double = Heater.defaultMaximumTemperature
     ) {
         self.deviceId = deviceId
         self.name = name
         self.mode = mode
-        self.temperature = clamp(temperature, using: 7...28)
+        self.temperature = clamp(temperature, using: minimumTemperature...maximumTemperature)
+        self.minimumTemperature = minimumTemperature
+        self.maximumTemperature = maximumTemperature
     }
     
     /// Creates an instance of the device from its raw model if possible.
@@ -55,6 +78,8 @@ public struct Heater: Device {
         self.name = rawModel.name
         self.temperature = temperature
         self.mode = mode
+        self.minimumTemperature = Heater.defaultMinimumTemperature
+        self.maximumTemperature = Heater.defaultMaximumTemperature
         
     }
     

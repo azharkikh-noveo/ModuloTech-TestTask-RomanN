@@ -1,5 +1,5 @@
 //
-//  ShutterSettingsViewController.swift
+//  RollerShutterSettingsViewController.swift
 //  modulotech-test-ios
 //
 //  Created by Roman Nabiullin on 16.09.2022.
@@ -11,25 +11,25 @@ import UIKit
 // MARK: - Screen
 
 /// The roller shutter device editor screen.
-public final class ShutterSettingsViewController: BaseViewController {
+public final class RollerShutterSettingsViewController: BaseViewController {
     
     
     /// The view-model.
-    private let viewModel: ShutterSettingsViewModel
+    private let viewModel: RollerShutterSettingsViewModel
     
     
     // MARK: Subviews
     
     /// Use this property instead of just `view`. Casts a view controller `view` to the needed class.
-    private var settingsView: ShutterSettingsView! {
-        return view as? ShutterSettingsView
+    private var settingsView: RollerShutterSettingsView! {
+        return view as? RollerShutterSettingsView
     }
     
     
     // MARK: Lifecycle
     
     /// Creates an instance of view controller and assignes a view-model to it.
-    public init(viewModel: ShutterSettingsViewModel) {
+    public init(viewModel: RollerShutterSettingsViewModel) {
         self.viewModel = viewModel
         super.init()
     }
@@ -40,7 +40,7 @@ public final class ShutterSettingsViewController: BaseViewController {
     }
     
     public override func loadView() {
-        view = ShutterSettingsView(frame: .zero)
+        view = RollerShutterSettingsView(frame: .zero)
     }
     
     public override func viewDidLoad() {

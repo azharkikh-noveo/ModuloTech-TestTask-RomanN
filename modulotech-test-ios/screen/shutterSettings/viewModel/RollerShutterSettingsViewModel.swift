@@ -1,5 +1,5 @@
 //
-//  ShutterSettingsViewModel.swift
+//  RollerShutterSettingsViewModel.swift
 //  modulotech-test-ios
 //
 //  Created by Roman Nabiullin on 16.09.2022.
@@ -12,14 +12,11 @@ import Combine
 // MARK: - View-model
 
 /// View-model of the shutter device settings screen.
-public final class ShutterSettingsViewModel: BaseViewModel {
+public final class RollerShutterSettingsViewModel: BaseViewModel {
     
     
-    /// Router type used by the view-model.
-    public typealias RouterType = Router
-    
-    /// Assigned router.
-    private let router: ShutterSettingsViewModel.RouterType
+    /// Coordinator delegate.
+    private weak var coordinatorDelegate: RollerShutterSettingsCoordinatorDelegate?
     
     /// A device to display.
     public let device: RollerShutter
@@ -33,14 +30,15 @@ public final class ShutterSettingsViewModel: BaseViewModel {
     
     // MARK: Lifecycle
     
-    /// Creates an instance of a view-model, assignes a router and a device to it.
+    /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
-        router: ShutterSettingsViewModel.RouterType,
-        device: RollerShutter
+        device: RollerShutter,
+        coordinatorDelegate: RollerShutterSettingsCoordinatorDelegate?
     ) {
-        self.router = router
         self.device = device
+        self.coordinatorDelegate = coordinatorDelegate
     }
+    
     
     public override func onViewDidLoad() {
         super.onViewDidLoad()
@@ -52,7 +50,7 @@ public final class ShutterSettingsViewModel: BaseViewModel {
 
 // MARK: Settings
 
-extension ShutterSettingsViewModel {
+extension RollerShutterSettingsViewModel {
     
     
     /// Changes the shutter position.
@@ -66,12 +64,12 @@ extension ShutterSettingsViewModel {
 
 // MARK: Navigation
 
-extension ShutterSettingsViewModel {
+extension RollerShutterSettingsViewModel {
     
     
     /// Closes the screen.
     public func close() {
-        router.close(completion: nil)
+        coordinatorDelegate?.viewModelDidClose(self)
     }
     
 }

@@ -12,7 +12,7 @@ import SnapKit
 // MARK: - View
 
 /// Content view of the roller shutter settings screen.
-public final class ShutterSettingsView: BaseView {
+public final class RollerShutterSettingsView: BaseView {
     
     
     // MARK: Subviews
@@ -89,7 +89,7 @@ struct ShutterSettingsView_Preview: PreviewProvider {
     static var previews: some View {
         
         UIViewPreview {
-            let view = ShutterSettingsView(frame: .zero)
+            let view = RollerShutterSettingsView(frame: .zero)
             view.positionSlider.titleLabel.text = "Position"
             return view
         }

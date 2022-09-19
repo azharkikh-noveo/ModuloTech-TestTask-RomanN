@@ -15,11 +15,8 @@ import Combine
 public final class HeaterSettingsViewModel: BaseViewModel {
     
     
-    /// Router type used by the view-model.
-    public typealias RouterType = Router
-    
-    /// Assigned router.
-    private let router: HeaterSettingsViewModel.RouterType
+    /// Coordinator delegate.
+    private weak var coordinatorDelegate: HeaterSettingsCoordinatorDelegate?
     
     /// A device to display.
     public let device: Heater
@@ -36,13 +33,13 @@ public final class HeaterSettingsViewModel: BaseViewModel {
     
     // MARK: Lifecycle
     
-    /// Creates an instance of a view-model, assignes a router and a device to it.
+    /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
-        router: HeaterSettingsViewModel.RouterType,
-        device: Heater
+        device: Heater,
+        coordinatorDelegate: HeaterSettingsCoordinatorDelegate?
     ) {
-        self.router = router
         self.device = device
+        self.coordinatorDelegate = coordinatorDelegate
     }
     
     public override func onViewDidLoad() {
@@ -81,7 +78,7 @@ extension HeaterSettingsViewModel {
     
     /// Closes the screen.
     public func close() {
-        router.close(completion: nil)
+        coordinatorDelegate?.viewModelDidClose(self)
     }
     
 }

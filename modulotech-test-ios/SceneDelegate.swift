@@ -11,8 +11,7 @@ import UIKit
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
-    var window: UIWindow?
-
+    var coordinator: ApplicationCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
@@ -20,12 +19,11 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        let router = BaseRouter(rootTransition: EmptyTransition())
+        coordinator = ApplicationCoordinator(
+            window: UIWindow(windowScene: windowScene)
+        )
         
-        window = UIWindow(windowScene: windowScene)
-        window?.backgroundColor = Asset.Colors.white.color
-        window?.rootViewController = router.makeRootViewController()
-        window?.makeKeyAndVisible()
+        coordinator?.openDeviceList()
         
     }
 

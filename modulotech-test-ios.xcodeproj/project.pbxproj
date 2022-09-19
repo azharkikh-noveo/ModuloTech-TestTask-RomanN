@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33331F4928D8544A00F6DFD0 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F4828D8544A00F6DFD0 /* ApplicationCoordinator.swift */; };
+		33331F4F28D85DF100F6DFD0 /* LightSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F4E28D85DF100F6DFD0 /* LightSettingsCoordinator.swift */; };
+		33331F5128D86E8D00F6DFD0 /* DeviceListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F5028D86E8D00F6DFD0 /* DeviceListCoordinator.swift */; };
+		33331F5528D8733100F6DFD0 /* HeaterSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F5428D8733100F6DFD0 /* HeaterSettingsCoordinator.swift */; };
+		33331F5728D8733A00F6DFD0 /* RollerShutterSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F5628D8733A00F6DFD0 /* RollerShutterSettingsCoordinator.swift */; };
+		33331F5928D8759500F6DFD0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F5828D8759500F6DFD0 /* Coordinator.swift */; };
 		3357F3C928D371550044AE7B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3C828D371550044AE7B /* Assets.swift */; };
 		3357F3D328D3A7320044AE7B /* LightSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D228D3A7320044AE7B /* LightSettingsViewController.swift */; };
 		3357F3D528D3A73A0044AE7B /* LightSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D428D3A73A0044AE7B /* LightSettingsViewModel.swift */; };
 		3357F3D728D3A7430044AE7B /* LightSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D628D3A7430044AE7B /* LightSettingsView.swift */; };
-		3357F3D928D3A8E40044AE7B /* LightSettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D828D3A8E40044AE7B /* LightSettingsRoute.swift */; };
 		3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */; };
 		3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */; };
 		3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */; };
@@ -19,13 +24,11 @@
 		3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E428D458150044AE7B /* DeviceInfoView.swift */; };
 		3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */; };
 		3357F3ED28D46A6D0044AE7B /* ShutterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3EC28D46A6D0044AE7B /* ShutterSettingsView.swift */; };
-		3357F3EF28D46A750044AE7B /* ShutterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3EE28D46A750044AE7B /* ShutterSettingsViewController.swift */; };
-		3357F3F128D46A7D0044AE7B /* ShutterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F028D46A7D0044AE7B /* ShutterSettingsViewModel.swift */; };
-		3357F3F328D470810044AE7B /* ShutterSettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F228D470810044AE7B /* ShutterSettingsRoute.swift */; };
+		3357F3EF28D46A750044AE7B /* RollerShutterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */; };
+		3357F3F128D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */; };
 		3357F3F928D472B80044AE7B /* HeaterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F828D472B80044AE7B /* HeaterSettingsView.swift */; };
 		3357F3FB28D472BF0044AE7B /* HeaterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */; };
 		3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */; };
-		3357F3FF28D475AA0044AE7B /* HeaterSettingsRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */; };
 		3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */; };
 		336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E228D5FD62001BD45B /* VerticalSlider.swift */; };
 		336147E528D60002001BD45B /* LabeledVerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E428D60002001BD45B /* LabeledVerticalSlider.swift */; };
@@ -46,14 +49,8 @@
 		338C187728D28DD400278530 /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187628D28DD400278530 /* Heater.swift */; };
 		338C187B28D28E8200278530 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187A28D28E8200278530 /* Device.swift */; };
 		338C187F28D2967100278530 /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187E28D2967100278530 /* Clamp.swift */; };
-		338C188C28D3134B00278530 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C188B28D3134B00278530 /* Router.swift */; };
-		338C188E28D3137000278530 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C188D28D3137000278530 /* Transition.swift */; };
-		338C189128D313CD00278530 /* EmptyTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189028D313CD00278530 /* EmptyTransition.swift */; };
-		338C189328D313F100278530 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189228D313F100278530 /* PushTransition.swift */; };
-		338C189B28D3176D00278530 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189A28D3176D00278530 /* BaseRouter.swift */; };
 		338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189C28D31A2900278530 /* DeviceListViewModel.swift */; };
 		338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189E28D31A8B00278530 /* DeviceListViewController.swift */; };
-		338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A028D31B0500278530 /* DeviceListRoute.swift */; };
 		338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A228D31B6200278530 /* BaseNavigationController.swift */; };
 		338C18A628D31DF900278530 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A528D31DF900278530 /* NetworkService.swift */; };
 		338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A828D323BC00278530 /* DeviceProduct.swift */; };
@@ -71,11 +68,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33331F4828D8544A00F6DFD0 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApplicationCoordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/ApplicationCoordinator.swift"; sourceTree = "<group>"; };
+		33331F4E28D85DF100F6DFD0 /* LightSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LightSettingsCoordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/LightSettingsCoordinator.swift"; sourceTree = "<group>"; };
+		33331F5028D86E8D00F6DFD0 /* DeviceListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeviceListCoordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/DeviceListCoordinator.swift"; sourceTree = "<group>"; };
+		33331F5428D8733100F6DFD0 /* HeaterSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HeaterSettingsCoordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/HeaterSettingsCoordinator.swift"; sourceTree = "<group>"; };
+		33331F5628D8733A00F6DFD0 /* RollerShutterSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RollerShutterSettingsCoordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/RollerShutterSettingsCoordinator.swift"; sourceTree = "<group>"; };
+		33331F5828D8759500F6DFD0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Coordinator.swift; path = "../../../../../code/modulotech-test-ios/modulotech-test-ios/navigation/coordinator/Coordinator.swift"; sourceTree = "<group>"; };
 		3357F3C828D371550044AE7B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		3357F3D228D3A7320044AE7B /* LightSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsViewController.swift; sourceTree = "<group>"; };
 		3357F3D428D3A73A0044AE7B /* LightSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsViewModel.swift; sourceTree = "<group>"; };
 		3357F3D628D3A7430044AE7B /* LightSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsView.swift; sourceTree = "<group>"; };
-		3357F3D828D3A8E40044AE7B /* LightSettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsRoute.swift; sourceTree = "<group>"; };
 		3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
 		3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSwitchView.swift; sourceTree = "<group>"; };
@@ -83,13 +85,11 @@
 		3357F3E428D458150044AE7B /* DeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoView.swift; sourceTree = "<group>"; };
 		3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledHorizontalSlider.swift; sourceTree = "<group>"; };
 		3357F3EC28D46A6D0044AE7B /* ShutterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSettingsView.swift; sourceTree = "<group>"; };
-		3357F3EE28D46A750044AE7B /* ShutterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSettingsViewController.swift; sourceTree = "<group>"; };
-		3357F3F028D46A7D0044AE7B /* ShutterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSettingsViewModel.swift; sourceTree = "<group>"; };
-		3357F3F228D470810044AE7B /* ShutterSettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSettingsRoute.swift; sourceTree = "<group>"; };
+		3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSettingsViewController.swift; sourceTree = "<group>"; };
+		3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSettingsViewModel.swift; sourceTree = "<group>"; };
 		3357F3F828D472B80044AE7B /* HeaterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsView.swift; sourceTree = "<group>"; };
 		3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewModel.swift; sourceTree = "<group>"; };
 		3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewController.swift; sourceTree = "<group>"; };
-		3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsRoute.swift; sourceTree = "<group>"; };
 		3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceListViewModel+State.swift"; sourceTree = "<group>"; };
 		336147E228D5FD62001BD45B /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
 		336147E428D60002001BD45B /* LabeledVerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledVerticalSlider.swift; sourceTree = "<group>"; };
@@ -113,14 +113,8 @@
 		338C187628D28DD400278530 /* Heater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
 		338C187A28D28E8200278530 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		338C187E28D2967100278530 /* Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clamp.swift; sourceTree = "<group>"; };
-		338C188B28D3134B00278530 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		338C188D28D3137000278530 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
-		338C189028D313CD00278530 /* EmptyTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTransition.swift; sourceTree = "<group>"; };
-		338C189228D313F100278530 /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
-		338C189A28D3176D00278530 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		338C189C28D31A2900278530 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
 		338C189E28D31A8B00278530 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
-		338C18A028D31B0500278530 /* DeviceListRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListRoute.swift; sourceTree = "<group>"; };
 		338C18A228D31B6200278530 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		338C18A528D31DF900278530 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		338C18A828D323BC00278530 /* DeviceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProduct.swift; sourceTree = "<group>"; };
@@ -148,6 +142,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33331F4728D853C900F6DFD0 /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33331F4828D8544A00F6DFD0 /* ApplicationCoordinator.swift */,
+				33331F5828D8759500F6DFD0 /* Coordinator.swift */,
+				33331F5028D86E8D00F6DFD0 /* DeviceListCoordinator.swift */,
+				33331F4E28D85DF100F6DFD0 /* LightSettingsCoordinator.swift */,
+				33331F5428D8733100F6DFD0 /* HeaterSettingsCoordinator.swift */,
+				33331F5628D8733A00F6DFD0 /* RollerShutterSettingsCoordinator.swift */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
 		3357F3C728D371050044AE7B /* generated */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,7 +211,7 @@
 		3357F3E928D46A4B0044AE7B /* controller */ = {
 			isa = PBXGroup;
 			children = (
-				3357F3EE28D46A750044AE7B /* ShutterSettingsViewController.swift */,
+				3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -212,7 +219,7 @@
 		3357F3EA28D46A500044AE7B /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
-				3357F3F028D46A7D0044AE7B /* ShutterSettingsViewModel.swift */,
+				3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -407,41 +414,9 @@
 		338C188828D312FF00278530 /* navigation */ = {
 			isa = PBXGroup;
 			children = (
-				338C188A28D3130E00278530 /* core */,
-				338C188F28D3137600278530 /* transition */,
-				338C188928D3130900278530 /* routes */,
+				33331F4728D853C900F6DFD0 /* coordinator */,
 			);
 			path = navigation;
-			sourceTree = "<group>";
-		};
-		338C188928D3130900278530 /* routes */ = {
-			isa = PBXGroup;
-			children = (
-				338C18A028D31B0500278530 /* DeviceListRoute.swift */,
-				3357F3D828D3A8E40044AE7B /* LightSettingsRoute.swift */,
-				3357F3FE28D475AA0044AE7B /* HeaterSettingsRoute.swift */,
-				3357F3F228D470810044AE7B /* ShutterSettingsRoute.swift */,
-			);
-			path = routes;
-			sourceTree = "<group>";
-		};
-		338C188A28D3130E00278530 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				338C189A28D3176D00278530 /* BaseRouter.swift */,
-				338C188B28D3134B00278530 /* Router.swift */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		338C188F28D3137600278530 /* transition */ = {
-			isa = PBXGroup;
-			children = (
-				338C189028D313CD00278530 /* EmptyTransition.swift */,
-				338C189228D313F100278530 /* PushTransition.swift */,
-				338C188D28D3137000278530 /* Transition.swift */,
-			);
-			path = transition;
 			sourceTree = "<group>";
 		};
 		338C18A428D31CB900278530 /* service */ = {
@@ -569,10 +544,8 @@
 				3357F3D728D3A7430044AE7B /* LightSettingsView.swift in Sources */,
 				338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */,
 				338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */,
-				338C188E28D3137000278530 /* Transition.swift in Sources */,
 				3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */,
-				3357F3F128D46A7D0044AE7B /* ShutterSettingsViewModel.swift in Sources */,
-				338C189128D313CD00278530 /* EmptyTransition.swift in Sources */,
+				3357F3F128D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift in Sources */,
 				338C187728D28DD400278530 /* Heater.swift in Sources */,
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
@@ -580,7 +553,6 @@
 				3357F3C928D371550044AE7B /* Assets.swift in Sources */,
 				338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */,
 				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
-				3357F3D928D3A8E40044AE7B /* LightSettingsRoute.swift in Sources */,
 				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,
 				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
 				338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */,
@@ -591,18 +563,17 @@
 				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
 				338C18B328D34F1700278530 /* UITableView+register.swift in Sources */,
 				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
-				338C189328D313F100278530 /* PushTransition.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
 				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
 				338C187328D28DC000278530 /* Light.swift in Sources */,
 				3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */,
-				338C188C28D3134B00278530 /* Router.swift in Sources */,
+				33331F5928D8759500F6DFD0 /* Coordinator.swift in Sources */,
 				3357F3D328D3A7320044AE7B /* LightSettingsViewController.swift in Sources */,
 				338C18B828D34FB000278530 /* DeviceListView.swift in Sources */,
 				338C187F28D2967100278530 /* Clamp.swift in Sources */,
-				338C189B28D3176D00278530 /* BaseRouter.swift in Sources */,
-				3357F3F328D470810044AE7B /* ShutterSettingsRoute.swift in Sources */,
 				3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */,
+				33331F5128D86E8D00F6DFD0 /* DeviceListCoordinator.swift in Sources */,
+				33331F5528D8733100F6DFD0 /* HeaterSettingsCoordinator.swift in Sources */,
 				3357F3F928D472B80044AE7B /* HeaterSettingsView.swift in Sources */,
 				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
 				3357F3D528D3A73A0044AE7B /* LightSettingsViewModel.swift in Sources */,
@@ -611,17 +582,18 @@
 				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
 				33C0B5D228D629F6002454BF /* Strings.swift in Sources */,
 				336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */,
+				33331F4928D8544A00F6DFD0 /* ApplicationCoordinator.swift in Sources */,
 				3357F3ED28D46A6D0044AE7B /* ShutterSettingsView.swift in Sources */,
 				3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */,
 				3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */,
 				338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */,
 				3357F3FB28D472BF0044AE7B /* HeaterSettingsViewModel.swift in Sources */,
 				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
-				338C18A128D31B0500278530 /* DeviceListRoute.swift in Sources */,
+				33331F4F28D85DF100F6DFD0 /* LightSettingsCoordinator.swift in Sources */,
 				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,
 				338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */,
-				3357F3FF28D475AA0044AE7B /* HeaterSettingsRoute.swift in Sources */,
-				3357F3EF28D46A750044AE7B /* ShutterSettingsViewController.swift in Sources */,
+				33331F5728D8733A00F6DFD0 /* RollerShutterSettingsCoordinator.swift in Sources */,
+				3357F3EF28D46A750044AE7B /* RollerShutterSettingsViewController.swift in Sources */,
 				3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

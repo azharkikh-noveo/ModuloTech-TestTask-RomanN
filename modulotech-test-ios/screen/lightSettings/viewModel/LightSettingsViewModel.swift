@@ -15,11 +15,8 @@ import Combine
 public final class LightSettingsViewModel: BaseViewModel {
     
     
-    /// Router type used by the view-model.
-    public typealias RouterType = Router
-    
-    /// Assigned router.
-    private let router: LightSettingsViewModel.RouterType
+    /// Coordinator delegate.
+    private weak var coordinatorDelegate: LightSettingsCoordinatorDelegate?
     
     /// A device to display.
     public let device: Light
@@ -36,13 +33,13 @@ public final class LightSettingsViewModel: BaseViewModel {
     
     // MARK: Lifecycle
     
-    /// Creates an instance of a view-model, assignes a router and a device to it.
+    /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
-        router: LightSettingsViewModel.RouterType,
-        device: Light
+        device: Light,
+        coordinatorDelegate: LightSettingsCoordinatorDelegate?
     ) {
-        self.router = router
         self.device = device
+        self.coordinatorDelegate = coordinatorDelegate
     }
     
     public override func onViewDidLoad() {
@@ -81,7 +78,7 @@ extension LightSettingsViewModel {
     
     /// Closes the screen.
     public func close() {
-        router.close(completion: nil)
+        coordinatorDelegate?.viewModelDidClose(self)
     }
     
 }

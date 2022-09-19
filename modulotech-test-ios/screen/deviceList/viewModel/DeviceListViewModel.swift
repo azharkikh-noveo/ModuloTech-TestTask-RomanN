@@ -23,11 +23,8 @@ public final class DeviceListViewModel: BaseViewModel {
     }
     
     
-    /// Router type used by the view-model.
-    public typealias RouterType = Router & LightSettingsRoute & ShutterSettingsRoute & HeaterSettingsRoute
-    
-    /// Assigned router.
-    private let router: DeviceListViewModel.RouterType
+    /// Coordinator delegate.
+    private weak var coordinatorDelegate: DeviceListCoordinatorDelegate?
     
     /// Used for backend calls.
     private let networkService: NetworkService
@@ -49,14 +46,14 @@ public final class DeviceListViewModel: BaseViewModel {
     
     /// Creates an instance of a view-model and assignes a router and a network service to it.
     public init(
-        router: DeviceListViewModel.RouterType,
-        networkService: NetworkService
+        networkService: NetworkService,
+        coordinatorDelegate: DeviceListCoordinatorDelegate?
     ) {
         self.shouldReloadDeviceList = .init()
         self.screenState = .init(.loading)
         self.devices = []
-        self.router = router
         self.networkService = networkService
+        self.coordinatorDelegate = coordinatorDelegate
     }
     
     
@@ -118,18 +115,16 @@ extension DeviceListViewModel {
     
     /// Opens a device settings screen for a specific device.
     public func openSettingsScreen(for device: Device) {
-        
         switch device {
         case let light as Light:
-            router.openLightSettings(for: light)
+            coordinatorDelegate?.viewModel(self, didSelectDevice: light)
         case let heater as Heater:
-            router.openHeaterSettings(for: heater)
+            coordinatorDelegate?.viewModel(self, didSelectDevice: heater)
         case let shutter as RollerShutter:
-            router.openShutterSettings(for: shutter)
+            coordinatorDelegate?.viewModel(self, didSelectDevice: shutter)
         default:
-            fatalError("Unknown device kind found. Check the flow.")
+            preconditionFailure("Unknown device kind found. Check the flow.")
         }
-        
     }
     
 }

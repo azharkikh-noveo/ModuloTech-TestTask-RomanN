@@ -15,8 +15,8 @@ import Combine
 public final class RollerShutterSettingsViewModel: BaseViewModel {
     
     
-    /// Coordinator delegate.
-    private weak var coordinatorDelegate: RollerShutterSettingsCoordinatorDelegate?
+    /// Reference to a coordinator.
+    private weak var coordinator: DeviceSettingsCoordinator?
     
     /// A device to display.
     public var device: RollerShutter
@@ -33,10 +33,10 @@ public final class RollerShutterSettingsViewModel: BaseViewModel {
     /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
         device: RollerShutter,
-        coordinatorDelegate: RollerShutterSettingsCoordinatorDelegate?
+        coordinator: DeviceSettingsCoordinator?
     ) {
         self.device = device
-        self.coordinatorDelegate = coordinatorDelegate
+        self.coordinator = coordinator
     }
     
     
@@ -69,7 +69,20 @@ extension RollerShutterSettingsViewModel {
     
     /// Closes the screen.
     public func close() {
-        coordinatorDelegate?.viewModelDidClose(self)
+        
+        do {
+            
+            try coordinator?.changeState(
+                from: .rollerShutterSettings(device: device),
+                to: .deviceList
+            )
+            
+        } catch let error {
+            
+            print(error)
+            
+        }
+        
     }
     
 }

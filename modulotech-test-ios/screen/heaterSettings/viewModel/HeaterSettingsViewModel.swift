@@ -15,8 +15,8 @@ import Combine
 public final class HeaterSettingsViewModel: BaseViewModel {
     
     
-    /// Coordinator delegate.
-    private weak var coordinatorDelegate: HeaterSettingsCoordinatorDelegate?
+    /// Reference to a coordinator.
+    private weak var coordinator: DeviceSettingsCoordinator?
     
     /// A device to display.
     public var device: Heater
@@ -36,10 +36,10 @@ public final class HeaterSettingsViewModel: BaseViewModel {
     /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
         device: Heater,
-        coordinatorDelegate: HeaterSettingsCoordinatorDelegate?
+        coordinator: DeviceSettingsCoordinator?
     ) {
         self.device = device
-        self.coordinatorDelegate = coordinatorDelegate
+        self.coordinator = coordinator
     }
     
     public override func onViewDidLoad() {
@@ -78,7 +78,20 @@ extension HeaterSettingsViewModel {
     
     /// Closes the screen.
     public func close() {
-        coordinatorDelegate?.viewModelDidClose(self)
+        
+        do {
+            
+            try coordinator?.changeState(
+                from: .heaterSettings(device: device),
+                to: .deviceList
+            )
+            
+        } catch let error {
+            
+            print(error)
+            
+        }
+        
     }
     
 }

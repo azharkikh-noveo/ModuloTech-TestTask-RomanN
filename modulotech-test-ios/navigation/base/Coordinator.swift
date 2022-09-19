@@ -8,11 +8,11 @@
 import UIKit
 
 
-/// A coordinator protocol.
+/// Protocol to which any coordinator should conform.
 public protocol Coordinator {
     
     
-    /// Starts a coordinator flow and returns its root view controller.
-    func viewController() -> UIViewController
+    /// Starts a coordinator flow.
+    func start()
     
 }

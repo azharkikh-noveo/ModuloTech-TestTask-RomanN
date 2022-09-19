@@ -15,8 +15,8 @@ import Combine
 public final class LightSettingsViewModel: BaseViewModel {
     
     
-    /// Coordinator delegate.
-    private weak var coordinatorDelegate: LightSettingsCoordinatorDelegate?
+    /// Reference to a coordinator.
+    private weak var coordinator: DeviceSettingsCoordinator?
     
     /// A device to display.
     public var device: Light
@@ -36,10 +36,10 @@ public final class LightSettingsViewModel: BaseViewModel {
     /// Creates an instance of a view-model, assignes a coordinator and a device to it.
     public init(
         device: Light,
-        coordinatorDelegate: LightSettingsCoordinatorDelegate?
+        coordinator: DeviceSettingsCoordinator?
     ) {
         self.device = device
-        self.coordinatorDelegate = coordinatorDelegate
+        self.coordinator = coordinator
     }
     
     public override func onViewDidLoad() {
@@ -78,7 +78,20 @@ extension LightSettingsViewModel {
     
     /// Closes the screen.
     public func close() {
-        coordinatorDelegate?.viewModelDidClose(self)
+        
+        do {
+         
+            try coordinator?.changeState(
+                from: .lightSettings(device: device),
+                to: .deviceList
+            )
+            
+        } catch let error {
+            
+            print(error)
+            
+        }
+        
     }
     
 }

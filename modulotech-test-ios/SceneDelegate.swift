@@ -11,7 +11,9 @@ import UIKit
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
-    var coordinator: ApplicationCoordinator?
+    var coordinator: DeviceSettingsCoordinator?
+    
+    var window: UIWindow?
 
     func scene(
         _ scene: UIScene,
@@ -23,11 +25,19 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
         
-        coordinator = ApplicationCoordinator(
-            window: UIWindow(windowScene: windowScene)
-        )
+        let window = UIWindow(windowScene: windowScene)
         
-        coordinator?.openDeviceList()
+        let networkService = NetworkService()
+        
+        self.window = window
+        
+        self.coordinator = DeviceSettingsCoordinator(
+            window: window,
+            networkService: networkService
+        )
+        self.coordinator?.start()
+        
+        window.makeKeyAndVisible()
         
     }
 

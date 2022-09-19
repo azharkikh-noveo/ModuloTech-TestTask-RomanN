@@ -23,8 +23,8 @@ public final class DeviceListViewModel: BaseViewModel {
     }
     
     
-    /// Coordinator delegate.
-    private weak var coordinatorDelegate: DeviceListCoordinatorDelegate?
+    /// Reference to a coordinator.
+    private weak var coordinator: DeviceSettingsCoordinator?
     
     /// Used for backend calls.
     private let networkService: NetworkService
@@ -47,13 +47,13 @@ public final class DeviceListViewModel: BaseViewModel {
     /// Creates an instance of a view-model and assignes a router and a network service to it.
     public init(
         networkService: NetworkService,
-        coordinatorDelegate: DeviceListCoordinatorDelegate?
+        coordinator: DeviceSettingsCoordinator?
     ) {
         self.shouldReloadDeviceList = .init()
         self.screenState = .init(.loading)
         self.devices = []
         self.networkService = networkService
-        self.coordinatorDelegate = coordinatorDelegate
+        self.coordinator = coordinator
     }
     
     
@@ -62,11 +62,6 @@ public final class DeviceListViewModel: BaseViewModel {
     public override func onViewDidLoad() {
         super.onViewDidLoad()
         loadDeviceList()
-    }
-    
-    public override func onViewWillAppear() {
-        super.onViewWillAppear()
-        shouldReloadDeviceList.send()
     }
     
 }
@@ -115,16 +110,70 @@ extension DeviceListViewModel {
     
     /// Opens a device settings screen for a specific device.
     public func openSettingsScreen(for device: Device) {
-        switch device {
-        case let light as Light:
-            coordinatorDelegate?.viewModel(self, didSelectDevice: light)
-        case let heater as Heater:
-            coordinatorDelegate?.viewModel(self, didSelectDevice: heater)
-        case let shutter as RollerShutter:
-            coordinatorDelegate?.viewModel(self, didSelectDevice: shutter)
-        default:
-            preconditionFailure("Unknown device kind found. Check the flow.")
+        
+        do {
+            
+            switch device {
+            case let light as Light:
+                try coordinator?.changeState(to: .lightSettings(device: light))
+            case let heater as Heater:
+                try coordinator?.changeState(to: .heaterSettings(device: heater))
+            case let shutter as RollerShutter:
+                try coordinator?.changeState(to: .rollerShutterSettings(device: shutter))
+            default:
+                preconditionFailure("Unknown device kind found. Check the flow.")
+            }
+            
+        } catch let error {
+            
+            print(error.localizedDescription)
+            
         }
+        
+    }
+    
+}
+
+
+// MARK: DeviceSettingsCoordinatorDelegate
+
+extension DeviceListViewModel: DeviceSettingsCoordinatorDelegate {
+    
+    
+    public func coordinator(
+        _ coordinator: DeviceSettingsCoordinator,
+        willChangeStateFrom oldState: DeviceSettingsCoordinator.State,
+        to newState: DeviceSettingsCoordinator.State
+    ) {
+        
+        switch newState {
+        case .deviceList:
+            break
+        default:
+            return
+        }
+        
+        var modifiedDevice: Device
+        
+        switch oldState {
+        case .lightSettings(let device):
+            modifiedDevice = device
+        case .heaterSettings(let device):
+            modifiedDevice = device
+        case .rollerShutterSettings(let device):
+            modifiedDevice = device
+        case .deviceList:
+            return
+        }
+        
+        guard let i = devices.map(\.deviceId).firstIndex(of: modifiedDevice.deviceId) else {
+            return
+        }
+        
+        devices[i] = modifiedDevice
+        
+        shouldReloadDeviceList.send()
+        
     }
     
 }

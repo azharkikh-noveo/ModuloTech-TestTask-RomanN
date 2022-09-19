@@ -19,7 +19,7 @@ public final class HeaterSettingsViewModel: BaseViewModel {
     private weak var coordinatorDelegate: HeaterSettingsCoordinatorDelegate?
     
     /// A device to display.
-    public let device: Heater
+    public var device: Heater
     
     
     // MARK: Publishers

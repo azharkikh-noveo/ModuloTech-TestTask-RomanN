@@ -10,31 +10,17 @@ import Foundation
 
 // MARK: Device
 
-/// Base class for smart home device.
-public class Device: CustomStringConvertible {
-    
-    
-    public var description: String {
-        return "Device(id: \(deviceId), name: \"\(name)\")"
-    }
-    
-    
-    /// A device type string.
-    public var deviceType: String {
-        return L10n.Device.Device.kind
-    }
+/// Base type of a smart home devices.
+public protocol Device: CustomStringConvertible {
     
     
     /// Device identifier.
-    public var deviceId: Int
+    var deviceId: Int { get set }
     
     /// Device name.
-    public var name: String
+    var name: String { get set }
     
-    /// Creates an instance of a device.
-    public init(id: Int, name: String) {
-        self.deviceId = id
-        self.name = name
-    }
+    /// Device type string.
+    var deviceKindString: String { get }
     
 }

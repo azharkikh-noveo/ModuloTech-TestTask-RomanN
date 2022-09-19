@@ -19,7 +19,7 @@ public final class LightSettingsViewModel: BaseViewModel {
     private weak var coordinatorDelegate: LightSettingsCoordinatorDelegate?
     
     /// A device to display.
-    public let device: Light
+    public var device: Light
     
     
     // MARK: Publishers

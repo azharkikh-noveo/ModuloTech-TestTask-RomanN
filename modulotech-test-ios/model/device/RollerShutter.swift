@@ -8,19 +8,19 @@
 import Foundation
 
 
+// MARK: - Model
+
 /// "RollerShutter" device.
-public final class RollerShutter: Device {
+public struct RollerShutter: Device {
     
     
-    public override var description: String {
-        return "RollerShutter(id: \(deviceId), name: \"\(name)\", position: \(position))"
-    }
-    
-    
-    public override var deviceType: String {
+    public var deviceKindString: String {
         return L10n.Device.RollerShutter.kind
     }
     
+    public var deviceId: Int
+    
+    public var name: String
     
     /// Shutter position
     public private(set) var position: Int
@@ -31,8 +31,9 @@ public final class RollerShutter: Device {
         name: String,
         position: Int
     ) {
+        self.deviceId = deviceId
+        self.name = name
         self.position = clamp(position, using: 0...100)
-        super.init(id: deviceId, name: name)
     }
     
     /// Creates an instance of the device from its raw model if possible.
@@ -42,8 +43,9 @@ public final class RollerShutter: Device {
             return nil
         }
         
+        self.deviceId = rawModel.deviceId
+        self.name = rawModel.name
         self.position = position
-        super.init(id: rawModel.deviceId, name: rawModel.name)
         
     }
     
@@ -51,8 +53,24 @@ public final class RollerShutter: Device {
     // MARK: Helper
     
     /// Setter for the shutter position.
-    public func set(position newValue: Int) {
+    public mutating func set(position newValue: Int) {
         position = clamp(newValue, using: 0...100)
+    }
+    
+}
+
+
+// MARK: CustomStringConvertible
+
+extension RollerShutter: CustomStringConvertible {
+    
+    
+    public var description: String {
+        var result: String = ""
+        result += "RollerShutter(id: \(deviceId), "
+        result += "name: \"\(name)\", "
+        result += "position: \(position))"
+        return result
     }
     
 }

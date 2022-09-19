@@ -19,7 +19,7 @@ public final class RollerShutterSettingsViewModel: BaseViewModel {
     private weak var coordinatorDelegate: RollerShutterSettingsCoordinatorDelegate?
     
     /// A device to display.
-    public let device: RollerShutter
+    public var device: RollerShutter
     
     
     // MARK: Publishers

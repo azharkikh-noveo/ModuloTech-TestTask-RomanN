@@ -13,7 +13,12 @@ public final class Light: Device {
     
     
     public override var description: String {
-        return "Light(id: \(deviceId), name: \"\(name)\", intensity: \(intensity), mode: \"\(mode)\")"
+        var result: String = ""
+        result += "Light(id: \(deviceId), "
+        result += "name: \"\(name)\", "
+        result += "intensity: \(intensity), "
+        result += "mode: \"\(mode)\")"
+        return result
     }
     
     

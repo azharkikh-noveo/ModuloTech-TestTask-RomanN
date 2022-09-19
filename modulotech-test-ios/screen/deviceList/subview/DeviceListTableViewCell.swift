@@ -147,7 +147,9 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
             switch light.mode {
             case .on:
                 stateImageView.image = Asset.Images.Device.deviceLightOnIcon.image
-                deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.onAt(light.intensity)
+                deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.onAt(
+                    light.intensity
+                )
             case .off:
                 stateImageView.image = Asset.Images.Device.deviceLightOffIcon.image
                 deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.off
@@ -179,7 +181,9 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
                 
             } else {
              
-                deviceDescriptionLabel.text = L10n.Device.RollerShutter.DeviceListState.openedAt(shutter.position)
+                deviceDescriptionLabel.text = L10n.Device.RollerShutter.DeviceListState.openedAt(
+                    shutter.position
+                )
                 
             }
             

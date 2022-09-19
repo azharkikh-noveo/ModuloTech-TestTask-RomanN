@@ -21,7 +21,7 @@ public final class DeviceListView: BaseView {
     @AutoLayout public var tableView: UITableView = UITableView(frame: .zero)
     
     /// Activity indicator for loading state.
-    @AutoLayout public var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: .zero)
+    @AutoLayout public var activityIndicator = UIActivityIndicatorView(frame: .zero)
     
     /// Label that describes the current activity.
     @AutoLayout public var activityDescriptionLabel: UILabel = UILabel(frame: .zero)
@@ -85,7 +85,9 @@ public final class DeviceListView: BaseView {
     public func showLoadingErrorState(for error: Error) {
         tableView.isHidden = true
         activityIndicator.stopAnimating()
-        activityDescriptionLabel.text = L10n.DeviceList.State.loadingError(error.localizedDescription)
+        activityDescriptionLabel.text = L10n.DeviceList.State.loadingError(
+            error.localizedDescription
+        )
         activityDescriptionLabel.sizeToFit()
     }
     

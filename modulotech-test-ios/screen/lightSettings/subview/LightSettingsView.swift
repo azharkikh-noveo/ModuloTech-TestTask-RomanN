@@ -27,7 +27,7 @@ public final class LightSettingsView: BaseView {
     @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
     /// Slider to configure the light intensity.
-    @AutoLayout public var intensitySlider: LabeledHorizontalSlider = LabeledHorizontalSlider(frame: .zero)
+    @AutoLayout public var intensitySlider = LabeledHorizontalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

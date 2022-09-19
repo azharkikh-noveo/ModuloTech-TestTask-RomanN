@@ -13,7 +13,18 @@ extension UITableView {
     
     /// Returns a reusable table-view cell object for the specified class and adds it to the table.
     public func dequeue<T: UITableViewCell>(_ cell: T.Type, for indexPath: IndexPath) -> T {
-        return dequeueReusableCell(withIdentifier: T.defaultReuseIdentifier, for: indexPath) as! T
+        
+        let reusableCell: UITableViewCell = dequeueReusableCell(
+            withIdentifier: T.defaultReuseIdentifier,
+            for: indexPath
+        )
+        
+        guard let cell = reusableCell as? T else {
+            preconditionFailure("Cell you are trying to dequeue has not been registred!")
+        }
+        
+        return cell
+        
     }
     
     /// Returns a reusable table-view cell object for the specified class and adds it to the table.

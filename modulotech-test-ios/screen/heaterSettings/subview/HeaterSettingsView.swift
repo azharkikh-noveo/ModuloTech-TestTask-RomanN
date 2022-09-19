@@ -27,7 +27,7 @@ public final class HeaterSettingsView: BaseView {
     @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
     /// Slider to configure the light intensity.
-    @AutoLayout public var temperatureSlider: LabeledHorizontalSlider = LabeledHorizontalSlider(frame: .zero)
+    @AutoLayout public var temperatureSlider = LabeledHorizontalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

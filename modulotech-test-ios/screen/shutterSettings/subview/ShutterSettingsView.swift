@@ -24,7 +24,7 @@ public final class RollerShutterSettingsView: BaseView {
     @AutoLayout public var deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
     
     /// Roller shutter position slider.
-    @AutoLayout public var positionSlider: LabeledVerticalSlider = LabeledVerticalSlider(frame: .zero)
+    @AutoLayout public var positionSlider = LabeledVerticalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

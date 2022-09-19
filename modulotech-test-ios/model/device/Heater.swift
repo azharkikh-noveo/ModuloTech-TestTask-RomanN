@@ -13,7 +13,12 @@ public final class Heater: Device {
     
     
     public override var description: String {
-        return "Heater(id: \(deviceId), name: \"\(name)\", temperature: \(temperature), mode: \"\(mode)\")"
+        var result: String = ""
+        result += "Heater(id: \(deviceId), "
+        result += "name: \"\(name)\", "
+        result += "temperature: \(temperature), "
+        result += "mode: \"\(mode)\")"
+        return result
     }
     
     

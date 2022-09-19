@@ -89,6 +89,7 @@ public final class DeviceListView: BaseView {
             error.localizedDescription
         )
         activityDescriptionLabel.sizeToFit()
+        activityDescriptionLabel.isHidden = false
     }
     
     /// Shows an activity indicator state.
@@ -97,12 +98,14 @@ public final class DeviceListView: BaseView {
         activityIndicator.startAnimating()
         activityDescriptionLabel.text = L10n.DeviceList.State.loading
         activityDescriptionLabel.sizeToFit()
+        activityDescriptionLabel.isHidden = false
     }
     
     /// Shows a content view.
     public func showTableView() {
         tableView.isHidden = false
         activityIndicator.stopAnimating()
+        activityDescriptionLabel.isHidden = true
     }
     
 }

@@ -78,46 +78,50 @@ public final class RollerShutterSettingsViewController: BaseViewController {
         
         // View subscriptions
         
-        settingsView
-            .navigationView
-            .backButton
-            .publisher(for: .touchUpInside)
-            .sink { [unowned self] _ in
-                viewModel.close()
-            }
-            .store(in: &disposeBag)
-        
-
-        settingsView
-            .positionSlider
-            .slider
-            .valueChanged
-            .map(\.valueConsideringStep)
-            .map(Int.init)
-            .removeDuplicates()
-            .sink(receiveValue: viewModel.setPosition(_:))
-            .store(in: &disposeBag)
+        disposeBag.collect {
+            
+            settingsView
+                .navigationView
+                .backButton
+                .publisher(for: .touchUpInside)
+                .sink { [unowned self] _ in
+                    viewModel.close()
+                }
+            
+            settingsView
+                .positionSlider
+                .slider
+                .valueChanged
+                .map(\.valueConsideringStep)
+                .map(Int.init)
+                .removeDuplicates()
+                .sink(receiveValue: viewModel.setPosition(_:))
+            
+        }
         
         
         // View-model subscriptions
 
-        viewModel
-            .shutterPosition
-            .map { position in
-                if position == 0 {
-                    return L10n.DeviceSettings.RollerShutter.Slider.Title.closed
-                } else if position == 100 {
-                    return L10n.DeviceSettings.RollerShutter.Slider.Title.opened
-                } else {
-                    return L10n.DeviceSettings.RollerShutter.Slider.Title.openedAt(position)
+        disposeBag.collect {
+            
+            viewModel
+                .shutterPosition
+                .map { position in
+                    if position == 0 {
+                        return L10n.DeviceSettings.RollerShutter.Slider.Title.closed
+                    } else if position == 100 {
+                        return L10n.DeviceSettings.RollerShutter.Slider.Title.opened
+                    } else {
+                        return L10n.DeviceSettings.RollerShutter.Slider.Title.openedAt(position)
+                    }
                 }
-            }
-            .receive(on: DispatchQueue.main)
-            .assign(
-                to: \.text,
-                on: settingsView.positionSlider.titleLabel
-            )
-            .store(in: &disposeBag)
+                .receive(on: DispatchQueue.main)
+                .assign(
+                    to: \.text,
+                    on: settingsView.positionSlider.titleLabel
+                )
+            
+        }
         
     }
     

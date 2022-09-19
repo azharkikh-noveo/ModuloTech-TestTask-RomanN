@@ -78,63 +78,66 @@ public final class HeaterSettingsViewController: BaseViewController {
         
         // View subscriptions
         
-        settingsView
-            .navigationView
-            .backButton
-            .publisher(for: .touchUpInside)
-            .sink { [unowned self] _ in
-                viewModel.close()
-            }
-            .store(in: &disposeBag)
-        
-        settingsView
-            .modeSwitchView
-            .switchView
-            .publisher(for: .touchUpInside)
-            .map(\.isOn)
-            .removeDuplicates()
-            .sink(receiveValue: viewModel.setHeaterMode(isOn:))
-            .store(in: &disposeBag)
-        
-        settingsView
-            .temperatureSlider
-            .slider
-            .valueChanged
-            .map(\.valueConsideringStep)
-            .map(Double.init)
-            .removeDuplicates()
-            .sink(receiveValue: viewModel.setTemperature(_:))
-            .store(in: &disposeBag)
+        disposeBag.collect {
+            
+            settingsView
+                .navigationView
+                .backButton
+                .publisher(for: .touchUpInside)
+                .sink { [unowned self] _ in
+                    viewModel.close()
+                }
+            
+            settingsView
+                .modeSwitchView
+                .switchView
+                .publisher(for: .touchUpInside)
+                .map(\.isOn)
+                .removeDuplicates()
+                .sink(receiveValue: viewModel.setHeaterMode(isOn:))
+            
+            settingsView
+                .temperatureSlider
+                .slider
+                .valueChanged
+                .map(\.valueConsideringStep)
+                .map(Double.init)
+                .removeDuplicates()
+                .sink(receiveValue: viewModel.setTemperature(_:))
+            
+        }
         
         
         // View-model subscriptions
         
-        viewModel
-            .isHeaterOn
-            .map { isOn -> String in
-                if isOn {
-                    return L10n.DeviceSettings.Heater.Mode.on
-                } else {
-                    return L10n.DeviceSettings.Heater.Mode.off
+        disposeBag.collect {
+            
+            viewModel
+                .isHeaterOn
+                .map { isOn -> String in
+                    if isOn {
+                        return L10n.DeviceSettings.Heater.Mode.on
+                    } else {
+                        return L10n.DeviceSettings.Heater.Mode.off
+                    }
                 }
-            }
-            .receive(on: DispatchQueue.main)
-            .assign(
-                to: \.text,
-                on: settingsView.modeSwitchView.titleLabel
-            )
-            .store(in: &disposeBag)
-        
-        viewModel
-            .heaterTemperature
-            .map { String(format: "%.1f", $0) }
-            .map { L10n.DeviceSettings.Heater.Slider.title($0) }
-            .receive(on: DispatchQueue.main)
-            .assign(
-                to: \.text,
-                on: settingsView.temperatureSlider.titleLabel
-            )
-            .store(in: &disposeBag)
+                .receive(on: DispatchQueue.main)
+                .assign(
+                    to: \.text,
+                    on: settingsView.modeSwitchView.titleLabel
+                )
+            
+            viewModel
+                .heaterTemperature
+                .map { String(format: "%.1f", $0) }
+                .map { L10n.DeviceSettings.Heater.Slider.title($0) }
+                .receive(on: DispatchQueue.main)
+                .assign(
+                    to: \.text,
+                    on: settingsView.temperatureSlider.titleLabel
+                )
+            
+        }
         
     }
     

@@ -78,62 +78,65 @@ public final class LightSettingsViewController: BaseViewController {
         
         // View subscriptions
         
-        settingsView
-            .navigationView
-            .backButton
-            .publisher(for: .touchUpInside)
-            .sink { [unowned self] _ in
-                viewModel.close()
-            }
-            .store(in: &disposeBag)
-        
-        settingsView
-            .modeSwitchView
-            .switchView
-            .publisher(for: .touchUpInside)
-            .map(\.isOn)
-            .removeDuplicates()
-            .sink(receiveValue: viewModel.setLightMode(isOn:))
-            .store(in: &disposeBag)
-        
-        settingsView
-            .intensitySlider
-            .slider
-            .valueChanged
-            .map(\.valueConsideringStep)
-            .map(Int.init)
-            .removeDuplicates()
-            .sink(receiveValue: viewModel.setIntensity(_:))
-            .store(in: &disposeBag)
+        disposeBag.collect {
+            
+            settingsView
+                .navigationView
+                .backButton
+                .publisher(for: .touchUpInside)
+                .sink { [unowned self] _ in
+                    viewModel.close()
+                }
+            
+            settingsView
+                .modeSwitchView
+                .switchView
+                .publisher(for: .touchUpInside)
+                .map(\.isOn)
+                .removeDuplicates()
+                .sink(receiveValue: viewModel.setLightMode(isOn:))
+            
+            settingsView
+                .intensitySlider
+                .slider
+                .valueChanged
+                .map(\.valueConsideringStep)
+                .map(Int.init)
+                .removeDuplicates()
+                .sink(receiveValue: viewModel.setIntensity(_:))
+            
+        }
         
         
         // View-model subscriptions
         
-        viewModel
-            .isLightOn
-            .map { isOn -> String in
-                if isOn {
-                    return L10n.DeviceSettings.Light.Mode.on
-                } else {
-                    return L10n.DeviceSettings.Light.Mode.off
+        disposeBag.collect {
+            
+            viewModel
+                .isLightOn
+                .map { isOn -> String in
+                    if isOn {
+                        return L10n.DeviceSettings.Light.Mode.on
+                    } else {
+                        return L10n.DeviceSettings.Light.Mode.off
+                    }
                 }
-            }
-            .receive(on: DispatchQueue.main)
-            .assign(
-                to: \.text,
-                on: settingsView.modeSwitchView.titleLabel
-            )
-            .store(in: &disposeBag)
-        
-        viewModel
-            .lightIntensity
-            .map { L10n.DeviceSettings.Light.Slider.title($0) }
-            .receive(on: DispatchQueue.main)
-            .assign(
-                to: \.text,
-                on: settingsView.intensitySlider.titleLabel
-            )
-            .store(in: &disposeBag)
+                .receive(on: DispatchQueue.main)
+                .assign(
+                    to: \.text,
+                    on: settingsView.modeSwitchView.titleLabel
+                )
+            
+            viewModel
+                .lightIntensity
+                .map { L10n.DeviceSettings.Light.Slider.title($0) }
+                .receive(on: DispatchQueue.main)
+                .assign(
+                    to: \.text,
+                    on: settingsView.intensitySlider.titleLabel
+                )
+            
+        }
         
     }
     

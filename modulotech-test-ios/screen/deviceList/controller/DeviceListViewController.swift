@@ -77,31 +77,33 @@ public final class DeviceListViewController: BaseViewController {
     /// Setups bindings to the view. Should be called once.
     private func setupBindings() {
         
-        viewModel
-            .screenState
-            .throttle(
-                for: 1.5,
-                scheduler: DispatchQueue.main,
-                latest: true
-            )
-            .receive(on: DispatchQueue.main)
-            .sink { [unowned self] state in
-                switch state {
-                case .error(let error):
-                    deviceListView.showLoadingErrorState(for: error)
-                case .loading:
-                    deviceListView.showLoadingState()
-                case .deviceList:
-                    deviceListView.showTableView()
+        disposeBag.collect {
+            
+            viewModel
+                .shouldReloadDeviceList
+                .receive(on: DispatchQueue.main)
+                .sink(receiveValue: deviceListView.tableView.reloadData)
+            
+            viewModel
+                .screenState
+                .throttle(
+                    for: 1.5,
+                    scheduler: DispatchQueue.main,
+                    latest: true
+                )
+                .receive(on: DispatchQueue.main)
+                .sink { [unowned self] state in
+                    switch state {
+                    case .error(let error):
+                        deviceListView.showLoadingErrorState(for: error)
+                    case .loading:
+                        deviceListView.showLoadingState()
+                    case .deviceList:
+                        deviceListView.showTableView()
+                    }
                 }
-            }
-            .store(in: &disposeBag)
-        
-        viewModel
-            .shouldReloadDeviceList
-            .receive(on: DispatchQueue.main)
-            .sink(receiveValue: deviceListView.tableView.reloadData)
-            .store(in: &disposeBag)
+            
+        }
         
     }
     

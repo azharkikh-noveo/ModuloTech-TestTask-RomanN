@@ -61,6 +61,7 @@
 		33E1B1A328D8BFA500071834 /* BinaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A228D8BFA500071834 /* BinaryMode.swift */; };
 		33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */; };
 		33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */; };
+		33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1AD28D8FD8000071834 /* Set+collect.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		33E1B1A228D8BFA500071834 /* BinaryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryMode.swift; sourceTree = "<group>"; };
 		33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingsCoordinator.swift; sourceTree = "<group>"; };
 		33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Step.swift"; sourceTree = "<group>"; };
+		33E1B1AD28D8FD8000071834 /* Set+collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+collect.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +259,7 @@
 		3357F40028D4776D0044AE7B /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				33E1B1AD28D8FD8000071834 /* Set+collect.swift */,
 				338C186B28D285C300278530 /* UIFont+primary.swift */,
 				338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */,
 				338C18B228D34F1700278530 /* UITableView+register.swift */,
@@ -576,6 +579,7 @@
 				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
 				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
+				33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */,
 				33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */,
 				33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */,
 				3357F3C928D371550044AE7B /* Assets.swift in Sources */,

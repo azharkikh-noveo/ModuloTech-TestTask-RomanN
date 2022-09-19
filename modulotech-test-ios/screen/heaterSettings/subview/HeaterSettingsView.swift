@@ -90,25 +90,3 @@ public final class HeaterSettingsView: BaseView {
     }
     
 }
-
-
-#if DEBUG
-import SwiftUI
-
-
-struct HeaterSettingsView_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = HeaterSettingsView(frame: .zero)
-            view.modeSwitchView.switchView.isOn = true
-            view.modeSwitchView.titleLabel.text = "Heater is on"
-            return view
-        }
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

@@ -89,25 +89,3 @@ public final class LightSettingsView: BaseView {
     }
     
 }
-
-
-#if DEBUG
-import SwiftUI
-
-
-struct LightSettingsView_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = LightSettingsView(frame: .zero)
-            view.modeSwitchView.switchView.isOn = true
-            view.modeSwitchView.titleLabel.text = "Light is on"
-            return view
-        }
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

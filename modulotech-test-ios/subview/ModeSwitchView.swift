@@ -69,31 +69,3 @@ public final class ModeSwitchView: BaseView {
     }
     
 }
-
-
-// MARK: - Preview
-
-#if DEBUG
-import SwiftUI
-
-
-struct ModeSwitchView_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = ModeSwitchView(frame: .zero)
-            view.titleLabel.text = "Mode: ON"
-            return view
-        }
-        .frame(
-            width: 300,
-            height: ModeSwitchView.preferredHeight,
-            alignment: .center
-        )
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

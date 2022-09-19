@@ -78,24 +78,3 @@ public final class RollerShutterSettingsView: BaseView {
     }
     
 }
-
-
-#if DEBUG
-import SwiftUI
-
-
-struct ShutterSettingsView_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = RollerShutterSettingsView(frame: .zero)
-            view.positionSlider.titleLabel.text = "Position"
-            return view
-        }
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

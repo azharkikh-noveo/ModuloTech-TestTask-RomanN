@@ -140,7 +140,10 @@ extension DeviceListCoordinator: DeviceListCoordinatorDelegate {
         openHeaterSettings(for: heater)
     }
     
-    public func viewModel(_ viewModel: DeviceListViewModel, didSelectDevice shutter: RollerShutter) {
+    public func viewModel(
+        _ viewModel: DeviceListViewModel,
+        didSelectDevice shutter: RollerShutter
+    ) {
         openRollerShutterSettings(for: shutter)
     }
     

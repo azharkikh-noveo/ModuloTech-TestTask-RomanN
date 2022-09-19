@@ -24,34 +24,3 @@ public class VerticalSlider: BaseSlider {
     }
 
 }
-
-
-// MARK: - Preview
-
-#if DEBUG
-import SwiftUI
-
-
-struct VerticalSlider_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = VerticalSlider(frame: .zero)
-            view.minimumValue = 0
-            view.maximumValue = 100
-            view.step = 1
-            view.set(value: 33)
-            return view
-        }
-        .frame(
-            width: 300,
-            height: 300,
-            alignment: .center
-        )
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

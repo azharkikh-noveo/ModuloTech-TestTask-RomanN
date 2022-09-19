@@ -77,31 +77,3 @@ public final class LabeledHorizontalSlider: BaseView {
     }
     
 }
-
-
-// MARK: - Preview
-
-#if DEBUG
-import SwiftUI
-
-
-struct LabeledHorizontalSlider_Preview: PreviewProvider {
-    
-    static var previews: some View {
-        
-        UIViewPreview {
-            let view = LabeledHorizontalSlider(frame: .zero)
-            view.titleLabel.text = "Selected intensity"
-            return view
-        }
-        .frame(
-            width: 300,
-            height: LabeledHorizontalSlider.preferredHeight,
-            alignment: .center
-        )
-        .border(Color.blue, width: 0.6)
-        
-    }
-    
-}
-#endif

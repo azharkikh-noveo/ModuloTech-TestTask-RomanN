@@ -40,8 +40,6 @@
 		338C186028D283F500278530 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185F28D283F500278530 /* BaseView.swift */; };
 		338C186228D2843200278530 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186128D2843200278530 /* BaseViewModel.swift */; };
 		338C186528D284A200278530 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186428D284A200278530 /* AutoLayout.swift */; };
-		338C186728D2853D00278530 /* UIViewPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186628D2853D00278530 /* UIViewPreview.swift */; };
-		338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186828D2855C00278530 /* UIViewControllerPreview.swift */; };
 		338C186C28D285C300278530 /* UIFont+primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186B28D285C300278530 /* UIFont+primary.swift */; };
 		338C186E28D2880E00278530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338C186D28D2880E00278530 /* Assets.xcassets */; };
 		338C187328D28DC000278530 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187228D28DC000278530 /* Light.swift */; };
@@ -104,8 +102,6 @@
 		338C185F28D283F500278530 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		338C186128D2843200278530 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		338C186428D284A200278530 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
-		338C186628D2853D00278530 /* UIViewPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewPreview.swift; sourceTree = "<group>"; };
-		338C186828D2855C00278530 /* UIViewControllerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerPreview.swift; sourceTree = "<group>"; };
 		338C186B28D285C300278530 /* UIFont+primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+primary.swift"; sourceTree = "<group>"; };
 		338C186D28D2880E00278530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338C187228D28DC000278530 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
@@ -331,8 +327,6 @@
 				338C185D28D283B500278530 /* BaseViewController.swift */,
 				338C186128D2843200278530 /* BaseViewModel.swift */,
 				3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */,
-				338C186628D2853D00278530 /* UIViewPreview.swift */,
-				338C186828D2855C00278530 /* UIViewControllerPreview.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -473,6 +467,7 @@
 				338C184028D2829400278530 /* Sources */,
 				338C184128D2829400278530 /* Frameworks */,
 				338C184228D2829400278530 /* Resources */,
+				33E1B1A028D8B84700071834 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -536,6 +531,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33E1B1A028D8B84700071834 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint using Homebrew.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		338C184028D2829400278530 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -562,7 +578,6 @@
 				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
 				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
 				338C18B328D34F1700278530 /* UITableView+register.swift in Sources */,
-				338C186728D2853D00278530 /* UIViewPreview.swift in Sources */,
 				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
 				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
 				338C187328D28DC000278530 /* Light.swift in Sources */,
@@ -579,7 +594,6 @@
 				3357F3D528D3A73A0044AE7B /* LightSettingsViewModel.swift in Sources */,
 				3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */,
 				338C186028D283F500278530 /* BaseView.swift in Sources */,
-				338C186928D2855C00278530 /* UIViewControllerPreview.swift in Sources */,
 				33C0B5D228D629F6002454BF /* Strings.swift in Sources */,
 				336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */,
 				33331F4928D8544A00F6DFD0 /* ApplicationCoordinator.swift in Sources */,

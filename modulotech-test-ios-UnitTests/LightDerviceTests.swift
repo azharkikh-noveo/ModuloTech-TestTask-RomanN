@@ -1,5 +1,5 @@
 //
-//  LightModelTests.swift
+//  LightDerviceTests.swift
 //  modulotech-test-ios-UnitTests
 //
 //  Created by Roman Nabiullin on 20.09.2022.
@@ -11,7 +11,7 @@ import XCTest
 
 // MARK: - Class
 
-final class LightModelTests: XCTestCase {
+final class LightDerviceTests: XCTestCase {
     
     
     // MARK: Helper

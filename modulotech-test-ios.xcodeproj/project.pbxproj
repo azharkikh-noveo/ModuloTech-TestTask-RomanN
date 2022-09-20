@@ -64,7 +64,9 @@
 		33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1AD28D8FD8000071834 /* Set+collect.swift */; };
 		33E1B1C328D9B1ED00071834 /* modulotech_test_ios_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1C228D9B1ED00071834 /* modulotech_test_ios_UITests.swift */; };
 		33E1B1C528D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1C428D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift */; };
-		33E1B1CC28D9B46100071834 /* LightModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CB28D9B46100071834 /* LightModelTests.swift */; };
+		33E1B1CC28D9B46100071834 /* LightDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */; };
+		33E1B1CE28DA137700071834 /* HeaterDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */; };
+		33E1B1D028DA173F00071834 /* RollerShutterDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,7 +148,9 @@
 		33E1B1C028D9B1ED00071834 /* modulotech-test-ios-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "modulotech-test-ios-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		33E1B1C228D9B1ED00071834 /* modulotech_test_ios_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modulotech_test_ios_UITests.swift; sourceTree = "<group>"; };
 		33E1B1C428D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modulotech_test_ios_UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		33E1B1CB28D9B46100071834 /* LightModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightModelTests.swift; sourceTree = "<group>"; };
+		33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDerviceTests.swift; sourceTree = "<group>"; };
+		33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterDerviceTests.swift; sourceTree = "<group>"; };
+		33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterDeviceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -516,7 +520,9 @@
 		33E1B1B428D9B18F00071834 /* modulotech-test-ios-UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				33E1B1CB28D9B46100071834 /* LightModelTests.swift */,
+				33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */,
+				33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */,
+				33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */,
 			);
 			path = "modulotech-test-ios-UnitTests";
 			sourceTree = "<group>";
@@ -748,7 +754,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33E1B1CC28D9B46100071834 /* LightModelTests.swift in Sources */,
+				33E1B1CC28D9B46100071834 /* LightDerviceTests.swift in Sources */,
+				33E1B1D028DA173F00071834 /* RollerShutterDeviceTests.swift in Sources */,
+				33E1B1CE28DA137700071834 /* HeaterDerviceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -45,6 +45,8 @@ public struct RollerShutter: Device {
     // MARK: Init
     
     /// Creates an instace of the roller shutter device with all parameters specified.
+    ///
+    /// If the provided minimum position is greater than the maximum one, they are swapped.
     public init(
         deviceId: Int,
         name: String,
@@ -55,11 +57,13 @@ public struct RollerShutter: Device {
         self.deviceId = deviceId
         self.name = name
         self.position = clamp(position, using: minimumPosition...maximumPosition)
-        self.minimumPosition = minimumPosition
-        self.maximumPosition = maximumPosition
+        self.minimumPosition = min(minimumPosition, maximumPosition)
+        self.maximumPosition = max(minimumPosition, maximumPosition)
     }
     
     /// Creates an instance of the device from its raw model if possible.
+    ///
+    /// Sets the default minimum and maximum position.
     public init?(from rawModel: DeviceProduct) {
         
         guard let position = rawModel.position else {
@@ -69,8 +73,8 @@ public struct RollerShutter: Device {
         self.deviceId = rawModel.deviceId
         self.name = rawModel.name
         self.position = position
-        self.minimumPosition = 0
-        self.maximumPosition = 100
+        self.minimumPosition = RollerShutter.defaultMinimumPosition
+        self.maximumPosition = RollerShutter.defaultMaximumPosition
         
     }
     
@@ -79,7 +83,7 @@ public struct RollerShutter: Device {
     
     /// Setter for the shutter position.
     public mutating func set(position newValue: Int) {
-        position = clamp(newValue, using: 0...100)
+        position = clamp(newValue, using: minimumPosition...maximumPosition)
     }
     
 }

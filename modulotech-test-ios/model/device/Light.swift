@@ -48,6 +48,8 @@ public struct Light: Device {
     // MARK: Init
     
     /// Creates an instace of the light device with all parameters specified.
+    ///
+    /// If the provided minimum intensity is greater than the maximum one, they are swapped.
     public init(
         deviceId: Int,
         name: String,
@@ -60,11 +62,13 @@ public struct Light: Device {
         self.name = name
         self.intensity = clamp(intensity, using: minimumIntensity...maximumIntensity)
         self.mode = mode
-        self.minimumIntensity = minimumIntensity
-        self.maximumIntensity = maximumIntensity
+        self.minimumIntensity = min(minimumIntensity, maximumIntensity)
+        self.maximumIntensity = max(minimumIntensity, maximumIntensity)
     }
     
     /// Creates an instance of the device from its raw model if possible.
+    ///
+    /// Sets the default minimum and maximum intensity.
     public init?(from rawModel: DeviceProduct) {
         
         guard

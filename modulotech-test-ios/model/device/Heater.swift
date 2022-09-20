@@ -48,6 +48,8 @@ public struct Heater: Device {
     // MARK: Init
     
     /// Creates an instace of the light device with all parameters specified.
+    ///
+    /// If the provided minimum temperature is greater than the maximum one, they are swapped.
     public init(
         deviceId: Int,
         name: String,
@@ -60,11 +62,13 @@ public struct Heater: Device {
         self.name = name
         self.mode = mode
         self.temperature = clamp(temperature, using: minimumTemperature...maximumTemperature)
-        self.minimumTemperature = minimumTemperature
-        self.maximumTemperature = maximumTemperature
+        self.minimumTemperature = min(minimumTemperature, maximumTemperature)
+        self.maximumTemperature = max(minimumTemperature, maximumTemperature)
     }
     
     /// Creates an instance of the device from its raw model if possible.
+    ///
+    /// Sets the default minimum and maximum temperature.
     public init?(from rawModel: DeviceProduct) {
         
         guard
@@ -88,7 +92,7 @@ public struct Heater: Device {
     
     /// Setter for the heater temperature.
     public mutating func set(temperature newValue: Double) {
-        temperature = clamp(newValue, using: 7...28)
+        temperature = clamp(newValue, using: minimumTemperature...maximumTemperature)
     }
     
 }

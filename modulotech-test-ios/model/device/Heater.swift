@@ -61,9 +61,9 @@ public struct Heater: Device {
         self.deviceId = deviceId
         self.name = name
         self.mode = mode
-        self.temperature = clamp(temperature, using: minimumTemperature...maximumTemperature)
         self.minimumTemperature = min(minimumTemperature, maximumTemperature)
         self.maximumTemperature = max(minimumTemperature, maximumTemperature)
+        self.temperature = clamp(temperature, using: self.minimumTemperature...self.maximumTemperature)
     }
     
     /// Creates an instance of the device from its raw model if possible.

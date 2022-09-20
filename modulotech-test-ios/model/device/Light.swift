@@ -60,10 +60,10 @@ public struct Light: Device {
     ) {
         self.deviceId = deviceId
         self.name = name
-        self.intensity = clamp(intensity, using: minimumIntensity...maximumIntensity)
         self.mode = mode
         self.minimumIntensity = min(minimumIntensity, maximumIntensity)
         self.maximumIntensity = max(minimumIntensity, maximumIntensity)
+        self.intensity = clamp(intensity, using: self.minimumIntensity...self.maximumIntensity)
     }
     
     /// Creates an instance of the device from its raw model if possible.

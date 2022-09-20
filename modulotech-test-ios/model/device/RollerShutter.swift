@@ -56,9 +56,9 @@ public struct RollerShutter: Device {
     ) {
         self.deviceId = deviceId
         self.name = name
-        self.position = clamp(position, using: minimumPosition...maximumPosition)
         self.minimumPosition = min(minimumPosition, maximumPosition)
         self.maximumPosition = max(minimumPosition, maximumPosition)
+        self.position = clamp(position, using: self.minimumPosition...self.maximumPosition)
     }
     
     /// Creates an instance of the device from its raw model if possible.

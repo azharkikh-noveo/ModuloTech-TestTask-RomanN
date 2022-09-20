@@ -9,7 +9,12 @@ import XCTest
 @testable import modulotech_test_ios
 
 
+// MARK: - Class
+
 final class LightModelTests: XCTestCase {
+    
+    
+    // MARK: Helper
     
     struct IntensityCase {
         let lowerBound: Int
@@ -29,6 +34,9 @@ final class LightModelTests: XCTestCase {
         )
     }
     
+    
+    // MARK: Setup
+    
     override func setUpWithError() throws {
         // Not needed.
     }
@@ -37,7 +45,40 @@ final class LightModelTests: XCTestCase {
         // Not needed.
     }
     
-    func test_lowerBoundEqualsUpperBound() throws {
+    
+    // MARK: Intensity bounds
+    
+    func test_lowerBoundLessThanUpperBound() {
+        
+        let intensityCase = IntensityCase(
+            lowerBound: 30, upperBound: 60,
+            initial: 90, expectedAfterClamping: 60
+        )
+        
+        let light: Light = light(forIntensityCase: intensityCase)
+        
+        XCTAssertEqual(light.minimumIntensity, intensityCase.lowerBound)
+        XCTAssertEqual(light.maximumIntensity, intensityCase.upperBound)
+        XCTAssertEqual(light.intensity, intensityCase.expectedAfterClamping)
+        
+    }
+    
+    func test_lowerBoundGreaterThanUpperBound() {
+        
+        let intensityCase = IntensityCase(
+            lowerBound: 27, upperBound: 10,
+            initial: 80, expectedAfterClamping: 27
+        )
+        
+        let light: Light = light(forIntensityCase: intensityCase)
+        
+        XCTAssertEqual(light.minimumIntensity, intensityCase.upperBound)
+        XCTAssertEqual(light.maximumIntensity, intensityCase.lowerBound)
+        XCTAssertEqual(light.intensity, intensityCase.expectedAfterClamping)
+        
+    }
+    
+    func test_lowerBoundEqualsUpperBound() {
         
         let intensityCase = IntensityCase(
             lowerBound: 15, upperBound: 15,
@@ -54,18 +95,33 @@ final class LightModelTests: XCTestCase {
         
     }
     
-    func test_lowerBoundLessThanUpperBound() throws {
+    
+    // MARK: Intensity settings
+    
+    func test_intensitySetter() {
         
         let intensityCase = IntensityCase(
-            lowerBound: 27, upperBound: 10,
-            initial: 80, expectedAfterClamping: 27
+            lowerBound: 0, upperBound: 100,
+            initial: 50, expectedAfterClamping: 50
         )
         
-        let light: Light = light(forIntensityCase: intensityCase)
-        
-        XCTAssertEqual(light.minimumIntensity, intensityCase.upperBound)
-        XCTAssertEqual(light.maximumIntensity, intensityCase.lowerBound)
+        var light: Light = light(forIntensityCase: intensityCase)
         XCTAssertEqual(light.intensity, intensityCase.expectedAfterClamping)
+        
+        light.set(intensity: 300)
+        XCTAssertEqual(light.intensity, intensityCase.upperBound)
+        
+        light.set(intensity: -300)
+        XCTAssertEqual(light.intensity, intensityCase.lowerBound)
+        
+        light.set(intensity: light.minimumIntensity)
+        XCTAssertEqual(light.intensity, intensityCase.lowerBound)
+        
+        light.set(intensity: light.maximumIntensity)
+        XCTAssertEqual(light.intensity, intensityCase.upperBound)
+        
+        light.set(intensity: 20)
+        XCTAssertEqual(light.intensity, 20)
         
     }
     

@@ -28,6 +28,28 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E1B1B228D9B18F00071834"
+               BuildableName = "modulotech-test-ios-UnitTests.xctest"
+               BlueprintName = "modulotech-test-ios-UnitTests"
+               ReferencedContainer = "container:modulotech-test-ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "33E1B1BF28D9B1ED00071834"
+               BuildableName = "modulotech-test-ios-UITests.xctest"
+               BlueprintName = "modulotech-test-ios-UITests"
+               ReferencedContainer = "container:modulotech-test-ios.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

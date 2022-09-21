@@ -62,8 +62,6 @@
 		33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */; };
 		33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */; };
 		33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1AD28D8FD8000071834 /* Set+collect.swift */; };
-		33E1B1C328D9B1ED00071834 /* modulotech_test_ios_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1C228D9B1ED00071834 /* modulotech_test_ios_UITests.swift */; };
-		33E1B1C528D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1C428D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift */; };
 		33E1B1CC28D9B46100071834 /* LightDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */; };
 		33E1B1CE28DA137700071834 /* HeaterDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */; };
 		33E1B1D028DA173F00071834 /* RollerShutterDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */; };
@@ -71,13 +69,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		33E1B1B728D9B18F00071834 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 338C183C28D2829400278530 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 338C184328D2829400278530;
-			remoteInfo = "modulotech-test-ios";
-		};
-		33E1B1C628D9B1ED00071834 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 338C183C28D2829400278530 /* Project object */;
 			proxyType = 1;
@@ -145,9 +136,6 @@
 		33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Step.swift"; sourceTree = "<group>"; };
 		33E1B1AD28D8FD8000071834 /* Set+collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+collect.swift"; sourceTree = "<group>"; };
 		33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "modulotech-test-ios-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33E1B1C028D9B1ED00071834 /* modulotech-test-ios-UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "modulotech-test-ios-UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		33E1B1C228D9B1ED00071834 /* modulotech_test_ios_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modulotech_test_ios_UITests.swift; sourceTree = "<group>"; };
-		33E1B1C428D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modulotech_test_ios_UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDerviceTests.swift; sourceTree = "<group>"; };
 		33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterDerviceTests.swift; sourceTree = "<group>"; };
 		33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterDeviceTests.swift; sourceTree = "<group>"; };
@@ -163,13 +151,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		33E1B1B028D9B18F00071834 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		33E1B1BD28D9B1ED00071834 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -316,7 +297,6 @@
 			children = (
 				338C184628D2829400278530 /* modulotech-test-ios */,
 				33E1B1B428D9B18F00071834 /* modulotech-test-ios-UnitTests */,
-				33E1B1C128D9B1ED00071834 /* modulotech-test-ios-UITests */,
 				338C184528D2829400278530 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -326,7 +306,6 @@
 			children = (
 				338C184428D2829400278530 /* modulotech-test-ios.app */,
 				33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */,
-				33E1B1C028D9B1ED00071834 /* modulotech-test-ios-UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -527,15 +506,6 @@
 			path = "modulotech-test-ios-UnitTests";
 			sourceTree = "<group>";
 		};
-		33E1B1C128D9B1ED00071834 /* modulotech-test-ios-UITests */ = {
-			isa = PBXGroup;
-			children = (
-				33E1B1C228D9B1ED00071834 /* modulotech_test_ios_UITests.swift */,
-				33E1B1C428D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift */,
-			);
-			path = "modulotech-test-ios-UITests";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -578,24 +548,6 @@
 			productReference = 33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		33E1B1BF28D9B1ED00071834 /* modulotech-test-ios-UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 33E1B1C828D9B1ED00071834 /* Build configuration list for PBXNativeTarget "modulotech-test-ios-UITests" */;
-			buildPhases = (
-				33E1B1BC28D9B1ED00071834 /* Sources */,
-				33E1B1BD28D9B1ED00071834 /* Frameworks */,
-				33E1B1BE28D9B1ED00071834 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				33E1B1C728D9B1ED00071834 /* PBXTargetDependency */,
-			);
-			name = "modulotech-test-ios-UITests";
-			productName = "modulotech-test-ios-UITests";
-			productReference = 33E1B1C028D9B1ED00071834 /* modulotech-test-ios-UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -610,10 +562,6 @@
 						CreatedOnToolsVersion = 13.4.1;
 					};
 					33E1B1B228D9B18F00071834 = {
-						CreatedOnToolsVersion = 14.0;
-						TestTargetID = 338C184328D2829400278530;
-					};
-					33E1B1BF28D9B1ED00071834 = {
 						CreatedOnToolsVersion = 14.0;
 						TestTargetID = 338C184328D2829400278530;
 					};
@@ -638,7 +586,6 @@
 			targets = (
 				338C184328D2829400278530 /* modulotech-test-ios */,
 				33E1B1B228D9B18F00071834 /* modulotech-test-ios-UnitTests */,
-				33E1B1BF28D9B1ED00071834 /* modulotech-test-ios-UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -655,13 +602,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		33E1B1B128D9B18F00071834 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		33E1B1BE28D9B1ED00071834 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -760,15 +700,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		33E1B1BC28D9B1ED00071834 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				33E1B1C528D9B1ED00071834 /* modulotech_test_ios_UITestsLaunchTests.swift in Sources */,
-				33E1B1C328D9B1ED00071834 /* modulotech_test_ios_UITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -776,11 +707,6 @@
 			isa = PBXTargetDependency;
 			target = 338C184328D2829400278530 /* modulotech-test-ios */;
 			targetProxy = 33E1B1B728D9B18F00071834 /* PBXContainerItemProxy */;
-		};
-		33E1B1C728D9B1ED00071834 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 338C184328D2829400278530 /* modulotech-test-ios */;
-			targetProxy = 33E1B1C628D9B1ED00071834 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1013,44 +939,6 @@
 			};
 			name = Release;
 		};
-		33E1B1C928D9B1ED00071834 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K3W3K9M953;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "modulotech-test-ios";
-			};
-			name = Debug;
-		};
-		33E1B1CA28D9B1ED00071834 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K3W3K9M953;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios-UITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "modulotech-test-ios";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1077,15 +965,6 @@
 			buildConfigurations = (
 				33E1B1B928D9B18F00071834 /* Debug */,
 				33E1B1BA28D9B18F00071834 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		33E1B1C828D9B1ED00071834 /* Build configuration list for PBXNativeTarget "modulotech-test-ios-UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				33E1B1C928D9B1ED00071834 /* Debug */,
-				33E1B1CA28D9B1ED00071834 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

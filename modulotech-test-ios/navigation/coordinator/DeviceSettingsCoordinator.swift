@@ -154,13 +154,15 @@ extension DeviceSettingsCoordinator {
     }
     
     /// Changes state of a coordinator.
+    ///
+    /// - Throws: `DeviceSettingsCoordinatorError` if a state cannot be changed.
     public func changeState(
         from oldState: DeviceSettingsCoordinator.State,
         to newState: DeviceSettingsCoordinator.State
     ) throws {
         
         guard canChangeState(from: oldState, to: newState) else {
-            throw NSError(domain: "DeviceSettingsCoordinator", code: -90)
+            throw DeviceSettingsCoordinatorError.cannotChangeState
         }
         
         delegate?.coordinator(self, willChangeStateFrom: oldState, to: newState)

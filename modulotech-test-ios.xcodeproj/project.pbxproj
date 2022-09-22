@@ -57,6 +57,7 @@
 		338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */; };
 		338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BF28D3559C00278530 /* BaseTableViewCell.swift */; };
 		33C0B5D228D629F6002454BF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0B5D128D629F6002454BF /* Strings.swift */; };
+		33D1910728DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */; };
 		33E1B1A328D8BFA500071834 /* BinaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A228D8BFA500071834 /* BinaryMode.swift */; };
 		33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */; };
 		33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */; };
@@ -129,6 +130,7 @@
 		338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewCell.swift; sourceTree = "<group>"; };
 		338C18BF28D3559C00278530 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		33C0B5D128D629F6002454BF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Error.swift"; sourceTree = "<group>"; };
 		33E1B1A228D8BFA500071834 /* BinaryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryMode.swift; sourceTree = "<group>"; };
 		33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingsCoordinator.swift; sourceTree = "<group>"; };
 		33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Step.swift"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 			children = (
 				33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */,
 				33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */,
+				33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */,
 			);
 			path = coordinator;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */,
 				33E1B1A328D8BFA500071834 /* BinaryMode.swift in Sources */,
 				3357F3EF28D46A750044AE7B /* RollerShutterSettingsViewController.swift in Sources */,
+				33D1910728DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift in Sources */,
 				3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

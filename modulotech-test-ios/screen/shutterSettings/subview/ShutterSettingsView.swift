@@ -18,13 +18,13 @@ public final class RollerShutterSettingsView: BaseView {
     // MARK: Subviews
     
     /// Custom navigation bar that is a part of the view.
-    @AutoLayout public var navigationView: NavigationBarView = NavigationBarView(frame: .zero)
+    public let navigationView: NavigationBarView = NavigationBarView(frame: .zero)
     
     /// Device description view.
-    @AutoLayout public var deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
+    public let deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
     
     /// Roller shutter position slider.
-    @AutoLayout public var positionSlider = LabeledVerticalSlider(frame: .zero)
+    public let positionSlider = LabeledVerticalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

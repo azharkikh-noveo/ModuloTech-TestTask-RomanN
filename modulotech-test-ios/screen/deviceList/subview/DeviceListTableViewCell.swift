@@ -22,22 +22,22 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
     // MARK: Subviews
     
     /// Cell content horizontal stack view.
-    @AutoLayout private var containerStackView: UIStackView = UIStackView(frame: .zero)
+    private let containerStackView: UIStackView = UIStackView(frame: .zero)
     
     /// Cell labels stack view.
-    @AutoLayout private var labelsStackView: UIStackView = UIStackView(frame: .zero)
+    private let labelsStackView: UIStackView = UIStackView(frame: .zero)
     
     /// Cell content container view.
-    @AutoLayout public var containerView: UIView = UIView(frame: .zero)
+    public let containerView: UIView = UIView(frame: .zero)
     
     /// Device title label.
-    @AutoLayout public var deviceTitleLabel: UILabel = UILabel(frame: .zero)
+    public let deviceTitleLabel: UILabel = UILabel(frame: .zero)
     
     /// Device description label.
-    @AutoLayout public var deviceDescriptionLabel: UILabel = UILabel(frame: .zero)
+    public let deviceDescriptionLabel: UILabel = UILabel(frame: .zero)
     
     /// Device state image view.
-    @AutoLayout public var stateImageView: UIImageView = UIImageView(frame: .zero)
+    public let stateImageView: UIImageView = UIImageView(frame: .zero)
     
     
     // MARK: Lifecycle

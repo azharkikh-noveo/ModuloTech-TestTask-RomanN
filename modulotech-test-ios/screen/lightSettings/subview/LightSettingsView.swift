@@ -18,16 +18,16 @@ public final class LightSettingsView: BaseView {
     // MARK: Subviews
     
     /// Custom navigation bar that is a part of the view.
-    @AutoLayout public var navigationView: NavigationBarView = NavigationBarView(frame: .zero)
+    public let navigationView: NavigationBarView = NavigationBarView(frame: .zero)
     
     /// Light description view.
-    @AutoLayout public var deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
+    public let deviceInfoView: DeviceInfoView = DeviceInfoView(frame: .zero)
     
     /// Light mode switch view.
-    @AutoLayout public var modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
+    public let modeSwitchView: ModeSwitchView = ModeSwitchView(frame: .zero)
     
     /// Slider to configure the light intensity.
-    @AutoLayout public var intensitySlider = LabeledHorizontalSlider(frame: .zero)
+    public let intensitySlider = LabeledHorizontalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

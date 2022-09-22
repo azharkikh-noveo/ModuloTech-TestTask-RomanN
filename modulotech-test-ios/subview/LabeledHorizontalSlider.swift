@@ -22,13 +22,13 @@ public final class LabeledHorizontalSlider: BaseView {
     // MARK: Subviews
     
     /// Content stack view.
-    @AutoLayout private var stackView: UIStackView = UIStackView(frame: .zero)
+    private let stackView: UIStackView = UIStackView(frame: .zero)
     
     /// Title label.
-    @AutoLayout public var titleLabel: UILabel = UILabel(frame: .zero)
+    public let titleLabel: UILabel = UILabel(frame: .zero)
     
     /// Slider.
-    @AutoLayout public var slider: BaseSlider = BaseSlider(frame: .zero)
+    public let slider: BaseSlider = BaseSlider(frame: .zero)
     
     
     // MARK: Lifecycle

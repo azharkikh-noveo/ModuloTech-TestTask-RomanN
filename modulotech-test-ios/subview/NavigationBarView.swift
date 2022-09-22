@@ -22,10 +22,10 @@ public final class NavigationBarView: BaseView {
     // MARK: Subviews
     
     /// Label at the center of a view.
-    @AutoLayout public var titleLabel: UILabel = UILabel(frame: .zero)
+    public let titleLabel: UILabel = UILabel(frame: .zero)
     
     /// Back button.
-    @AutoLayout public var backButton: UIButton = UIButton(frame: .zero)
+    public let backButton: UIButton = UIButton(frame: .zero)
     
     
     // MARK: Lifecycle

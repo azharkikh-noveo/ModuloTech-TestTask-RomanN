@@ -22,13 +22,13 @@ public final class DeviceInfoView: BaseView {
     // MARK: Subviews
     
     /// Vertical stack for the content.
-    @AutoLayout private var stackView: UIStackView = UIStackView(frame: .zero)
+    private let stackView: UIStackView = UIStackView(frame: .zero)
     
     /// Device title/name label.
-    @AutoLayout public var deviceTitleLabel: UILabel = UILabel(frame: .zero)
+    public let deviceTitleLabel: UILabel = UILabel(frame: .zero)
     
     /// Device type label.
-    @AutoLayout public var deviceTypeLabel: UILabel = UILabel(frame: .zero)
+    public let deviceTypeLabel: UILabel = UILabel(frame: .zero)
     
     
     // MARK: Lifecycle

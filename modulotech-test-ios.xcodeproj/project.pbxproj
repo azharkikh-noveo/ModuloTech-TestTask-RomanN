@@ -34,7 +34,6 @@
 		338C185E28D283B500278530 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185D28D283B500278530 /* BaseViewController.swift */; };
 		338C186028D283F500278530 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185F28D283F500278530 /* BaseView.swift */; };
 		338C186228D2843200278530 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186128D2843200278530 /* BaseViewModel.swift */; };
-		338C186528D284A200278530 /* AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186428D284A200278530 /* AutoLayout.swift */; };
 		338C186C28D285C300278530 /* UIFont+primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186B28D285C300278530 /* UIFont+primary.swift */; };
 		338C186E28D2880E00278530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338C186D28D2880E00278530 /* Assets.xcassets */; };
 		338C187328D28DC000278530 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187228D28DC000278530 /* Light.swift */; };
@@ -108,7 +107,6 @@
 		338C185D28D283B500278530 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		338C185F28D283F500278530 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		338C186128D2843200278530 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		338C186428D284A200278530 /* AutoLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoLayout.swift; sourceTree = "<group>"; };
 		338C186B28D285C300278530 /* UIFont+primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+primary.swift"; sourceTree = "<group>"; };
 		338C186D28D2880E00278530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		338C187228D28DC000278530 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
@@ -321,7 +319,6 @@
 				338C187D28D2966900278530 /* global */,
 				338C187128D28DAF00278530 /* model */,
 				338C188828D312FF00278530 /* navigation */,
-				338C186328D2849900278530 /* propertyWrapper */,
 				338C185B28D282DC00278530 /* resources */,
 				338C188028D298BC00278530 /* screen */,
 				338C18A428D31CB900278530 /* service */,
@@ -350,14 +347,6 @@
 				3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */,
 			);
 			path = common;
-			sourceTree = "<group>";
-		};
-		338C186328D2849900278530 /* propertyWrapper */ = {
-			isa = PBXGroup;
-			children = (
-				338C186428D284A200278530 /* AutoLayout.swift */,
-			);
-			path = propertyWrapper;
 			sourceTree = "<group>";
 		};
 		338C187128D28DAF00278530 /* model */ = {
@@ -642,7 +631,6 @@
 				3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */,
 				3357F3F128D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift in Sources */,
 				338C187728D28DD400278530 /* Heater.swift in Sources */,
-				338C186528D284A200278530 /* AutoLayout.swift in Sources */,
 				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
 				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
 				33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */,

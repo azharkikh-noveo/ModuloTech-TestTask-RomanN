@@ -22,10 +22,10 @@ public final class ModeSwitchView: BaseView {
     // MARK: Subviews
     
     /// Mode switch view.
-    @AutoLayout public var switchView: UISwitch = UISwitch(frame: .zero)
+    public let switchView: UISwitch = UISwitch(frame: .zero)
     
     /// Mode title label.
-    @AutoLayout public var titleLabel: UILabel = UILabel(frame: .zero)
+    public let titleLabel: UILabel = UILabel(frame: .zero)
     
     
     // MARK: Lifecycle

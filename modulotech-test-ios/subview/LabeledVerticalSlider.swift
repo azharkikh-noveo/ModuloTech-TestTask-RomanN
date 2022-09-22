@@ -22,10 +22,10 @@ public final class LabeledVerticalSlider: BaseView {
     // MARK: Subviews
     
     /// Title label.
-    @AutoLayout public var titleLabel: UILabel = UILabel(frame: .zero)
+    public let titleLabel: UILabel = UILabel(frame: .zero)
     
     /// Slider.
-    @AutoLayout public var slider: VerticalSlider = VerticalSlider(frame: .zero)
+    public let slider: VerticalSlider = VerticalSlider(frame: .zero)
     
     
     // MARK: Lifecycle

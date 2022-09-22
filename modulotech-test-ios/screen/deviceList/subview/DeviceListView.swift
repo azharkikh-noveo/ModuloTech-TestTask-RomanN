@@ -18,13 +18,13 @@ public final class DeviceListView: BaseView {
     // MARK: Subviews
     
     /// Device list table view.
-    @AutoLayout public var tableView: UITableView = UITableView(frame: .zero)
+    public let tableView: UITableView = UITableView(frame: .zero)
     
     /// Activity indicator for loading state.
-    @AutoLayout public var activityIndicator = UIActivityIndicatorView(frame: .zero)
+    public let activityIndicator = UIActivityIndicatorView(frame: .zero)
     
     /// Label that describes the current activity.
-    @AutoLayout public var activityDescriptionLabel: UILabel = UILabel(frame: .zero)
+    public let activityDescriptionLabel: UILabel = UILabel(frame: .zero)
     
     
     // MARK: Lifecycle

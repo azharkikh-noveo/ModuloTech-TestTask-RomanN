@@ -27,7 +27,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let window = UIWindow(windowScene: windowScene)
         
-        let networkService = NetworkService()
+        let networkService = NetworkService(domain: "http://storage42.com")
         
         self.window = window
         

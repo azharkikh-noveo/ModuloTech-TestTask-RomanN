@@ -18,11 +18,25 @@ public final class NetworkService {
     /// Storage for the subscriptions.
     public var disposeBag: Set<AnyCancellable> = []
     
+    /// Base domain for all requests that can be performed by this server.
+    private let domain: String
+    
+    
+    /// Creates an instance of a service for a specified domain.
+    public init(domain: String) {
+        self.domain = domain
+    }
+    
     
     /// Fetches the device list from the server.
+    ///
+    /// Publishes `NetworkServiceError` if an error occured somewhere in the service except for the network part.
     public func deviceList() -> AnyPublisher<Array<Device>, Error> {
         
-        let url: URL = URL(string: "http://storage42.com/modulotest/data.json")!
+        guard let url = URL(string: domain)?.appendingPathComponent("modulotest/data.json") else {
+            return Fail(error: NetworkServiceError.cannotComposeURL)
+                .eraseToAnyPublisher()
+        }
         
         let publisher: AnyPublisher<Array<Device>, Error> = URLSession.shared
             .dataTaskPublisher(for: url)
@@ -62,6 +76,22 @@ public final class NetworkService {
         .store(in: &disposeBag)
         
         return publisher
+        
+    }
+    
+}
+
+
+// MARK: Error
+
+extension NetworkService {
+    
+    
+    /// Errors that can occur in the network service.
+    public enum NetworkServiceError: Error {
+        
+        /// URL for request cannot be composed from the domain and the path.
+        case cannotComposeURL
         
     }
     

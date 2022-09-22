@@ -30,7 +30,7 @@ public final class DeviceListViewModel: BaseViewModel {
     private let networkService: NetworkService
     
     /// Publishes devices to display.
-    public private(set) var devices: Array<Device>
+    public private(set) var devices: Array<DeviceKind>
     
     
     // MARK: Publishers
@@ -101,19 +101,17 @@ extension DeviceListViewModel {
     
     
     /// Opens a device settings screen for a specific device.
-    public func openSettingsScreen(for device: Device) {
+    public func openSettingsScreen(for deviceKind: DeviceKind) {
         
         do {
             
-            switch device {
-            case let light as Light:
+            switch deviceKind {
+            case .light(let light):
                 try coordinator?.changeState(to: .lightSettings(device: light))
-            case let heater as Heater:
+            case .heater(let heater):
                 try coordinator?.changeState(to: .heaterSettings(device: heater))
-            case let shutter as RollerShutter:
+            case .rollerShutter(let shutter):
                 try coordinator?.changeState(to: .rollerShutterSettings(device: shutter))
-            default:
-                preconditionFailure("Unknown device kind found. Check the flow.")
             }
             
         } catch let error {
@@ -145,20 +143,22 @@ extension DeviceListViewModel: DeviceSettingsCoordinatorDelegate {
             return
         }
         
-        var modifiedDevice: Device
+        var modifiedDevice: DeviceKind
         
         switch oldState {
         case .lightSettings(let device):
-            modifiedDevice = device
+            modifiedDevice = .light(device)
         case .heaterSettings(let device):
-            modifiedDevice = device
+            modifiedDevice = .heater(device)
         case .rollerShutterSettings(let device):
-            modifiedDevice = device
+            modifiedDevice = .rollerShutter(device)
         case .deviceList:
             return
         }
         
-        guard let i = devices.map(\.deviceId).firstIndex(of: modifiedDevice.deviceId) else {
+        let deviceIDs: Array<Int> = devices.map { $0.device.deviceId }
+        
+        guard let i = deviceIDs.firstIndex(of: modifiedDevice.device.deviceId) else {
             return
         }
         

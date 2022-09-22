@@ -137,12 +137,12 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
     // MARK: Assign
     
     /// Assignes a device to display.
-    public func assign(_ device: Device) {
+    public func assign(_ deviceKind: DeviceKind) {
         
-        deviceTitleLabel.text = device.name
+        deviceTitleLabel.text = deviceKind.device.name
         
-        switch device {
-        case let light as Light:
+        switch deviceKind {
+        case .light(let light):
             
             switch light.mode {
             case .on:
@@ -155,7 +155,7 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
                 deviceDescriptionLabel.text = L10n.Device.Light.DeviceListState.off
             }
             
-        case let heater as Heater:
+        case .heater(let heater):
             
             switch heater.mode {
             case .on:
@@ -167,7 +167,7 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
                 deviceDescriptionLabel.text = L10n.Device.Heater.DeviceListState.off
             }
             
-        case let shutter as RollerShutter:
+        case .rollerShutter(let shutter):
             
             stateImageView.image = Asset.Images.Device.deviceRollerShutterIcon.image
             
@@ -187,8 +187,6 @@ public final class DeviceListTableViewCell: BaseTableViewCell {
                 
             }
             
-        default:
-            fatalError("Unknown device found.")
         }
         
     }

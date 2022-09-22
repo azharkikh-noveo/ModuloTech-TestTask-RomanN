@@ -31,32 +31,19 @@ public final class NetworkService {
     /// Fetches the device list from the server.
     ///
     /// Publishes `NetworkServiceError` if an error occured somewhere in the service except for the network part.
-    public func deviceList() -> AnyPublisher<Array<Device>, Error> {
+    public func deviceList() -> AnyPublisher<Array<DeviceKind>, Error> {
         
         guard let url = URL(string: domain)?.appendingPathComponent("modulotest/data.json") else {
             return Fail(error: NetworkServiceError.cannotComposeURL)
                 .eraseToAnyPublisher()
         }
         
-        let publisher: AnyPublisher<Array<Device>, Error> = URLSession.shared
+        let publisher: AnyPublisher<Array<DeviceKind>, Error> = URLSession.shared
             .dataTaskPublisher(for: url)
             .map(\.data)
             .decode(type: DeviceListResponse.self, decoder: JSONDecoder())
             .map(\.devices)
-            .map { rawModels in
-                
-                return rawModels.compactMap { product in
-                    switch product.productType {
-                    case .heater:
-                        return Heater(from: product)
-                    case .light:
-                        return Light(from: product)
-                    case .rollerShutter:
-                        return RollerShutter(from: product)
-                    }
-                }
-                
-            }
+            .map { $0.compactMap(DeviceKind.init(rawModel:)) }
             .eraseToAnyPublisher()
         
         publisher.sink { completion in
@@ -69,7 +56,7 @@ public final class NetworkService {
         } receiveValue: { devices in
             
             print("Received a device list:")
-            print(devices.map { " - " + $0.description }.joined(separator: "\n"))
+            print(devices.map { " - " + $0.device.description }.joined(separator: "\n"))
             print("\n")
             
         }

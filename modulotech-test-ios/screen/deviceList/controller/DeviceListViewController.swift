@@ -123,7 +123,7 @@ extension DeviceListViewController: UITableViewDelegate {
         _ tableView: UITableView,
         didSelectRowAt indexPath: IndexPath
     ) {
-        let device: Device = viewModel.devices[indexPath.row]
+        let device: DeviceKind = viewModel.devices[indexPath.row]
         viewModel.openSettingsScreen(for: device)
     }
     

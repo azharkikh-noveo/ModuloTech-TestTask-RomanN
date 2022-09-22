@@ -21,8 +21,8 @@ public struct Heater: Device {
     public static let defaultMaximumTemperature: Double = 28.0
     
     
-    public var deviceKindString: String {
-        return L10n.Device.Heater.kind
+    public var deviceType: DeviceTypeName {
+        return .heater
     }
     
     public var deviceId: Int

@@ -91,7 +91,7 @@ public final class LightSettingsView: BaseView {
     public func setup(for device: Light) {
         
         deviceInfoView.deviceTitleLabel.text = device.name
-        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        deviceInfoView.deviceTypeLabel.text = device.deviceType.stringValue
         
         modeSwitchView.switchView.isOn = device.mode.booleanValue
      

@@ -21,8 +21,8 @@ public struct RollerShutter: Device {
     public static let defaultMaximumPosition: Int = 100
     
     
-    public var deviceKindString: String {
-        return L10n.Device.RollerShutter.kind
+    public var deviceType: DeviceTypeName {
+        return .rollerShutter
     }
     
     public var deviceId: Int

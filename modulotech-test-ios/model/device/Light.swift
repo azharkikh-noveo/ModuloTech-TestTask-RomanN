@@ -21,8 +21,8 @@ public struct Light: Device {
     public static let defaultMaximumIntensity: Int = 100
     
     
-    public var deviceKindString: String {
-        return L10n.Device.Light.kind
+    public var deviceType: DeviceTypeName {
+        return .light
     }
     
     public var deviceId: Int

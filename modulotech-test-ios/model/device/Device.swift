@@ -21,6 +21,6 @@ public protocol Device: CustomStringConvertible {
     var name: String { get set }
     
     /// Device type string.
-    var deviceKindString: String { get }
+    var deviceType: DeviceTypeName { get }
     
 }

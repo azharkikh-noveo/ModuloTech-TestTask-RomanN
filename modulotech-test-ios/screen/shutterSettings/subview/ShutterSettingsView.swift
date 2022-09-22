@@ -75,7 +75,7 @@ public final class RollerShutterSettingsView: BaseView {
     /// Setups a view for the device. Should be called once.
     public func setup(for device: RollerShutter) {
         
-        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        deviceInfoView.deviceTypeLabel.text = device.deviceType.stringValue
         deviceInfoView.deviceTitleLabel.text = device.name
         
         positionSlider.slider.minimumValue = Float(device.minimumPosition)

@@ -91,7 +91,7 @@ public final class HeaterSettingsView: BaseView {
     public func setup(for device: Heater) {
         
         deviceInfoView.deviceTitleLabel.text = device.name
-        deviceInfoView.deviceTypeLabel.text = device.deviceKindString
+        deviceInfoView.deviceTypeLabel.text = device.deviceType.stringValue
         
         temperatureSlider.slider.minimumValue = Float(device.minimumTemperature)
         temperatureSlider.slider.maximumValue = Float(device.maximumTemperature)

@@ -42,8 +42,9 @@ public final class LightSettingsViewModel: BaseViewModel {
         self.coordinator = coordinator
     }
     
-    public override func onViewDidLoad() {
-        super.onViewDidLoad()
+    
+    /// Should be called once from a view-controller to setup a initial state.
+    public func initialSetup() {
         self.isLightOn.send(device.mode.booleanValue)
         self.lightIntensity.send(device.intensity)
     }

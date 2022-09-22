@@ -40,8 +40,8 @@ public final class RollerShutterSettingsViewModel: BaseViewModel {
     }
     
     
-    public override func onViewDidLoad() {
-        super.onViewDidLoad()
+    /// Should be called once from a view-controller to setup a initial state.
+    public func initialSetup() {
         self.shutterPosition.send(device.position)
     }
     

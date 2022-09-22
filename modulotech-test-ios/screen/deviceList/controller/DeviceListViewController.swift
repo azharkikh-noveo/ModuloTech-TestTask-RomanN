@@ -48,27 +48,7 @@ public final class DeviceListViewController: BaseViewController {
         deviceListView.tableView.dataSource = self
         deviceListView.tableView.delegate = self
         setupBindings()
-        viewModel.onViewDidLoad()
-    }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        viewModel.onViewWillAppear()
-    }
-    
-    public override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        viewModel.onViewDidAppear()
-    }
-    
-    public override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        viewModel.onViewWillDisappear()
-    }
-    
-    public override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        viewModel.onViewDidDisappear()
+        viewModel.loadDeviceList()
     }
     
     

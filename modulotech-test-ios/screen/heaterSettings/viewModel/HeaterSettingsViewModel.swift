@@ -42,8 +42,9 @@ public final class HeaterSettingsViewModel: BaseViewModel {
         self.coordinator = coordinator
     }
     
-    public override func onViewDidLoad() {
-        super.onViewDidLoad()
+    
+    /// Should be called once from a view-controller to setup a initial state.
+    public func initialSetup() {
         self.isHeaterOn.send(device.mode.booleanValue)
         self.heaterTemperature.send(device.temperature)
     }

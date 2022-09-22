@@ -56,14 +56,6 @@ public final class DeviceListViewModel: BaseViewModel {
         self.coordinator = coordinator
     }
     
-    
-    // MARK: View controller lifecycle
-    
-    public override func onViewDidLoad() {
-        super.onViewDidLoad()
-        loadDeviceList()
-    }
-    
 }
 
 

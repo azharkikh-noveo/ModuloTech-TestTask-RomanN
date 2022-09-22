@@ -21,29 +21,4 @@ public class BaseViewModel {
         
     }
     
-    /// Should be called after the respective method of assigned view controller.
-    public func onViewDidLoad() {
-        
-    }
-    
-    /// Should be called after the respective method of assigned view controller.
-    public func onViewWillAppear() {
-        
-    }
-    
-    /// Should be called after the respective method of assigned view controller.
-    public func onViewDidAppear() {
-        
-    }
-    
-    /// Should be called after the respective method of assigned view controller.
-    public func onViewWillDisappear() {
-        
-    }
-    
-    /// Should be called after the respective method of assigned view controller.
-    public func onViewDidDisappear() {
-        
-    }
-    
 }

@@ -10,15 +10,15 @@ import Combine
 
 
 /// Base class for the view controller view-models.
-public class BaseViewModel: NSObject {
+public class BaseViewModel {
     
     
     /// Storage for the subscriptions.
     public var disposeBag: Set<AnyCancellable> = []
     
     /// Creates an instance of a view-model.
-    public override init() {
-        super.init()
+    public init() {
+        
     }
     
     /// Should be called after the respective method of assigned view controller.

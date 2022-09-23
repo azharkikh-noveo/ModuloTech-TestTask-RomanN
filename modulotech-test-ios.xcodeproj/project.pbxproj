@@ -1,0 +1,994 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		33331F5928D8759500F6DFD0 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33331F5828D8759500F6DFD0 /* Coordinator.swift */; };
+		3357F3C928D371550044AE7B /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3C828D371550044AE7B /* Assets.swift */; };
+		3357F3D328D3A7320044AE7B /* LightSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D228D3A7320044AE7B /* LightSettingsViewController.swift */; };
+		3357F3D528D3A73A0044AE7B /* LightSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D428D3A73A0044AE7B /* LightSettingsViewModel.swift */; };
+		3357F3D728D3A7430044AE7B /* LightSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3D628D3A7430044AE7B /* LightSettingsView.swift */; };
+		3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */; };
+		3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */; };
+		3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */; };
+		3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E228D3D1F60044AE7B /* BaseSlider.swift */; };
+		3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E428D458150044AE7B /* DeviceInfoView.swift */; };
+		3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */; };
+		3357F3ED28D46A6D0044AE7B /* ShutterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3EC28D46A6D0044AE7B /* ShutterSettingsView.swift */; };
+		3357F3EF28D46A750044AE7B /* RollerShutterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */; };
+		3357F3F128D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */; };
+		3357F3F928D472B80044AE7B /* HeaterSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3F828D472B80044AE7B /* HeaterSettingsView.swift */; };
+		3357F3FB28D472BF0044AE7B /* HeaterSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */; };
+		3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */; };
+		3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */; };
+		336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E228D5FD62001BD45B /* VerticalSlider.swift */; };
+		336147E528D60002001BD45B /* LabeledVerticalSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 336147E428D60002001BD45B /* LabeledVerticalSlider.swift */; };
+		336147E828D604E7001BD45B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 336147E728D604E7001BD45B /* Localizable.strings */; };
+		338C184828D2829400278530 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184728D2829400278530 /* AppDelegate.swift */; };
+		338C184A28D2829400278530 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C184928D2829400278530 /* SceneDelegate.swift */; };
+		338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 338C185228D2829500278530 /* LaunchScreen.storyboard */; };
+		338C185E28D283B500278530 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185D28D283B500278530 /* BaseViewController.swift */; };
+		338C186028D283F500278530 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C185F28D283F500278530 /* BaseView.swift */; };
+		338C186228D2843200278530 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186128D2843200278530 /* BaseViewModel.swift */; };
+		338C186C28D285C300278530 /* UIFont+primary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C186B28D285C300278530 /* UIFont+primary.swift */; };
+		338C186E28D2880E00278530 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 338C186D28D2880E00278530 /* Assets.xcassets */; };
+		338C187328D28DC000278530 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187228D28DC000278530 /* Light.swift */; };
+		338C187528D28DCC00278530 /* RollerShutter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187428D28DCC00278530 /* RollerShutter.swift */; };
+		338C187728D28DD400278530 /* Heater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187628D28DD400278530 /* Heater.swift */; };
+		338C187B28D28E8200278530 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187A28D28E8200278530 /* Device.swift */; };
+		338C187F28D2967100278530 /* Clamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C187E28D2967100278530 /* Clamp.swift */; };
+		338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189C28D31A2900278530 /* DeviceListViewModel.swift */; };
+		338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C189E28D31A8B00278530 /* DeviceListViewController.swift */; };
+		338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A228D31B6200278530 /* BaseNavigationController.swift */; };
+		338C18A628D31DF900278530 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A528D31DF900278530 /* NetworkService.swift */; };
+		338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18A828D323BC00278530 /* DeviceProduct.swift */; };
+		338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */; };
+		338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */; };
+		338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18AE28D32A0A00278530 /* DeviceListResponse.swift */; };
+		338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */; };
+		338C18B328D34F1700278530 /* UITableView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B228D34F1700278530 /* UITableView+register.swift */; };
+		338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B428D34F4900278530 /* UITableView+dequeue.swift */; };
+		338C18B828D34FB000278530 /* DeviceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18B728D34FB000278530 /* DeviceListView.swift */; };
+		338C18BC28D3528D00278530 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 338C18BB28D3528D00278530 /* SnapKit */; };
+		338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */; };
+		338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 338C18BF28D3559C00278530 /* BaseTableViewCell.swift */; };
+		33C0B5D228D629F6002454BF /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C0B5D128D629F6002454BF /* Strings.swift */; };
+		33D1910728DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */; };
+		33D1910928DC67370037D4FF /* DeviceKind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1910828DC67370037D4FF /* DeviceKind.swift */; };
+		33D1910B28DC74C60037D4FF /* DeviceTypeName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D1910A28DC74C60037D4FF /* DeviceTypeName.swift */; };
+		33E1B1A328D8BFA500071834 /* BinaryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A228D8BFA500071834 /* BinaryMode.swift */; };
+		33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */; };
+		33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */; };
+		33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1AD28D8FD8000071834 /* Set+collect.swift */; };
+		33E1B1CC28D9B46100071834 /* LightDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */; };
+		33E1B1CE28DA137700071834 /* HeaterDerviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */; };
+		33E1B1D028DA173F00071834 /* RollerShutterDeviceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		33E1B1B728D9B18F00071834 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 338C183C28D2829400278530 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 338C184328D2829400278530;
+			remoteInfo = "modulotech-test-ios";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33331F5828D8759500F6DFD0 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		3357F3C828D371550044AE7B /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		3357F3D228D3A7320044AE7B /* LightSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsViewController.swift; sourceTree = "<group>"; };
+		3357F3D428D3A73A0044AE7B /* LightSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsViewModel.swift; sourceTree = "<group>"; };
+		3357F3D628D3A7430044AE7B /* LightSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSettingsView.swift; sourceTree = "<group>"; };
+		3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
+		3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlPublisher.swift; sourceTree = "<group>"; };
+		3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeSwitchView.swift; sourceTree = "<group>"; };
+		3357F3E228D3D1F60044AE7B /* BaseSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseSlider.swift; sourceTree = "<group>"; };
+		3357F3E428D458150044AE7B /* DeviceInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceInfoView.swift; sourceTree = "<group>"; };
+		3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledHorizontalSlider.swift; sourceTree = "<group>"; };
+		3357F3EC28D46A6D0044AE7B /* ShutterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShutterSettingsView.swift; sourceTree = "<group>"; };
+		3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSettingsViewController.swift; sourceTree = "<group>"; };
+		3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterSettingsViewModel.swift; sourceTree = "<group>"; };
+		3357F3F828D472B80044AE7B /* HeaterSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsView.swift; sourceTree = "<group>"; };
+		3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewModel.swift; sourceTree = "<group>"; };
+		3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterSettingsViewController.swift; sourceTree = "<group>"; };
+		3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceListViewModel+State.swift"; sourceTree = "<group>"; };
+		336147E228D5FD62001BD45B /* VerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalSlider.swift; sourceTree = "<group>"; };
+		336147E428D60002001BD45B /* LabeledVerticalSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledVerticalSlider.swift; sourceTree = "<group>"; };
+		336147E628D604AD001BD45B /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		336147E728D604E7001BD45B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		338C184428D2829400278530 /* modulotech-test-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "modulotech-test-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		338C184728D2829400278530 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		338C184928D2829400278530 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		338C185328D2829500278530 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		338C185528D2829500278530 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		338C185D28D283B500278530 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		338C185F28D283F500278530 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		338C186128D2843200278530 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		338C186B28D285C300278530 /* UIFont+primary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+primary.swift"; sourceTree = "<group>"; };
+		338C186D28D2880E00278530 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		338C187228D28DC000278530 /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		338C187428D28DCC00278530 /* RollerShutter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutter.swift; sourceTree = "<group>"; };
+		338C187628D28DD400278530 /* Heater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heater.swift; sourceTree = "<group>"; };
+		338C187A28D28E8200278530 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		338C187E28D2967100278530 /* Clamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clamp.swift; sourceTree = "<group>"; };
+		338C189C28D31A2900278530 /* DeviceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewModel.swift; sourceTree = "<group>"; };
+		338C189E28D31A8B00278530 /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		338C18A228D31B6200278530 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		338C18A528D31DF900278530 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		338C18A828D323BC00278530 /* DeviceProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceProduct.swift; sourceTree = "<group>"; };
+		338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+ProductType.swift"; sourceTree = "<group>"; };
+		338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceProduct+Mode.swift"; sourceTree = "<group>"; };
+		338C18AE28D32A0A00278530 /* DeviceListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListResponse.swift; sourceTree = "<group>"; };
+		338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+defaultReuseIdentifier.swift"; sourceTree = "<group>"; };
+		338C18B228D34F1700278530 /* UITableView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register.swift"; sourceTree = "<group>"; };
+		338C18B428D34F4900278530 /* UITableView+dequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+dequeue.swift"; sourceTree = "<group>"; };
+		338C18B728D34FB000278530 /* DeviceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListView.swift; sourceTree = "<group>"; };
+		338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListTableViewCell.swift; sourceTree = "<group>"; };
+		338C18BF28D3559C00278530 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		33C0B5D128D629F6002454BF /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Error.swift"; sourceTree = "<group>"; };
+		33D1910828DC67370037D4FF /* DeviceKind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceKind.swift; sourceTree = "<group>"; };
+		33D1910A28DC74C60037D4FF /* DeviceTypeName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTypeName.swift; sourceTree = "<group>"; };
+		33E1B1A228D8BFA500071834 /* BinaryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BinaryMode.swift; sourceTree = "<group>"; };
+		33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingsCoordinator.swift; sourceTree = "<group>"; };
+		33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DeviceSettingsCoordinator+Step.swift"; sourceTree = "<group>"; };
+		33E1B1AD28D8FD8000071834 /* Set+collect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Set+collect.swift"; sourceTree = "<group>"; };
+		33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "modulotech-test-ios-UnitTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightDerviceTests.swift; sourceTree = "<group>"; };
+		33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaterDerviceTests.swift; sourceTree = "<group>"; };
+		33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollerShutterDeviceTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		338C184128D2829400278530 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338C18BC28D3528D00278530 /* SnapKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33E1B1B028D9B18F00071834 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		33331F4728D853C900F6DFD0 /* coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1A628D8CE9200071834 /* DeviceSettingsCoordinator.swift */,
+				33E1B1A828D8D03500071834 /* DeviceSettingsCoordinator+Step.swift */,
+				33D1910628DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift */,
+			);
+			path = coordinator;
+			sourceTree = "<group>";
+		};
+		3357F3C728D371050044AE7B /* generated */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3C828D371550044AE7B /* Assets.swift */,
+				33C0B5D128D629F6002454BF /* Strings.swift */,
+			);
+			path = generated;
+			sourceTree = "<group>";
+		};
+		3357F3CA28D3A6D30044AE7B /* lightSettings */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3CB28D3A6DF0044AE7B /* controller */,
+				3357F3CD28D3A6EB0044AE7B /* subview */,
+				3357F3CC28D3A6E40044AE7B /* viewModel */,
+			);
+			path = lightSettings;
+			sourceTree = "<group>";
+		};
+		3357F3CB28D3A6DF0044AE7B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3D228D3A7320044AE7B /* LightSettingsViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3357F3CC28D3A6E40044AE7B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3D428D3A73A0044AE7B /* LightSettingsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		3357F3CD28D3A6EB0044AE7B /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3D628D3A7430044AE7B /* LightSettingsView.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		3357F3E828D46A2A0044AE7B /* shutterSettings */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3E928D46A4B0044AE7B /* controller */,
+				3357F3EB28D46A570044AE7B /* subview */,
+				3357F3EA28D46A500044AE7B /* viewModel */,
+			);
+			path = shutterSettings;
+			sourceTree = "<group>";
+		};
+		3357F3E928D46A4B0044AE7B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3EE28D46A750044AE7B /* RollerShutterSettingsViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3357F3EA28D46A500044AE7B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3F028D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		3357F3EB28D46A570044AE7B /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3EC28D46A6D0044AE7B /* ShutterSettingsView.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		3357F3F428D472920044AE7B /* heaterSettings */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3F528D472990044AE7B /* controller */,
+				3357F3F628D4729E0044AE7B /* subview */,
+				3357F3F728D472A40044AE7B /* viewModel */,
+			);
+			path = heaterSettings;
+			sourceTree = "<group>";
+		};
+		3357F3F528D472990044AE7B /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3FC28D472C40044AE7B /* HeaterSettingsViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		3357F3F628D4729E0044AE7B /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3F828D472B80044AE7B /* HeaterSettingsView.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		3357F3F728D472A40044AE7B /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3FA28D472BF0044AE7B /* HeaterSettingsViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		3357F40028D4776D0044AE7B /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1AD28D8FD8000071834 /* Set+collect.swift */,
+				338C186B28D285C300278530 /* UIFont+primary.swift */,
+				338C18B028D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift */,
+				338C18B228D34F1700278530 /* UITableView+register.swift */,
+				338C18B428D34F4900278530 /* UITableView+dequeue.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		338C183B28D2829400278530 = {
+			isa = PBXGroup;
+			children = (
+				338C184628D2829400278530 /* modulotech-test-ios */,
+				33E1B1B428D9B18F00071834 /* modulotech-test-ios-UnitTests */,
+				338C184528D2829400278530 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		338C184528D2829400278530 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				338C184428D2829400278530 /* modulotech-test-ios.app */,
+				33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		338C184628D2829400278530 /* modulotech-test-ios */ = {
+			isa = PBXGroup;
+			children = (
+				338C185528D2829500278530 /* Info.plist */,
+				338C184728D2829400278530 /* AppDelegate.swift */,
+				338C184928D2829400278530 /* SceneDelegate.swift */,
+				338C185C28D283A200278530 /* common */,
+				3357F40028D4776D0044AE7B /* extension */,
+				338C187D28D2966900278530 /* global */,
+				338C187128D28DAF00278530 /* model */,
+				338C188828D312FF00278530 /* navigation */,
+				338C185B28D282DC00278530 /* resources */,
+				338C188028D298BC00278530 /* screen */,
+				338C18A428D31CB900278530 /* service */,
+				338C18B928D3514300278530 /* subview */,
+			);
+			path = "modulotech-test-ios";
+			sourceTree = "<group>";
+		};
+		338C185B28D282DC00278530 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3C728D371050044AE7B /* generated */,
+				338C186D28D2880E00278530 /* Assets.xcassets */,
+				338C185228D2829500278530 /* LaunchScreen.storyboard */,
+				336147E728D604E7001BD45B /* Localizable.strings */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		338C185C28D283A200278530 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				338C18A228D31B6200278530 /* BaseNavigationController.swift */,
+				338C185D28D283B500278530 /* BaseViewController.swift */,
+				338C186128D2843200278530 /* BaseViewModel.swift */,
+				3357F3DE28D3B6720044AE7B /* UIControlPublisher.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		338C187128D28DAF00278530 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1A128D8BF9C00071834 /* common */,
+				338C187C28D28E8800278530 /* device */,
+				338C18A728D3234200278530 /* network */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		338C187C28D28E8800278530 /* device */ = {
+			isa = PBXGroup;
+			children = (
+				338C187A28D28E8200278530 /* Device.swift */,
+				33D1910828DC67370037D4FF /* DeviceKind.swift */,
+				33D1910A28DC74C60037D4FF /* DeviceTypeName.swift */,
+				338C187228D28DC000278530 /* Light.swift */,
+				338C187428D28DCC00278530 /* RollerShutter.swift */,
+				338C187628D28DD400278530 /* Heater.swift */,
+			);
+			path = device;
+			sourceTree = "<group>";
+		};
+		338C187D28D2966900278530 /* global */ = {
+			isa = PBXGroup;
+			children = (
+				338C187E28D2967100278530 /* Clamp.swift */,
+			);
+			path = global;
+			sourceTree = "<group>";
+		};
+		338C188028D298BC00278530 /* screen */ = {
+			isa = PBXGroup;
+			children = (
+				338C188128D298C800278530 /* deviceList */,
+				3357F3F428D472920044AE7B /* heaterSettings */,
+				3357F3CA28D3A6D30044AE7B /* lightSettings */,
+				3357F3E828D46A2A0044AE7B /* shutterSettings */,
+			);
+			path = screen;
+			sourceTree = "<group>";
+		};
+		338C188128D298C800278530 /* deviceList */ = {
+			isa = PBXGroup;
+			children = (
+				338C188228D298D200278530 /* controller */,
+				338C18B628D34F9C00278530 /* subview */,
+				338C188528D298E600278530 /* viewModel */,
+			);
+			path = deviceList;
+			sourceTree = "<group>";
+		};
+		338C188228D298D200278530 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				338C189E28D31A8B00278530 /* DeviceListViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		338C188528D298E600278530 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				338C189C28D31A2900278530 /* DeviceListViewModel.swift */,
+				3357F40128D47ED90044AE7B /* DeviceListViewModel+State.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		338C188828D312FF00278530 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1AA28D8D0C300071834 /* base */,
+				33331F4728D853C900F6DFD0 /* coordinator */,
+			);
+			path = navigation;
+			sourceTree = "<group>";
+		};
+		338C18A428D31CB900278530 /* service */ = {
+			isa = PBXGroup;
+			children = (
+				338C18A528D31DF900278530 /* NetworkService.swift */,
+			);
+			path = service;
+			sourceTree = "<group>";
+		};
+		338C18A728D3234200278530 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				338C18AE28D32A0A00278530 /* DeviceListResponse.swift */,
+				338C18A828D323BC00278530 /* DeviceProduct.swift */,
+				338C18AC28D3257700278530 /* DeviceProduct+Mode.swift */,
+				338C18AA28D3245700278530 /* DeviceProduct+ProductType.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		338C18B628D34F9C00278530 /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				338C18BD28D3551700278530 /* DeviceListTableViewCell.swift */,
+				338C18B728D34FB000278530 /* DeviceListView.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		338C18B928D3514300278530 /* subview */ = {
+			isa = PBXGroup;
+			children = (
+				3357F3E228D3D1F60044AE7B /* BaseSlider.swift */,
+				338C18BF28D3559C00278530 /* BaseTableViewCell.swift */,
+				338C185F28D283F500278530 /* BaseView.swift */,
+				3357F3E428D458150044AE7B /* DeviceInfoView.swift */,
+				3357F3E628D4626F0044AE7B /* LabeledHorizontalSlider.swift */,
+				336147E428D60002001BD45B /* LabeledVerticalSlider.swift */,
+				3357F3E028D3BAF20044AE7B /* ModeSwitchView.swift */,
+				3357F3DA28D3B14D0044AE7B /* NavigationBarView.swift */,
+				336147E228D5FD62001BD45B /* VerticalSlider.swift */,
+			);
+			path = subview;
+			sourceTree = "<group>";
+		};
+		33E1B1A128D8BF9C00071834 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1A228D8BFA500071834 /* BinaryMode.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		33E1B1AA28D8D0C300071834 /* base */ = {
+			isa = PBXGroup;
+			children = (
+				33331F5828D8759500F6DFD0 /* Coordinator.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		33E1B1B428D9B18F00071834 /* modulotech-test-ios-UnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				33E1B1CB28D9B46100071834 /* LightDerviceTests.swift */,
+				33E1B1CD28DA137700071834 /* HeaterDerviceTests.swift */,
+				33E1B1CF28DA173F00071834 /* RollerShutterDeviceTests.swift */,
+			);
+			path = "modulotech-test-ios-UnitTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		338C184328D2829400278530 /* modulotech-test-ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 338C185828D2829500278530 /* Build configuration list for PBXNativeTarget "modulotech-test-ios" */;
+			buildPhases = (
+				338C184028D2829400278530 /* Sources */,
+				338C184128D2829400278530 /* Frameworks */,
+				338C184228D2829400278530 /* Resources */,
+				33E1B1A028D8B84700071834 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "modulotech-test-ios";
+			packageProductDependencies = (
+				338C18BB28D3528D00278530 /* SnapKit */,
+			);
+			productName = "modulotech-test-ios";
+			productReference = 338C184428D2829400278530 /* modulotech-test-ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		33E1B1B228D9B18F00071834 /* modulotech-test-ios-UnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33E1B1BB28D9B18F00071834 /* Build configuration list for PBXNativeTarget "modulotech-test-ios-UnitTests" */;
+			buildPhases = (
+				33E1B1AF28D9B18F00071834 /* Sources */,
+				33E1B1B028D9B18F00071834 /* Frameworks */,
+				33E1B1B128D9B18F00071834 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				33E1B1B828D9B18F00071834 /* PBXTargetDependency */,
+			);
+			name = "modulotech-test-ios-UnitTests";
+			productName = "modulotech-test-ios-UnitTests";
+			productReference = 33E1B1B328D9B18F00071834 /* modulotech-test-ios-UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		338C183C28D2829400278530 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					338C184328D2829400278530 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					33E1B1B228D9B18F00071834 = {
+						CreatedOnToolsVersion = 14.0;
+						TestTargetID = 338C184328D2829400278530;
+					};
+				};
+			};
+			buildConfigurationList = 338C183F28D2829400278530 /* Build configuration list for PBXProject "modulotech-test-ios" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				ja,
+			);
+			mainGroup = 338C183B28D2829400278530;
+			packageReferences = (
+				338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
+			productRefGroup = 338C184528D2829400278530 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				338C184328D2829400278530 /* modulotech-test-ios */,
+				33E1B1B228D9B18F00071834 /* modulotech-test-ios-UnitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		338C184228D2829400278530 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338C186E28D2880E00278530 /* Assets.xcassets in Resources */,
+				336147E828D604E7001BD45B /* Localizable.strings in Resources */,
+				338C185428D2829500278530 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33E1B1B128D9B18F00071834 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		33E1B1A028D8B84700071834 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint using Homebrew.\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		338C184028D2829400278530 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3357F3D728D3A7430044AE7B /* LightSettingsView.swift in Sources */,
+				338C18A328D31B6200278530 /* BaseNavigationController.swift in Sources */,
+				338C18AB28D3245700278530 /* DeviceProduct+ProductType.swift in Sources */,
+				3357F3E328D3D1F60044AE7B /* BaseSlider.swift in Sources */,
+				3357F3F128D46A7D0044AE7B /* RollerShutterSettingsViewModel.swift in Sources */,
+				338C187728D28DD400278530 /* Heater.swift in Sources */,
+				338C18AF28D32A0A00278530 /* DeviceListResponse.swift in Sources */,
+				338C187528D28DCC00278530 /* RollerShutter.swift in Sources */,
+				33E1B1AE28D8FD8000071834 /* Set+collect.swift in Sources */,
+				33D1910928DC67370037D4FF /* DeviceKind.swift in Sources */,
+				33E1B1A928D8D03500071834 /* DeviceSettingsCoordinator+Step.swift in Sources */,
+				33E1B1A728D8CE9200071834 /* DeviceSettingsCoordinator.swift in Sources */,
+				3357F3C928D371550044AE7B /* Assets.swift in Sources */,
+				338C18B528D34F4900278530 /* UITableView+dequeue.swift in Sources */,
+				338C184828D2829400278530 /* AppDelegate.swift in Sources */,
+				338C18AD28D3257700278530 /* DeviceProduct+Mode.swift in Sources */,
+				338C186228D2843200278530 /* BaseViewModel.swift in Sources */,
+				338C18C028D3559C00278530 /* BaseTableViewCell.swift in Sources */,
+				3357F3E128D3BAF20044AE7B /* ModeSwitchView.swift in Sources */,
+				338C187B28D28E8200278530 /* Device.swift in Sources */,
+				336147E528D60002001BD45B /* LabeledVerticalSlider.swift in Sources */,
+				338C184A28D2829400278530 /* SceneDelegate.swift in Sources */,
+				338C18A628D31DF900278530 /* NetworkService.swift in Sources */,
+				338C18B328D34F1700278530 /* UITableView+register.swift in Sources */,
+				338C185E28D283B500278530 /* BaseViewController.swift in Sources */,
+				338C189D28D31A2900278530 /* DeviceListViewModel.swift in Sources */,
+				338C187328D28DC000278530 /* Light.swift in Sources */,
+				3357F40228D47ED90044AE7B /* DeviceListViewModel+State.swift in Sources */,
+				33331F5928D8759500F6DFD0 /* Coordinator.swift in Sources */,
+				3357F3D328D3A7320044AE7B /* LightSettingsViewController.swift in Sources */,
+				338C18B828D34FB000278530 /* DeviceListView.swift in Sources */,
+				338C187F28D2967100278530 /* Clamp.swift in Sources */,
+				3357F3FD28D472C40044AE7B /* HeaterSettingsViewController.swift in Sources */,
+				3357F3F928D472B80044AE7B /* HeaterSettingsView.swift in Sources */,
+				338C186C28D285C300278530 /* UIFont+primary.swift in Sources */,
+				3357F3D528D3A73A0044AE7B /* LightSettingsViewModel.swift in Sources */,
+				3357F3DF28D3B6720044AE7B /* UIControlPublisher.swift in Sources */,
+				338C186028D283F500278530 /* BaseView.swift in Sources */,
+				33C0B5D228D629F6002454BF /* Strings.swift in Sources */,
+				336147E328D5FD62001BD45B /* VerticalSlider.swift in Sources */,
+				3357F3ED28D46A6D0044AE7B /* ShutterSettingsView.swift in Sources */,
+				3357F3DB28D3B14D0044AE7B /* NavigationBarView.swift in Sources */,
+				3357F3E528D458150044AE7B /* DeviceInfoView.swift in Sources */,
+				338C18B128D34ECB00278530 /* UITableViewCell+defaultReuseIdentifier.swift in Sources */,
+				3357F3FB28D472BF0044AE7B /* HeaterSettingsViewModel.swift in Sources */,
+				338C189F28D31A8B00278530 /* DeviceListViewController.swift in Sources */,
+				338C18A928D323BC00278530 /* DeviceProduct.swift in Sources */,
+				338C18BE28D3551700278530 /* DeviceListTableViewCell.swift in Sources */,
+				33D1910B28DC74C60037D4FF /* DeviceTypeName.swift in Sources */,
+				33E1B1A328D8BFA500071834 /* BinaryMode.swift in Sources */,
+				3357F3EF28D46A750044AE7B /* RollerShutterSettingsViewController.swift in Sources */,
+				33D1910728DC62420037D4FF /* DeviceSettingsCoordinator+Error.swift in Sources */,
+				3357F3E728D4626F0044AE7B /* LabeledHorizontalSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33E1B1AF28D9B18F00071834 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33E1B1CC28D9B46100071834 /* LightDerviceTests.swift in Sources */,
+				33E1B1D028DA173F00071834 /* RollerShutterDeviceTests.swift in Sources */,
+				33E1B1CE28DA137700071834 /* HeaterDerviceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		33E1B1B828D9B18F00071834 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 338C184328D2829400278530 /* modulotech-test-ios */;
+			targetProxy = 33E1B1B728D9B18F00071834 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		338C185228D2829500278530 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				338C185328D2829500278530 /* Base */,
+				336147E628D604AD001BD45B /* ja */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		338C185628D2829500278530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		338C185728D2829500278530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		338C185928D2829500278530 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3W3K9M953;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "modulo Tech";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		338C185A28D2829500278530 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3W3K9M953;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "modulotech-test-ios/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "modulo Tech";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		33E1B1B928D9B18F00071834 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3W3K9M953;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/modulotech-test-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/modulotech-test-ios";
+			};
+			name = Debug;
+		};
+		33E1B1BA28D9B18F00071834 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K3W3K9M953;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.whutao.modulotech-test-ios-UnitTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/modulotech-test-ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/modulotech-test-ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		338C183F28D2829400278530 /* Build configuration list for PBXProject "modulotech-test-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338C185628D2829500278530 /* Debug */,
+				338C185728D2829500278530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		338C185828D2829500278530 /* Build configuration list for PBXNativeTarget "modulotech-test-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				338C185928D2829500278530 /* Debug */,
+				338C185A28D2829500278530 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		33E1B1BB28D9B18F00071834 /* Build configuration list for PBXNativeTarget "modulotech-test-ios-UnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33E1B1B928D9B18F00071834 /* Debug */,
+				33E1B1BA28D9B18F00071834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		338C18BB28D3528D00278530 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 338C18BA28D3528D00278530 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 338C183C28D2829400278530 /* Project object */;
+}
